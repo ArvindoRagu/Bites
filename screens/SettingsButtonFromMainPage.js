@@ -571,7 +571,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   whatsNextRohan: {
-    fontSize: 32,
+    fontSize: FontSize.size_13xl,
     letterSpacing: -0.6,
     left: 38,
     top: 108,

@@ -25,55 +25,64 @@ const InterestsSetup = () => {
         <View style={[styles.passwordChild, styles.passwordPosition]} />
         <Text style={styles.password1}>Continue</Text>
       </Pressable>
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckboxchecked}
-        onPress={() => setEllipseCheckboxchecked(!ellipseCheckboxchecked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckboxLayout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox1checked}
-        onPress={() => setEllipseCheckbox1checked(!ellipseCheckbox1checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox1Layout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox2checked}
-        onPress={() => setEllipseCheckbox2checked(!ellipseCheckbox2checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox2Layout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox3checked}
-        onPress={() => setEllipseCheckbox3checked(!ellipseCheckbox3checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox3Layout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox4checked}
-        onPress={() => setEllipseCheckbox4checked(!ellipseCheckbox4checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox4Layout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox5checked}
-        onPress={() => setEllipseCheckbox5checked(!ellipseCheckbox5checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox5Layout}
-      />
-      <CheckBox
-        style={styles.interestsSetupChild}
-        checked={ellipseCheckbox6checked}
-        onPress={() => setEllipseCheckbox6checked(!ellipseCheckbox6checked)}
-        checkedColor="#d9d9d9"
-        containerStyle={styles.ellipseCheckbox6Layout}
-      />
+      <View style={[styles.interestsSetupInner, styles.interestsInnerLayout]}>
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckboxchecked}
+          onPress={() => setEllipseCheckboxchecked(!ellipseCheckboxchecked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckboxLayout}
+        />
+      </View>
+      <View style={[styles.interestsSetupChild, styles.interestsInnerLayout]}>
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox1checked}
+          onPress={() => setEllipseCheckbox1checked(!ellipseCheckbox1checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox1Layout}
+        />
+      </View>
+      <View style={[styles.ellipseView, styles.interestsInnerPosition]}>
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox2checked}
+          onPress={() => setEllipseCheckbox2checked(!ellipseCheckbox2checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox2Layout}
+        />
+      </View>
+      <View
+        style={[styles.interestsSetupInner1, styles.interestsInnerPosition]}
+      >
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox3checked}
+          onPress={() => setEllipseCheckbox3checked(!ellipseCheckbox3checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox3Layout}
+        />
+      </View>
+      <View
+        style={[styles.interestsSetupInner2, styles.interestsInnerPosition]}
+      >
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox4checked}
+          onPress={() => setEllipseCheckbox4checked(!ellipseCheckbox4checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox4Layout}
+        />
+      </View>
+      <View style={[styles.interestsSetupInner3, styles.interestsInnerLayout]}>
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox5checked}
+          onPress={() => setEllipseCheckbox5checked(!ellipseCheckbox5checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox5Layout}
+        />
+      </View>
       <Text style={[styles.entertainment, styles.otherTypo]}>
         Entertainment
       </Text>
@@ -83,9 +92,18 @@ const InterestsSetup = () => {
       <Text
         style={[styles.artLiterature, styles.politicsTypo]}
       >{`Art & Literature`}</Text>
-      <Text
-        style={[styles.scienceTech, styles.otherTypo]}
-      >{`Science & Tech`}</Text>
+      <View style={styles.component5}>
+        <CheckBox
+          style={styles.componentChild}
+          checked={ellipseCheckbox6checked}
+          onPress={() => setEllipseCheckbox6checked(!ellipseCheckbox6checked)}
+          checkedColor="#d9d9d9"
+          containerStyle={styles.ellipseCheckbox6Layout}
+        />
+        <Text
+          style={[styles.scienceTech, styles.otherTypo]}
+        >{`Science & Tech`}</Text>
+      </View>
       <Text style={[styles.finance, styles.otherTypo]}>Finance</Text>
       <Image
         style={styles.vectorIcon}
@@ -93,7 +111,7 @@ const InterestsSetup = () => {
         source={require("../assets/vector4.png")}
       />
       <Pressable
-        style={styles.rectanglePressable}
+        style={styles.interestsSetupItem}
         onPress={() => navigation.goBack()}
       />
     </View>
@@ -104,50 +122,64 @@ const styles = StyleSheet.create({
   ellipseCheckboxLayout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 35,
-    top: 269,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox1Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 147,
-    top: 491,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox2Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 261,
-    top: 380,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox3Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 147,
-    top: 380,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox4Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 35,
-    top: 380,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox5Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 261,
-    top: 269,
+    left: "0%",
+    right: "0%",
+    top: "0%",
+    bottom: "0%",
     position: "absolute",
   },
   ellipseCheckbox6Layout: {
     backgroundColor: "transparent",
     padding: 0,
-    left: 147,
-    top: 269,
+    left: "7.87%",
+    right: "7.87%",
+    top: "0%",
+    bottom: "30.56%",
     position: "absolute",
   },
   passwordPosition: {
@@ -155,6 +187,17 @@ const styles = StyleSheet.create({
     width: 327,
     left: "50%",
     top: "50%",
+    position: "absolute",
+  },
+  interestsInnerLayout: {
+    height: 75,
+    width: 75,
+    position: "absolute",
+  },
+  interestsInnerPosition: {
+    top: 380,
+    height: 75,
+    width: 75,
     position: "absolute",
   },
   otherTypo: {
@@ -221,8 +264,29 @@ const styles = StyleSheet.create({
     elevation: 4,
     shadowOpacity: 1,
   },
-  interestsSetupChild: {
+  componentChild: {
     backgroundColor: Color.colorGainsboro_100,
+  },
+  interestsSetupInner: {
+    left: 35,
+    top: 269,
+  },
+  interestsSetupChild: {
+    top: 491,
+    left: 147,
+  },
+  ellipseView: {
+    left: 261,
+  },
+  interestsSetupInner1: {
+    left: 147,
+  },
+  interestsSetupInner2: {
+    left: 35,
+  },
+  interestsSetupInner3: {
+    left: 147,
+    top: 269,
   },
   entertainment: {
     left: 29,
@@ -243,9 +307,15 @@ const styles = StyleSheet.create({
     left: 26,
   },
   scienceTech: {
+    top: "72.22%",
+    left: "0%",
+  },
+  component5: {
     left: 254,
-    top: 347,
-    fontSize: FontSize.size_xs,
+    width: 89,
+    height: 108,
+    top: 269,
+    position: "absolute",
   },
   finance: {
     left: 161,
@@ -264,7 +334,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     overflow: "hidden",
   },
-  rectanglePressable: {
+  interestsSetupItem: {
     height: "3.94%",
     width: "8.8%",
     top: "6.53%",

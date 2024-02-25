@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Image } from "expo-image";
-import { StyleSheet, View, Pressable, Text } from "react-native";
+import { StyleSheet, Pressable, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
@@ -8,17 +8,12 @@ const YourInfocastPageFromMain = () => {
   const navigation = useNavigation();
 
   return (
-    <View
-      style={[styles.yourInfocastPageFromMain, styles.iphoneXOrNewerLayout]}
-    >
+    <View style={styles.yourInfocastPageFromMain}>
       <Image
-        style={[styles.shulgaTashCave, styles.iconLayout]}
+        style={[styles.shulgaTashCave, styles.vectorIconLayout1]}
         contentFit="cover"
         source={require("../assets/shulgatash-cave1.png")}
       />
-      <View style={styles.home}>
-        <View style={styles.homeIndicator} />
-      </View>
       <Pressable
         style={[styles.backToHomeParent, styles.parentFlexBox]}
         onPress={() => navigation.navigate("MainPage")}
@@ -44,7 +39,7 @@ const YourInfocastPageFromMain = () => {
       <Text style={[styles.rate, styles.ratePosition]}>Rate:</Text>
       <View style={[styles.groupParent, styles.ratePosition]}>
         <Image
-          style={styles.groupChild}
+          style={[styles.componentChild, styles.financeDigestPosition]}
           contentFit="cover"
           source={require("../assets/group-3.png")}
         />
@@ -54,7 +49,7 @@ const YourInfocastPageFromMain = () => {
       <View style={[styles.refresh41Parent, styles.parentFlexBox]}>
         <Pressable style={styles.refreshLayout}>
           <Image
-            style={[styles.vectorIcon, styles.iconLayout]}
+            style={[styles.vectorIcon, styles.vectorIconLayout1]}
             contentFit="cover"
             source={require("../assets/vector5.png")}
           />
@@ -72,7 +67,7 @@ const YourInfocastPageFromMain = () => {
         />
         <Pressable style={[styles.refresh42, styles.refreshLayout]}>
           <Image
-            style={[styles.vectorIcon, styles.iconLayout]}
+            style={[styles.vectorIcon, styles.vectorIconLayout1]}
             contentFit="cover"
             source={require("../assets/vector7.png")}
           />
@@ -89,52 +84,12 @@ const YourInfocastPageFromMain = () => {
         contentFit="cover"
         source={require("../assets/image-61.png")}
       />
-      <View style={[styles.statusbar, styles.statusbarPosition]}>
-        <View style={[styles.iphoneXOrNewer, styles.financeDigestPosition]}>
-          <Image
-            style={[styles.notchIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/notch.png")}
-          />
-          <View style={styles.rightSide}>
-            <Image
-              style={styles.batteryIcon}
-              contentFit="cover"
-              source={require("../assets/battery.png")}
-            />
-            <Image
-              style={styles.wifiIcon}
-              contentFit="cover"
-              source={require("../assets/wifi.png")}
-            />
-            <Image
-              style={styles.mobileSignalIcon}
-              contentFit="cover"
-              source={require("../assets/mobile-signal.png")}
-            />
-            <Image
-              style={[styles.recordingIndicatorIcon, styles.iconPosition]}
-              contentFit="cover"
-              source={require("../assets/recording-indicator.png")}
-            />
-          </View>
-          <Image
-            style={[styles.leftSideIcon, styles.statusbarPosition]}
-            contentFit="cover"
-            source={require("../assets/left-side2.png")}
-          />
-        </View>
-      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  iphoneXOrNewerLayout: {
-    overflow: "hidden",
-    width: "100%",
-  },
-  iconLayout: {
+  vectorIconLayout1: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
@@ -163,6 +118,11 @@ const styles = StyleSheet.create({
     left: 39,
     position: "absolute",
   },
+  financeDigestPosition: {
+    top: "0%",
+    left: "0%",
+    position: "absolute",
+  },
   textTypo: {
     opacity: 0.5,
     fontFamily: FontFamily.robotoMedium,
@@ -188,19 +148,6 @@ const styles = StyleSheet.create({
     width: 24,
     overflow: "hidden",
   },
-  statusbarPosition: {
-    top: 12,
-    position: "absolute",
-  },
-  financeDigestPosition: {
-    left: "0%",
-    top: "0%",
-    position: "absolute",
-  },
-  iconPosition: {
-    display: "none",
-    position: "absolute",
-  },
   shulgaTashCave: {
     height: "39.41%",
     width: "78.93%",
@@ -209,23 +156,6 @@ const styles = StyleSheet.create({
     bottom: "52.09%",
     borderRadius: 34,
     left: "10.4%",
-    position: "absolute",
-  },
-  homeIndicator: {
-    marginLeft: -66.5,
-    bottom: 8,
-    backgroundColor: Color.colorGray,
-    width: 134,
-    height: 5,
-    borderRadius: Border.br_81xl,
-    left: "50%",
-    position: "absolute",
-  },
-  home: {
-    top: 774,
-    left: 1,
-    height: 27,
-    width: 375,
     position: "absolute",
   },
   backToHome: {
@@ -243,6 +173,7 @@ const styles = StyleSheet.create({
   backToHomeParent: {
     top: 704,
     left: 88,
+    borderRadius: Border.br_81xl,
     backgroundColor: "rgba(255, 103, 139, 0)",
     borderStyle: "solid",
     borderColor: Color.colorMediumpurple,
@@ -250,7 +181,6 @@ const styles = StyleSheet.create({
     width: 200,
     height: 47,
     padding: 10,
-    borderRadius: Border.br_81xl,
   },
   financeDigest: {
     height: "23.26%",
@@ -289,24 +219,27 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_base,
     left: 39,
   },
-  groupChild: {
-    width: 297,
-    height: 22,
-    left: 0,
-    top: 0,
-    position: "absolute",
+  componentChild: {
+    height: "31.43%",
+    width: "99.33%",
+    right: "0.67%",
+    bottom: "68.57%",
+    left: "0%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
   },
   text: {
-    top: 14,
-    width: 29,
-    height: 56,
-    left: 0,
+    height: "80%",
+    width: "9.7%",
+    top: "20%",
+    left: "0%",
   },
   text1: {
-    top: 16,
-    left: 268,
-    width: 31,
-    height: 48,
+    height: "68.57%",
+    width: "10.37%",
+    top: "22.86%",
+    left: "89.63%",
   },
   groupParent: {
     top: 588,
@@ -342,8 +275,8 @@ const styles = StyleSheet.create({
     marginLeft: 38,
   },
   vectorIcon3: {
-    right: "8.33%",
     left: "50%",
+    right: "8.33%",
   },
   refresh42: {
     marginLeft: 38,
@@ -357,70 +290,18 @@ const styles = StyleSheet.create({
   },
   image6Icon: {
     top: 412,
+    left: 78,
     width: 128,
     height: 23,
-    left: 78,
     position: "absolute",
-  },
-  notchIcon: {
-    top: -2,
-    right: 78,
-    bottom: 16,
-    left: 78,
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-  },
-  batteryIcon: {
-    right: 0,
-    height: 11,
-    width: 24,
-    top: 0,
-    position: "absolute",
-  },
-  wifiIcon: {
-    width: 15,
-    height: 11,
-  },
-  mobileSignalIcon: {
-    width: 17,
-    height: 11,
-  },
-  recordingIndicatorIcon: {
-    top: -9,
-    right: 56,
-    width: 6,
-    height: 6,
-  },
-  rightSide: {
-    top: 17,
-    right: 15,
-    width: 67,
-    height: 11,
-    position: "absolute",
-  },
-  leftSideIcon: {
-    left: 21,
-    width: 54,
-    height: 21,
-  },
-  iphoneXOrNewer: {
-    height: "100%",
-    right: "0%",
-    bottom: "0%",
-    overflow: "hidden",
-    width: "100%",
-  },
-  statusbar: {
-    left: -1,
-    height: 44,
-    width: 375,
   },
   yourInfocastPageFromMain: {
     borderRadius: Border.br_31xl,
     backgroundColor: Color.colorWhite,
     flex: 1,
+    width: "100%",
     height: 812,
+    overflow: "hidden",
   },
 });
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Text, StyleSheet, Pressable, View } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
-import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
+import { Border, FontSize, Color, FontFamily } from "../GlobalStyles";
 
 const ViewFullPageButtonFromMa = () => {
   const navigation = useNavigation();
@@ -10,10 +10,7 @@ const ViewFullPageButtonFromMa = () => {
   return (
     <View style={styles.viewFullPageButtonFromMa}>
       <Text style={[styles.stocks, styles.stocksFlexBox]}>Stocks</Text>
-      <Text
-        style={[styles.howWasTodays, styles.beHonestYouTypo]}
-      >{`How Was Today’s Page? `}</Text>
-      <Text style={[styles.beHonestYou, styles.image6IconPosition]}>
+      <Text style={[styles.beHonestYou, styles.image6IconLayout]}>
         (Be honest, you won’t hurt our feelings)
       </Text>
       <Pressable
@@ -21,20 +18,23 @@ const ViewFullPageButtonFromMa = () => {
         onPress={() => navigation.navigate("Search")}
       >
         <View style={styles.searchBarChild} />
-        <Text style={[styles.askAQuestion, styles.personalizeTypo]}>
+        <Text style={[styles.askAQuestion, styles.stocksFlexBox]}>
           Ask a question
         </Text>
         <Image
-          style={[styles.searchIcon, styles.iconLayout1]}
+          style={[styles.searchIcon, styles.iconChildLayout]}
           contentFit="cover"
           source={require("../assets/search.png")}
         />
       </Pressable>
-      <Text style={[styles.financialInfoPersonalized, styles.personalizeTypo]}>
+      <Text style={[styles.financialInfoPersonalized, styles.stocksFlexBox]}>
         Financial info, personalized just for you...
       </Text>
       <Pressable
-        style={[styles.viewFullPageButtonFromMaChild, styles.viewBorder]}
+        style={[
+          styles.viewFullPageButtonFromMaChild,
+          styles.bookmarkLightLayout,
+        ]}
         onPress={() => {}}
       />
       <Pressable
@@ -56,13 +56,6 @@ const ViewFullPageButtonFromMa = () => {
       <Text
         style={[styles.todaysHighlights, styles.dailyInfocastTypo]}
       >{`Today’s Highlights `}</Text>
-      <Text style={[styles.dailyInfocast, styles.dailyInfocastTypo]}>
-        Daily Infocast
-      </Text>
-      <Text
-        style={[styles.meetRddtPopular, styles.stocksFlexBox]}
-      >{`Meet RDDT: Popular social platform Reddit to sell stock in an unusual IPO
-`}</Text>
       <Text
         style={[styles.dowJonesNasdaq, styles.dowJonesNasdaqTypo]}
       >{`Dow Jones, NASDAQ, and S&P 500 saw gains of 1.18%, 2.96%, and 2.11%, respectively.
@@ -70,27 +63,6 @@ Nvidia's earnings beat sparked a rally, particularly boosting tech stocks.
 Minor fluctuations in commodities like Brent Crude and Gold, and currencies like EUR/USD and GBP/USD
 
 `}</Text>
-      <Text
-        style={[styles.sourceGradeUnbiased, styles.authorTypo]}
-      >{`Source Grade: Unbiased 
-Complexity: Low
-Released: This Morning
-Time to read: 5 mins 
-`}</Text>
-      <Text style={[styles.nvidiasExplosionTheContainer, styles.minPosition]}>
-        <Text
-          style={styles.nvidiasExplosionThe}
-        >{`Nvidia's explosion, the fed's riddle, and 
-the commodity carousel...
-
-
-
-
-`}</Text>
-        <Text style={styles.text}>{`    
-`}</Text>
-        <Text style={styles.nvidiasExplosionThe}> </Text>
-      </Text>
       <Pressable
         style={styles.wrapper}
         onPress={() => navigation.navigate("InterestPersonalizer")}
@@ -101,28 +73,17 @@ the commodity carousel...
           source={require("../assets/rectangle-50.png")}
         />
       </Pressable>
-      <Text style={[styles.personalize, styles.personalizeTypo]}>
-        Personalize
-      </Text>
-      <Pressable
-        style={[styles.container, styles.containerLayout]}
-        onPress={() => {}}
-      >
+      <Text style={[styles.personalize, styles.listenClr]}>Personalize</Text>
+      <Pressable style={styles.container} onPress={() => {}}>
         <Image
           style={[styles.icon, styles.iconLayout]}
           contentFit="cover"
           source={require("../assets/rectangle-56.png")}
         />
       </Pressable>
-      <Text style={[styles.sources, styles.listenTypo]}>Sources</Text>
-      <Image
-        style={[styles.viewFullPageButtonFromMaChild1, styles.containerLayout]}
-        contentFit="cover"
-        source={require("../assets/rectangle-57.png")}
-      />
-      <Text style={[styles.listen, styles.listenTypo]}>Listen</Text>
+      <Text style={[styles.sources, styles.listenClr]}>Sources</Text>
       <Pressable
-        style={[styles.bookmarkLight, styles.bookmarkLayout]}
+        style={[styles.bookmarkLight, styles.bookmarkLightLayout]}
         onPress={() => {}}
       >
         <Image
@@ -131,111 +92,95 @@ the commodity carousel...
           source={require("../assets/bookmark-light.png")}
         />
       </Pressable>
-      <Pressable
-        style={[styles.bookmarkLight1, styles.bookmarkLayout]}
-        onPress={() => {}}
-      >
+      <View style={styles.dailyInfocastParent}>
+        <Text style={[styles.dailyInfocast, styles.dailyInfocastTypo]}>
+          Daily Infocast
+        </Text>
+        <Text style={[styles.nvidiasExplosionTheContainer, styles.minPosition]}>
+          <Text
+            style={styles.nvidiasExplosionThe}
+          >{`Nvidia's explosion, the fed's riddle, and 
+the commodity carousel...
+
+
+
+
+`}</Text>
+          <Text style={styles.text}>{`    
+`}</Text>
+          <Text style={styles.nvidiasExplosionThe}> </Text>
+        </Text>
         <Image
-          style={styles.iconLayout}
+          style={[styles.componentChild, styles.iconChildLayout]}
           contentFit="cover"
-          source={require("../assets/bookmark-light.png")}
+          source={require("../assets/rectangle-57.png")}
         />
-      </Pressable>
-      <Pressable
-        style={[styles.bookmarkLight2, styles.bookmarkLayout]}
-        onPress={() => {}}
-      >
+        <Text style={[styles.listen, styles.listenClr]}>Listen</Text>
+        <Pressable
+          style={[styles.bookmarkLight1, styles.bookmarkLight1Position]}
+          onPress={() => {}}
+        >
+          <Image
+            style={[styles.icon3, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/bookmark-light.png")}
+          />
+        </Pressable>
         <Image
-          style={styles.iconLayout}
+          style={[styles.shulgaTashCave, styles.bookmarkLight1Position]}
           contentFit="cover"
-          source={require("../assets/bookmark-light.png")}
+          source={require("../assets/shulgatash-cave.png")}
         />
-      </Pressable>
-      <Image
-        style={[styles.shulgaTashCave, styles.iconLayout1]}
-        contentFit="cover"
-        source={require("../assets/shulgatash-cave.png")}
-      />
-      <Text style={[styles.min, styles.minPosition]}>10 min</Text>
-      <Image
-        style={[styles.shulgaTashCave1, styles.iconLayout1]}
-        contentFit="cover"
-        source={require("../assets/shulgatashcave.png")}
-      />
-      <Image
-        style={[styles.ellipseIcon, styles.ellipseIconLayout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-68.png")}
-      />
-      <Text style={[styles.authorAuthor, styles.authorPosition1]}>
-        Author Author
-      </Text>
-      <Pressable
-        style={[styles.bookmarkLight3, styles.bookmarkLayout]}
-        onPress={() => {}}
-      >
-        <Image
-          style={styles.iconLayout}
-          contentFit="cover"
-          source={require("../assets/bookmark-light.png")}
-        />
-      </Pressable>
-      <Image
-        style={styles.bookmarkLightIcon}
-        contentFit="cover"
-        source={require("../assets/bookmark-light1.png")}
-      />
-      <Image
-        style={[styles.viewFullPageButtonFromMaChild2, styles.authorPosition]}
-        contentFit="cover"
-        source={require("../assets/ellipse-68.png")}
-      />
-      <Text style={[styles.authorAuthor1, styles.authorPosition]}>
-        Author Author
-      </Text>
-      <Image
-        style={[styles.image6Icon, styles.image6IconPosition]}
-        contentFit="cover"
-        source={require("../assets/image-6.png")}
-      />
-      <View style={[styles.home, styles.homeLayout]}>
-        <View style={styles.homeIndicator} />
+        <Text style={[styles.min, styles.minPosition]}>10 min</Text>
       </View>
-      <View style={[styles.statusbar, styles.homeLayout]}>
-        <View style={[styles.iphoneXOrNewer, styles.iconLayout]}>
-          <Image
-            style={[styles.notchIcon, styles.iconPosition]}
-            contentFit="cover"
-            source={require("../assets/notch.png")}
-          />
-          <View style={styles.rightSide}>
+      <View style={styles.component1}>
+        <View style={[styles.component1Inner, styles.component1InnerPosition]}>
+          <View
+            style={[styles.component1Inner, styles.component1InnerPosition]}
+          >
+            <Text
+              style={[styles.meetRddtPopular, styles.listenClr]}
+            >{`Meet RDDT: Popular social platform Reddit to sell stock in an unusual IPO
+`}</Text>
+            <Text
+              style={[styles.sourceGradeUnbiased, styles.authorTypo]}
+            >{`Source Grade: Unbiased 
+Complexity: Low
+Released: This Morning
+Time to read: 5 mins 
+`}</Text>
+            <Pressable style={styles.bookmarkLight2} onPress={() => {}}>
+              <Image
+                style={[styles.icon3, styles.iconLayout]}
+                contentFit="cover"
+                source={require("../assets/bookmark-light.png")}
+              />
+            </Pressable>
             <Image
-              style={[styles.batteryIcon, styles.bookmarkLayout]}
+              style={[styles.shulgaTashCave1, styles.component1InnerPosition]}
               contentFit="cover"
-              source={require("../assets/battery.png")}
+              source={require("../assets/shulgatashcave.png")}
             />
             <Image
-              style={styles.wifiIcon}
+              style={[styles.groupChild, styles.authorPosition]}
               contentFit="cover"
-              source={require("../assets/wifi.png")}
+              source={require("../assets/ellipse-68.png")}
             />
-            <Image
-              style={styles.mobileSignalIcon}
-              contentFit="cover"
-              source={require("../assets/mobile-signal.png")}
-            />
-            <Image
-              style={[styles.recordingIndicatorIcon, styles.iconPosition]}
-              contentFit="cover"
-              source={require("../assets/recording-indicator.png")}
-            />
+            <Text style={[styles.authorAuthor, styles.authorPosition]}>
+              Author Author
+            </Text>
           </View>
-          <Image
-            style={styles.leftSideIcon}
-            contentFit="cover"
-            source={require("../assets/left-side.png")}
-          />
         </View>
+      </View>
+      <View style={[styles.howWasTodaysPageParent, styles.howLayout]}>
+        <Text
+          style={[styles.howWasTodays, styles.howLayout]}
+        >{`How Was Today’s Page? `}</Text>
+        <Image
+          style={[styles.image6Icon, styles.image6IconLayout]}
+          contentFit="cover"
+          source={require("../assets/image-6.png")}
+        />
       </View>
     </View>
   );
@@ -246,39 +191,28 @@ const styles = StyleSheet.create({
     textAlign: "left",
     position: "absolute",
   },
-  beHonestYouTypo: {
-    textAlign: "center",
-    fontFamily: FontFamily.text,
-  },
-  image6IconPosition: {
+  image6IconLayout: {
     width: 190,
-    left: 110,
     position: "absolute",
   },
-  personalizeTypo: {
-    fontFamily: FontFamily.text,
-    textAlign: "left",
-    position: "absolute",
-  },
-  iconLayout1: {
+  iconChildLayout: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
   },
-  viewBorder: {
-    borderWidth: 0.2,
-    borderStyle: "solid",
-    backgroundColor: Color.colorWhitesmoke,
+  bookmarkLightLayout: {
+    height: 24,
+    position: "absolute",
   },
   viewLayout: {
     width: 103,
     height: 24,
-    top: 229,
+    top: 219,
     borderRadius: Border.br_base,
     position: "absolute",
   },
   newsTypo: {
-    top: 233,
+    top: 223,
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     color: Color.colorBlack,
@@ -287,8 +221,6 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   dailyInfocastTypo: {
-    height: 56,
-    width: 220,
     letterSpacing: -0.5,
     fontSize: FontSize.size_5xl,
     color: Color.colorBlack,
@@ -302,6 +234,29 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     color: Color.colorBlack,
   },
+  iconLayout: {
+    height: "100%",
+    width: "100%",
+  },
+  listenClr: {
+    color: Color.colorBlack,
+    letterSpacing: -0.3,
+    textAlign: "left",
+    position: "absolute",
+  },
+  minPosition: {
+    left: "31.88%",
+    textAlign: "left",
+    position: "absolute",
+  },
+  bookmarkLight1Position: {
+    top: "2.97%",
+    position: "absolute",
+  },
+  component1InnerPosition: {
+    right: "0%",
+    position: "absolute",
+  },
   authorTypo: {
     fontSize: FontSize.size_smi,
     fontFamily: FontFamily.rubikLight,
@@ -310,55 +265,16 @@ const styles = StyleSheet.create({
     color: Color.colorBlack,
     textAlign: "left",
   },
-  minPosition: {
-    left: 137,
-    textAlign: "left",
-    position: "absolute",
-  },
-  iconLayout: {
-    height: "100%",
-    width: "100%",
-  },
-  containerLayout: {
-    height: 23,
-    position: "absolute",
-  },
-  listenTypo: {
-    height: 12,
-    width: 55,
-    letterSpacing: -0.3,
-    fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.text,
-    textAlign: "left",
-    position: "absolute",
-  },
-  bookmarkLayout: {
-    width: 24,
-    position: "absolute",
-  },
-  ellipseIconLayout: {
-    height: 14,
-    width: 14,
-  },
-  authorPosition1: {
-    top: 692,
-    position: "absolute",
-  },
   authorPosition: {
-    top: 945,
+    top: "2.59%",
     position: "absolute",
   },
-  homeLayout: {
-    width: 375,
-    position: "absolute",
-  },
-  iconPosition: {
-    display: "none",
+  howLayout: {
+    width: 322,
     position: "absolute",
   },
   stocks: {
-    top: 68,
+    top: 58,
     width: 116,
     height: 45,
     color: Color.colorGray,
@@ -366,31 +282,24 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     letterSpacing: -0.7,
     fontSize: FontSize.size_17xl,
+    textAlign: "left",
     left: 33,
-  },
-  howWasTodays: {
-    top: 1507,
-    left: 44,
-    width: 322,
-    height: 93,
-    color: Color.colorGray,
-    letterSpacing: -0.7,
-    fontSize: FontSize.size_17xl,
-    position: "absolute",
   },
   beHonestYou: {
     top: 1605,
+    left: 110,
     fontSize: FontSize.size_3xs,
     letterSpacing: -0.2,
     height: 27,
-    color: Color.colorBlack,
     textAlign: "center",
+    width: 190,
+    color: Color.colorBlack,
     fontFamily: FontFamily.text,
   },
   searchBarChild: {
-    left: 0,
     backgroundColor: Color.colorWhitesmoke,
     borderRadius: Border.br_base,
+    left: 0,
     top: 0,
     height: 52,
     width: 327,
@@ -403,6 +312,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
+    fontFamily: FontFamily.text,
     color: Color.colorGray,
   },
   searchIcon: {
@@ -416,29 +326,32 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   searchBar: {
-    top: 136,
+    top: 126,
     height: 52,
     width: 327,
     left: 31,
     position: "absolute",
   },
   financialInfoPersonalized: {
-    top: 199,
+    top: 189,
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
+    fontFamily: FontFamily.text,
     color: Color.colorGray,
     left: 33,
+    textAlign: "left",
   },
   viewFullPageButtonFromMaChild: {
     borderColor: Color.colorBlack,
     width: 91,
-    height: 24,
-    top: 229,
+    borderWidth: 0.2,
     borderStyle: "solid",
+    backgroundColor: Color.colorWhitesmoke,
+    top: 219,
+    height: 24,
     borderRadius: Border.br_base,
     left: 33,
-    position: "absolute",
   },
   viewFullPageButtonFromMaItem: {
     left: 136,
@@ -466,33 +379,20 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
   },
   rectangleIcon: {
-    top: 202,
+    top: 192,
     left: 62,
     width: 100,
     height: 100,
     position: "absolute",
   },
   todaysHighlights: {
-    top: 276,
+    top: 266,
+    width: 220,
+    height: 56,
     left: 31,
   },
-  dailyInfocast: {
-    top: 536,
-    left: 135,
-  },
-  meetRddtPopular: {
-    top: 718,
-    left: 20,
-    fontSize: FontSize.size_mid,
-    width: 164,
-    height: 94,
-    letterSpacing: -0.3,
-    color: Color.colorBlack,
-    fontFamily: FontFamily.title,
-    fontWeight: "500",
-  },
   dowJonesNasdaq: {
-    top: 320,
+    top: 310,
     width: 338,
     height: 155,
     letterSpacing: -0.3,
@@ -501,12 +401,49 @@ const styles = StyleSheet.create({
     textAlign: "left",
     position: "absolute",
   },
-  sourceGradeUnbiased: {
-    top: 808,
-    left: 22,
-    width: 168,
-    height: 72,
+  icon: {
+    borderRadius: Border.br_2xs,
+  },
+  wrapper: {
+    left: 239,
+    top: 64,
+    width: 130,
+    height: 32,
     position: "absolute",
+  },
+  personalize: {
+    top: 72,
+    left: 268,
+    letterSpacing: -0.3,
+    fontSize: FontSize.paragraphFontSizeSmRegular_size,
+    fontFamily: FontFamily.text,
+  },
+  container: {
+    left: 26,
+    top: 446,
+    width: 98,
+    height: 23,
+    position: "absolute",
+  },
+  sources: {
+    top: 449,
+    left: 48,
+    width: 55,
+    height: 12,
+    letterSpacing: -0.3,
+    fontSize: FontSize.paragraphFontSizeSmRegular_size,
+    fontFamily: FontFamily.text,
+  },
+  bookmarkLight: {
+    left: 146,
+    top: 445,
+    width: 24,
+  },
+  dailyInfocast: {
+    height: "55.45%",
+    width: "59.95%",
+    left: "31.34%",
+    top: "0%",
   },
   nvidiasExplosionThe: {
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
@@ -515,209 +452,163 @@ const styles = StyleSheet.create({
     fontSize: 3,
   },
   nvidiasExplosionTheContainer: {
-    top: 573,
-    width: 250,
-    height: 38,
+    height: "37.62%",
+    width: "68.12%",
+    top: "36.63%",
     fontFamily: FontFamily.rubikLight,
     fontWeight: "300",
     color: Color.colorBlack,
   },
-  icon: {
+  componentChild: {
+    height: "22.77%",
+    width: "23.43%",
+    top: "77.23%",
+    right: "1.09%",
+    left: "75.48%",
+    bottom: "0%",
     borderRadius: Border.br_2xs,
-  },
-  wrapper: {
-    left: 239,
-    top: 74,
-    width: 130,
-    height: 32,
     position: "absolute",
   },
-  personalize: {
-    top: 82,
-    left: 268,
+  listen: {
+    height: "11.88%",
+    width: "14.99%",
+    top: "81.19%",
+    left: "81.74%",
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    color: Color.colorBlack,
+    fontFamily: FontFamily.text,
   },
-  container: {
-    left: 26,
-    top: 456,
-    width: 98,
-  },
-  sources: {
-    top: 459,
-    left: 48,
-  },
-  viewFullPageButtonFromMaChild1: {
-    top: 614,
-    left: 297,
-    width: 86,
-    borderRadius: Border.br_2xs,
-  },
-  listen: {
-    top: 618,
-    left: 320,
-  },
-  bookmarkLight: {
-    left: 146,
-    top: 455,
-    height: 24,
+  icon3: {
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
   },
   bookmarkLight1: {
-    left: 19,
-    top: 687,
-    height: 24,
-  },
-  bookmarkLight2: {
-    left: 347,
-    top: 539,
-    height: 24,
+    left: "89.1%",
+    right: "4.36%",
+    bottom: "73.27%",
+    width: "6.54%",
+    height: "23.76%",
   },
   shulgaTashCave: {
-    height: "5.51%",
-    width: "24.87%",
-    top: "31.25%",
-    right: "70.1%",
-    bottom: "63.25%",
-    left: "5.03%",
+    height: "94.06%",
+    width: "26.98%",
+    right: "73.02%",
+    bottom: "2.97%",
     borderTopLeftRadius: Border.br_xs,
     borderTopRightRadius: Border.br_xs,
     borderBottomRightRadius: Border.br_xs,
     borderBottomLeftRadius: Border.br_smi,
-    position: "absolute",
+    left: "0%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
   },
   min: {
-    top: 617,
+    top: "80.2%",
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     color: Color.colorGray,
     fontFamily: FontFamily.title,
     fontWeight: "500",
   },
+  dailyInfocastParent: {
+    top: 526,
+    left: 20,
+    width: 367,
+    height: 101,
+    position: "absolute",
+  },
+  meetRddtPopular: {
+    height: "48.7%",
+    width: "45.05%",
+    top: "16.06%",
+    left: "0.27%",
+    fontSize: FontSize.size_mid,
+    letterSpacing: -0.3,
+    fontFamily: FontFamily.title,
+    fontWeight: "500",
+  },
+  sourceGradeUnbiased: {
+    height: "37.31%",
+    width: "46.15%",
+    top: "62.69%",
+    left: "0.82%",
+    position: "absolute",
+  },
+  bookmarkLight2: {
+    right: "93.41%",
+    bottom: "87.56%",
+    width: "6.59%",
+    height: "12.44%",
+    left: "0%",
+    top: "0%",
+    position: "absolute",
+  },
   shulgaTashCave1: {
-    height: "10.43%",
-    width: "45.98%",
-    top: "40.29%",
-    right: "3.77%",
-    bottom: "49.28%",
-    left: "50.25%",
+    height: "93.26%",
+    width: "50.27%",
+    top: "4.15%",
+    bottom: "2.59%",
+    left: "49.73%",
     borderRadius: Border.br_smi,
-    position: "absolute",
-  },
-  ellipseIcon: {
-    left: 54,
-    top: 692,
-    position: "absolute",
-  },
-  authorAuthor: {
-    left: 77,
-    fontSize: FontSize.size_smi,
-    fontFamily: FontFamily.rubikLight,
-    fontWeight: "300",
-    letterSpacing: -0.3,
-    color: Color.colorBlack,
-    textAlign: "left",
-  },
-  bookmarkLight3: {
-    left: 217,
-    top: 940,
-    height: 24,
-  },
-  bookmarkLightIcon: {
-    top: 1422,
-    left: 334,
-    width: 40,
-    height: 37,
-    position: "absolute",
-  },
-  viewFullPageButtonFromMaChild2: {
-    left: 252,
-    height: 14,
-    width: 14,
-  },
-  authorAuthor1: {
-    left: 275,
-    fontSize: FontSize.size_smi,
-    fontFamily: FontFamily.rubikLight,
-    fontWeight: "300",
-    letterSpacing: -0.3,
-    color: Color.colorBlack,
-    textAlign: "left",
-  },
-  image6Icon: {
-    top: 1627,
-    height: 43,
-  },
-  homeIndicator: {
-    marginLeft: -66.5,
-    bottom: 8,
-    left: "50%",
-    borderRadius: Border.br_81xl,
-    backgroundColor: Color.colorGray,
-    width: 134,
-    height: 5,
-    position: "absolute",
-  },
-  home: {
-    top: 1689,
-    left: 11,
-    height: 27,
-  },
-  notchIcon: {
-    top: -2,
-    right: 78,
-    bottom: 16,
-    left: 78,
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
   },
-  batteryIcon: {
-    right: 0,
-    height: 11,
-    top: 0,
-    width: 24,
-  },
-  wifiIcon: {
-    width: 15,
-    height: 11,
-  },
-  mobileSignalIcon: {
-    width: 17,
-    height: 11,
-  },
-  recordingIndicatorIcon: {
-    top: -9,
-    right: 56,
-    width: 6,
-    height: 6,
-  },
-  rightSide: {
-    top: 17,
-    right: 15,
-    width: 67,
-    height: 11,
-    position: "absolute",
-  },
-  leftSideIcon: {
-    top: 12,
-    left: 21,
-    width: 54,
-    height: 21,
-    position: "absolute",
-  },
-  iphoneXOrNewer: {
-    top: "0%",
-    right: "0%",
-    bottom: "0%",
-    left: "0%",
-    position: "absolute",
+  groupChild: {
+    height: "7.25%",
+    width: "3.85%",
+    right: "86.54%",
+    bottom: "90.16%",
+    left: "9.62%",
+    maxHeight: "100%",
+    maxWidth: "100%",
     overflow: "hidden",
   },
-  statusbar: {
-    top: 14,
-    left: 2,
-    height: 44,
+  authorAuthor: {
+    left: "15.93%",
+    fontSize: FontSize.size_smi,
+    fontFamily: FontFamily.rubikLight,
+    fontWeight: "300",
+    letterSpacing: -0.3,
+    color: Color.colorBlack,
+    textAlign: "left",
+  },
+  component1Inner: {
+    left: "0%",
+    bottom: "0%",
+    top: "0%",
+    height: "100%",
+    width: "100%",
+  },
+  component1: {
+    top: 677,
+    left: 19,
+    width: 364,
+    height: 193,
+    position: "absolute",
+  },
+  howWasTodays: {
+    height: 93,
+    left: 0,
+    top: 0,
+    width: 322,
+    textAlign: "center",
+    fontFamily: FontFamily.text,
+    color: Color.colorGray,
+    letterSpacing: -0.7,
+    fontSize: FontSize.size_17xl,
+  },
+  image6Icon: {
+    top: 120,
+    left: 66,
+    height: 43,
+  },
+  howWasTodaysPageParent: {
+    top: 1507,
+    left: 44,
+    height: 163,
   },
   viewFullPageButtonFromMa: {
     borderRadius: Border.br_31xl,

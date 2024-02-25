@@ -1,20 +1,22 @@
 import React, { useState, useCallback } from "react";
-import { Image } from "expo-image";
 import {
-  StyleSheet,
-  View,
   Text,
+  StyleSheet,
   Pressable,
+  View,
   ScrollView,
   Modal,
 } from "react-native";
+import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import Modal1 from "../components/Modal1";
+import WhatsNextModal from "../components/WhatsNextModal";
 import { Color, Border, FontSize, FontFamily, Padding } from "../GlobalStyles";
 
-const MainPage = ({ onClose }) => {
-  const [top30Visible, setTop30Visible] = useState(false);
+const MainPage = () => {
   const navigation = useNavigation();
+  const [top30Visible, setTop30Visible] = useState(false);
+  const [settingsIconVisible, setSettingsIconVisible] = useState(false);
 
   const openTop30 = useCallback(() => {
     setTop30Visible(true);
@@ -24,53 +26,25 @@ const MainPage = ({ onClose }) => {
     setTop30Visible(false);
   }, []);
 
+  const openSettingsIcon = useCallback(() => {
+    setSettingsIconVisible(true);
+  }, []);
+
+  const closeSettingsIcon = useCallback(() => {
+    setSettingsIconVisible(false);
+  }, []);
+
   return (
     <>
       <View style={styles.mainPage}>
-        <View style={[styles.statusbar, styles.homeLayout]}>
-          <View style={[styles.iphoneXOrNewer, styles.likedChildPosition]}>
-            <Image
-              style={[styles.notchIcon, styles.iconPosition]}
-              contentFit="cover"
-              source={require("../assets/notch.png")}
-            />
-            <View style={styles.rightSide}>
-              <Image
-                style={styles.batteryIcon}
-                contentFit="cover"
-                source={require("../assets/battery.png")}
-              />
-              <Image
-                style={styles.wifiIcon}
-                contentFit="cover"
-                source={require("../assets/wifi.png")}
-              />
-              <Image
-                style={styles.mobileSignalIcon}
-                contentFit="cover"
-                source={require("../assets/mobile-signal.png")}
-              />
-              <Image
-                style={[styles.recordingIndicatorIcon, styles.iconPosition]}
-                contentFit="cover"
-                source={require("../assets/recording-indicator.png")}
-              />
-            </View>
-            <Image
-              style={[styles.leftSideIcon, styles.categoriesPosition]}
-              contentFit="cover"
-              source={require("../assets/left-side1.png")}
-            />
-          </View>
-        </View>
         <Text
-          style={[styles.heyRohan, styles.logOut1Clr]}
+          style={[styles.heyRohan, styles.logOut1FlexBox]}
         >{`Hey, Rohan  `}</Text>
         <Pressable
           style={styles.logOut}
           onPress={() => navigation.navigate("Login")}
         >
-          <Text style={[styles.logOut1, styles.logOut1Clr]}>Log Out</Text>
+          <Text style={[styles.logOut1, styles.logOut1FlexBox]}>Log Out</Text>
         </Pressable>
         <View style={[styles.searchBar, styles.searchLayout]}>
           <View style={[styles.searchBarChild, styles.childBg]} />
@@ -152,127 +126,80 @@ const MainPage = ({ onClose }) => {
             </View>
             <Text style={[styles.food, styles.foodTypo]}>Food</Text>
           </View>
-          <View style={[styles.nature, styles.top30SpaceBlock]}>
-            <View style={styles.top301}>
-              <View style={[styles.foodChild, styles.childPosition]} />
-            </View>
-            <Text style={[styles.gastro1, styles.foodTypo]}>Medicine</Text>
-          </View>
         </ScrollView>
-        <View style={[styles.krasnyyKlyuch, styles.krasnyyKlyuchLayout]}>
+        <View style={[styles.salavatYulaev, styles.salavatLayout]}>
           <Image
-            style={[styles.krasnyyKlyuch1, styles.modalChildLayout]}
-            contentFit="cover"
-            source={require("../assets/krasnyy-klyuch.png")}
-          />
-          <Text style={[styles.krasnyyKlyuchSpring, styles.textPosition]}>
-            Krasnyy klyuch spring
-          </Text>
-          <View style={styles.liked}>
-            <View style={[styles.likedChild, styles.top30Border]} />
-            <Image
-              style={[styles.vectorIcon, styles.iconLayout]}
-              contentFit="cover"
-              source={require("../assets/vector9.png")}
-            />
-          </View>
-          <View style={[styles.rating, styles.ratingLayout]}>
-            <View style={[styles.ratingChild, styles.ratingLayout]} />
-            <Image
-              style={[styles.rateIcon, styles.iconLayout]}
-              contentFit="cover"
-              source={require("../assets/rate.png")}
-            />
-            <Text style={[styles.text, styles.textPosition]}>5,0</Text>
-          </View>
-        </View>
-        <View style={[styles.salavatYulaev, styles.krasnyyKlyuchLayout]}>
-          <Image
-            style={[styles.krasnyyKlyuch1, styles.modalChildLayout]}
+            style={[styles.salavatYulaev1, styles.childPosition1]}
             contentFit="cover"
             source={require("../assets/salavat-yulaev.png")}
           />
           <Text
-            style={[styles.monumentToSalavat, styles.textPosition]}
+            style={[styles.monumentToSalavat, styles.textClr]}
           >{`Monument to Salavat Yulaev `}</Text>
           <View style={styles.liked}>
-            <View style={[styles.likedChild, styles.top30Border]} />
+            <View style={[styles.likedChild, styles.childPosition1]} />
             <Image
               style={[styles.vectorIcon, styles.iconLayout]}
               contentFit="cover"
               source={require("../assets/vector10.png")}
             />
           </View>
-          <View style={[styles.rating, styles.ratingLayout]}>
-            <View style={[styles.ratingChild, styles.ratingLayout]} />
+          <View style={styles.rating}>
+            <View style={[styles.ratingChild, styles.childPosition1]} />
             <Image
               style={[styles.rateIcon, styles.iconLayout]}
               contentFit="cover"
               source={require("../assets/rate.png")}
             />
-            <Text style={[styles.text, styles.textPosition]}>4,9</Text>
+            <Text style={[styles.text, styles.textClr]}>4,9</Text>
           </View>
         </View>
-        <View style={[styles.home, styles.homeLayout]}>
-          <View style={styles.homeIndicator} />
-        </View>
-        <Pressable
-          style={styles.settings}
-          onPress={() => navigation.navigate("SettingsButtonFromMainPage")}
-        >
+        <Pressable style={styles.settings} onPress={openSettingsIcon}>
           <Image
-            style={[styles.icon, styles.iconLayout]}
+            style={styles.icon}
             contentFit="cover"
             source={require("../assets/settings.png")}
           />
         </Pressable>
-        <Image
-          style={styles.screenshot20240224At515}
-          contentFit="cover"
-          source={require("../assets/screenshot-20240224-at-515-1.png")}
-        />
-        <View style={styles.modal}>
+        <View style={[styles.gastroParent, styles.categoriesPosition]}>
+          <View style={[styles.gastro, styles.top30SpaceBlock]}>
+            <View style={styles.top301}>
+              <View style={[styles.foodChild, styles.childPosition]} />
+            </View>
+            <Text style={[styles.gastro1, styles.foodTypo]}>Medicine</Text>
+          </View>
           <Image
-            style={[styles.baseindicatorIcon, styles.iconLayout]}
+            style={styles.groupChild}
             contentFit="cover"
-            source={require("../assets/positiontop.png")}
+            source={require("../assets/screenshot-20240224-at-515-1.png")}
           />
+        </View>
+        <View style={[styles.salavatYulaev2, styles.salavatLayout]}>
           <Image
-            style={[styles.modalChild, styles.modalChildLayout]}
+            style={[styles.salavatYulaev1, styles.childPosition1]}
             contentFit="cover"
-            source={require("../assets/rectangle-46.png")}
+            source={require("../assets/salavat-yulaev.png")}
           />
-          <Text style={styles.highlights}>Highlights</Text>
-          <Pressable
-            style={[styles.wrapper, styles.wrapperPosition]}
-            onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
-          >
-            <Image
-              style={[styles.icon1, styles.icon1Layout]}
-              contentFit="cover"
-              source={require("../assets/rectangle-48.png")}
-            />
-          </Pressable>
-          <Image
-            style={[styles.modalItem, styles.icon1Layout]}
-            contentFit="cover"
-            source={require("../assets/rectangle-49.png")}
-          />
-          <Pressable
-            style={[styles.yourInfocast, styles.yourInfocastPosition]}
-            onPress={() => navigation.navigate("YourInfocastPageFromMain")}
-          >
-            <Text style={styles.viewFullPageTypo}>Your Infocast</Text>
-          </Pressable>
-          <Text style={[styles.viewFullPage, styles.viewFullPageTypo]}>
-            View Full Page
-          </Text>
           <Text
-            style={styles.dowJonesNasdaq}
-          >{`Dow Jones, NASDAQ, and S&P 500 saw gains of 1.18%, 2.96%, and 2.11%, respectively.
-Nvidia's earnings beat sparked a rally, particularly boosting tech stocks.
-Minor fluctuations in commodities like Brent Crude and Gold, and currencies like EUR/USD and GBP/USD
-`}</Text>
+            style={[styles.monumentToSalavat, styles.textClr]}
+          >{`Monument to Salavat Yulaev `}</Text>
+          <View style={styles.liked}>
+            <View style={[styles.likedChild, styles.childPosition1]} />
+            <Image
+              style={[styles.vectorIcon, styles.iconLayout]}
+              contentFit="cover"
+              source={require("../assets/vector10.png")}
+            />
+          </View>
+          <View style={styles.rating}>
+            <View style={[styles.ratingChild, styles.childPosition1]} />
+            <Image
+              style={[styles.rateIcon, styles.iconLayout]}
+              contentFit="cover"
+              source={require("../assets/rate.png")}
+            />
+            <Text style={[styles.text, styles.textClr]}>4,9</Text>
+          </View>
         </View>
       </View>
 
@@ -280,6 +207,16 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         <View style={styles.top30Overlay}>
           <Pressable style={styles.top30Bg} onPress={closeTop30} />
           <Modal1 onClose={closeTop30} />
+        </View>
+      </Modal>
+
+      <Modal animationType="fade" transparent visible={settingsIconVisible}>
+        <View style={styles.settingsIconOverlay}>
+          <Pressable
+            style={styles.settingsIconBg}
+            onPress={closeSettingsIcon}
+          />
+          <WhatsNextModal onClose={closeSettingsIcon} />
         </View>
       </Modal>
     </>
@@ -292,38 +229,17 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
-  homeLayout: {
-    width: 375,
-    position: "absolute",
-  },
-  likedChildPosition: {
-    left: "0%",
-    bottom: "0%",
-    right: "0%",
-    top: "0%",
-    height: "100%",
-    width: "100%",
-  },
-  iconPosition: {
-    display: "none",
-    position: "absolute",
-  },
-  categoriesPosition: {
-    left: 21,
-    position: "absolute",
-  },
-  logOut1Clr: {
-    color: Color.colorGray,
+  logOut1FlexBox: {
     textAlign: "left",
+    color: Color.colorGray,
   },
   searchLayout: {
-    height: 52,
     width: 327,
+    height: 52,
   },
   childBg: {
     backgroundColor: Color.colorWhitesmoke,
     borderRadius: Border.br_base,
-    position: "absolute",
   },
   iconLayout: {
     maxHeight: "100%",
@@ -336,6 +252,10 @@ const styles = StyleSheet.create({
     color: Color.colorGray,
     fontFamily: FontFamily.title,
     fontWeight: "500",
+    position: "absolute",
+  },
+  categoriesPosition: {
+    top: 229,
     position: "absolute",
   },
   top30SpaceBlock: {
@@ -379,121 +299,33 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.text,
     textAlign: "left",
   },
-  krasnyyKlyuchLayout: {
-    width: "56.53%",
-    height: "34.48%",
+  salavatLayout: {
+    height: 280,
+    width: 212,
+    top: 601,
     position: "absolute",
   },
-  modalChildLayout: {
-    borderRadius: Border.br_9xl,
-    maxHeight: "100%",
-    maxWidth: "100%",
+  childPosition1: {
     left: "0%",
     bottom: "0%",
     right: "0%",
+    top: "0%",
+    height: "100%",
     position: "absolute",
-    overflow: "hidden",
     width: "100%",
   },
-  textPosition: {
+  textClr: {
     color: Color.colorWhite,
-    left: 24,
     textAlign: "left",
     position: "absolute",
-  },
-  top30Border: {
-    borderWidth: 1,
-    borderStyle: "solid",
-  },
-  ratingLayout: {
-    height: 23,
-    width: 53,
-    position: "absolute",
-  },
-  wrapperPosition: {
-    height: "10.08%",
-    bottom: "6.98%",
-    top: "82.95%",
-    position: "absolute",
-  },
-  icon1Layout: {
-    borderRadius: Border.br_2xs,
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-  },
-  yourInfocastPosition: {
-    top: "84.11%",
-    position: "absolute",
-  },
-  viewFullPageTypo: {
-    color: Color.colorMediumslateblue,
-    lineHeight: 20,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
-    textAlign: "left",
-  },
-  notchIcon: {
-    top: -2,
-    right: 78,
-    bottom: 16,
-    left: 78,
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-  },
-  batteryIcon: {
-    right: 0,
-    width: 24,
-    top: 0,
-    height: 11,
-    position: "absolute",
-  },
-  wifiIcon: {
-    width: 15,
-    height: 11,
-  },
-  mobileSignalIcon: {
-    width: 17,
-    height: 11,
-  },
-  recordingIndicatorIcon: {
-    top: -9,
-    right: 56,
-    width: 6,
-    height: 6,
-  },
-  rightSide: {
-    top: 17,
-    right: 15,
-    width: 67,
-    height: 11,
-    position: "absolute",
-  },
-  leftSideIcon: {
-    top: 12,
-    width: 54,
-    height: 21,
-  },
-  iphoneXOrNewer: {
-    position: "absolute",
-    overflow: "hidden",
-  },
-  statusbar: {
-    left: -7,
-    height: 44,
-    top: 16,
-    width: 375,
   },
   heyRohan: {
-    top: 68,
+    top: 50,
     left: 23,
     fontSize: FontSize.size_15xl,
     letterSpacing: -0.7,
-    textAlign: "left",
     fontFamily: FontFamily.title,
     fontWeight: "500",
-    color: Color.colorGray,
     position: "absolute",
   },
   logOut1: {
@@ -501,29 +333,29 @@ const styles = StyleSheet.create({
     letterSpacing: 0.1,
     opacity: 0.5,
     fontFamily: FontFamily.text,
-    textAlign: "left",
   },
   logOut: {
     left: 25,
-    top: 116,
+    top: 98,
     position: "absolute",
   },
   searchBarChild: {
     left: 0,
+    top: 0,
+    position: "absolute",
     height: 52,
     width: 327,
-    top: 0,
   },
   askAnything: {
+    top: 16,
+    left: 16,
     width: 286,
     opacity: 0.4,
     lineHeight: 20,
     fontSize: FontSize.text_size,
-    left: 16,
     fontFamily: FontFamily.text,
     textAlign: "left",
     color: Color.colorGray,
-    top: 16,
     position: "absolute",
   },
   searchIcon: {
@@ -537,16 +369,17 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   searchBar: {
-    top: 146,
+    top: 128,
+    height: 52,
     left: 24,
     position: "absolute",
   },
   yourInterests: {
-    top: 214,
+    top: 196,
     left: 24,
   },
   forYou: {
-    top: 583,
+    top: 565,
     left: 27,
   },
   top30Overlay: {
@@ -606,39 +439,30 @@ const styles = StyleSheet.create({
   nature: {
     marginLeft: 12,
   },
-  foodChild: {
-    backgroundColor: "#296ce7",
-  },
-  gastro1: {
-    color: "#3a3a3a",
-  },
   categories: {
-    top: 247,
+    left: 21,
     width: "100%",
   },
-  krasnyyKlyuch1: {
-    top: "0%",
-    height: "100%",
+  salavatYulaev1: {
+    borderRadius: Border.br_9xl,
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
   },
-  krasnyyKlyuchSpring: {
-    width: 129,
+  monumentToSalavat: {
+    width: "54.25%",
+    top: "65.36%",
     fontSize: FontSize.size_base,
-    top: 183,
-    color: Color.colorWhite,
+    left: "11.32%",
     fontFamily: FontFamily.title,
     fontWeight: "500",
   },
   likedChild: {
     borderColor: Color.colorGray_100,
+    borderWidth: 1,
+    borderStyle: "solid",
     backgroundColor: Color.colorWhitesmoke,
     borderRadius: Border.br_base,
-    position: "absolute",
-    left: "0%",
-    bottom: "0%",
-    right: "0%",
-    top: "0%",
-    height: "100%",
-    width: "100%",
   },
   vectorIcon: {
     height: "50%",
@@ -662,8 +486,6 @@ const styles = StyleSheet.create({
   ratingChild: {
     borderRadius: Border.br_xl,
     backgroundColor: Color.colorGray_200,
-    left: 0,
-    top: 0,
   },
   rateIcon: {
     height: "56.52%",
@@ -676,141 +498,78 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   text: {
-    top: 4,
+    top: "17.39%",
+    left: "45.28%",
     fontSize: FontSize.size_smi,
     opacity: 0.65,
     fontFamily: FontFamily.text,
   },
   rating: {
-    top: 229,
-    left: 24,
-  },
-  krasnyyKlyuch: {
-    top: "76.35%",
-    right: "-23.47%",
-    bottom: "-10.84%",
-    left: "66.93%",
-  },
-  monumentToSalavat: {
-    width: 115,
-    fontSize: FontSize.size_base,
-    top: 183,
-    color: Color.colorWhite,
-    fontFamily: FontFamily.title,
-    fontWeight: "500",
-  },
-  salavatYulaev: {
-    top: "76.23%",
-    right: "36.27%",
-    bottom: "-10.71%",
-    left: "7.2%",
-  },
-  homeIndicator: {
-    marginLeft: -66.5,
-    bottom: 8,
-    left: "50%",
-    borderRadius: Border.br_81xl,
-    backgroundColor: Color.colorGray,
-    width: 134,
-    height: 5,
+    height: "8.21%",
+    width: "25%",
+    top: "81.79%",
+    right: "63.68%",
+    bottom: "10%",
+    left: "11.32%",
     position: "absolute",
   },
-  home: {
-    top: 805,
-    height: 13,
+  salavatYulaev: {
+    left: 27,
+  },
+  settingsIconOverlay: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(113, 113, 113, 0.3)",
+  },
+  settingsIconBg: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
     left: 0,
+    top: 0,
   },
   icon: {
     height: "100%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
     width: "100%",
   },
   settings: {
     left: "86.13%",
-    top: "9.36%",
+    top: "7.14%",
     right: "7.47%",
-    bottom: "87.68%",
+    bottom: "89.9%",
     width: "6.4%",
     height: "2.96%",
     position: "absolute",
   },
-  screenshot20240224At515: {
-    top: 257,
-    left: 275,
+  foodChild: {
+    backgroundColor: "#296ce7",
+  },
+  gastro1: {
+    color: "#3a3a3a",
+  },
+  gastro: {
+    left: 0,
+    top: 0,
+    position: "absolute",
+  },
+  groupChild: {
+    top: 10,
+    left: 11,
     width: 30,
     height: 32,
     position: "absolute",
   },
-  baseindicatorIcon: {
-    height: "3.1%",
-    width: "16.33%",
-    right: "73.18%",
-    bottom: "96.9%",
-    left: "10.5%",
-    top: "0%",
-    position: "absolute",
+  gastroParent: {
+    left: 264,
+    width: 131,
+    height: 52,
   },
-  modalChild: {
-    height: "96.12%",
-    top: "3.88%",
-  },
-  highlights: {
-    top: "1.55%",
-    left: "6.41%",
-    fontSize: FontSize.size_xl,
-    lineHeight: 80,
-    fontWeight: "600",
-    fontFamily: FontFamily.interSemiBold,
-    color: Color.colorBlack,
-    textAlign: "left",
-    position: "absolute",
-  },
-  icon1: {
-    height: "100%",
-    width: "100%",
-  },
-  wrapper: {
-    left: "51.02%",
-    right: "9.91%",
-    width: "39.07%",
-  },
-  modalItem: {
-    width: "36.44%",
-    right: "53.06%",
-    height: "10.08%",
-    bottom: "6.98%",
-    top: "82.95%",
-    position: "absolute",
-    left: "10.5%",
-  },
-  yourInfocast: {
-    left: "15.74%",
-  },
-  viewFullPage: {
-    left: "55.98%",
-    top: "84.11%",
-    position: "absolute",
-  },
-  dowJonesNasdaq: {
-    height: "53.49%",
-    width: "93.29%",
-    top: "25.97%",
-    left: "2.33%",
-    fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    letterSpacing: -0.3,
-    fontWeight: "300",
-    fontFamily: FontFamily.rubikLight,
-    color: Color.colorBlack,
-    textAlign: "left",
-    position: "absolute",
-  },
-  modal: {
-    top: 312,
-    width: 343,
-    height: 258,
-    left: 16,
-    maxHeight: "100%",
-    maxWidth: "100%",
-    position: "absolute",
+  salavatYulaev2: {
+    left: 269,
   },
   mainPage: {
     borderRadius: Border.br_31xl,
