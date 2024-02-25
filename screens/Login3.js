@@ -52,7 +52,7 @@ const Login3 = () => {
 const styles = StyleSheet.create({
   passwordPosition2: {
     fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     height: 68,
     width: 327,
     left: "50%",
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
   password2: {
     marginTop: -62.1,
     marginLeft: -146.5,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     opacity: 0.4,
   },
   password3: {

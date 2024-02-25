@@ -2,7 +2,7 @@ import * as React from "react";
 import { TextInput, StyleSheet, View, Pressable, Text } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
-import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
+import { FontSize, FontFamily, Border, Color } from "../GlobalStyles";
 
 const Login2 = () => {
   const navigation = useNavigation();
@@ -12,14 +12,14 @@ const Login2 = () => {
       <View style={[styles.passwordParent, styles.passwordLayout]}>
         <TextInput
           style={[styles.password, styles.passwordPosition1]}
-          placeholder="Username"
+          placeholder="Enter Username"
           placeholderTextColor="#242424"
         />
         <View style={[styles.groupChild, styles.passwordLayout]} />
       </View>
       <TextInput
         style={[styles.password1, styles.passwordPosition1]}
-        placeholder="Password"
+        placeholder="Enter Password"
         placeholderTextColor="#242424"
       />
       <Pressable
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   passwordPosition1: {
     fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     left: "50%",
     top: "50%",
     position: "absolute",
@@ -82,28 +82,25 @@ const styles = StyleSheet.create({
   groupChild: {
     top: 0,
     left: 0,
-    borderStyle: "solid",
-    borderColor: Color.colorBlack,
-    borderWidth: 1,
     borderRadius: Border.br_base,
     position: "absolute",
   },
   passwordParent: {
-    marginTop: -152,
+    marginTop: -135,
     left: "50%",
     top: "50%",
     position: "absolute",
     marginLeft: -164.5,
   },
   password1: {
-    marginTop: -54,
+    marginTop: -50,
     height: 68,
     width: 327,
     marginLeft: -164.5,
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
   },
   iForgotMyContainer: {

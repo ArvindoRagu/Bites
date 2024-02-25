@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa1111111111 = () => {
+const ViewFullPageButtonFromMa11111111111 = () => {
   const navigation = useNavigation();
 
   return (
@@ -328,11 +328,11 @@ const styles = StyleSheet.create({
   askAQuestion: {
     top: 16,
     left: 16,
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     textAlign: "left",
     color: Color.colorGray,
     left: 33,
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   popular: {
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   news: {
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   rectangleIcon: {
@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
     top: 72,
     left: 268,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   container: {
@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
     width: 54,
     height: 18,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   bookmarkLight: {
@@ -505,7 +505,7 @@ const styles = StyleSheet.create({
     top: "81.19%",
     left: "81.74%",
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   icon3: {
@@ -681,7 +681,7 @@ const styles = StyleSheet.create({
   howWasTodays: {
     textAlign: "center",
     top: "0%",
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     color: Color.colorGray,
     letterSpacing: -0.7,
     fontSize: FontSize.size_17xl,
@@ -734,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa1111111111;
+export default ViewFullPageButtonFromMa11111111111;

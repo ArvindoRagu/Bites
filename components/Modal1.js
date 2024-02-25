@@ -20,7 +20,7 @@ const Modal1 = ({ onClose }) => {
       <Pressable
         style={[styles.wrapper, styles.wrapperPosition]}
         onPress={() =>
-          navigation.navigate("ViewFullPageButtonFromMa11111111111")
+          navigation.navigate("ViewFullPageButtonFromMa111111111111")
         }
       >
         <Image
@@ -77,9 +77,9 @@ const styles = StyleSheet.create({
   },
   viewFullPageTypo: {
     color: Color.colorMediumslateblue,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     textAlign: "left",
   },
   modalChild: {
