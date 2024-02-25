@@ -24,7 +24,7 @@ const InterestManager = () => {
           <Pressable
             style={[styles.groupChild, styles.groupLayout]}
             onPress={() =>
-              navigation.navigate("ViewFullPageButtonFromMa1111111111")
+              navigation.navigate("ViewFullPageButtonFromMa11111111111")
             }
           />
           <Text style={styles.entertainment}>
@@ -40,7 +40,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa1111111111")
+            navigation.navigate("ViewFullPageButtonFromMa11111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -54,7 +54,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa1111111111")
+            navigation.navigate("ViewFullPageButtonFromMa11111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -68,7 +68,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa1111111111")
+            navigation.navigate("ViewFullPageButtonFromMa11111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -82,7 +82,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa1111111111")
+            navigation.navigate("ViewFullPageButtonFromMa11111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -96,7 +96,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa1111111111")
+            navigation.navigate("ViewFullPageButtonFromMa11111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     left: 16,
     fontSize: FontSize.size_xl,
     color: Color.colorDarkgray_100,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
     top: 15,
     textAlign: "left",
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     top: 17,
     fontSize: FontSize.size_xl,
     color: Color.colorDarkgray_100,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
     position: "absolute",
   },
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
     width: 244,
     height: 35,
     color: Color.colorDarkgray_100,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
     top: 15,
     left: 11,
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xl,
     height: 35,
     color: Color.colorDarkgray_100,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
     top: 15,
     textAlign: "left",

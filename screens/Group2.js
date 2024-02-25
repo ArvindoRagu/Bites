@@ -1,11 +1,12 @@
 import * as React from "react";
 import { Text, StyleSheet, Pressable, View } from "react-native";
 import { Image } from "expo-image";
-import RectangleScreen from "./RectangleScreen";
-import HongKongInforms from "./HongKongInforms";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { useNavigation } from "@react-navigation/native";
+import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
-const GroupComponent4 = () => {
+const Group2 = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.parent}>
       <Text style={[styles.text, styles.textTypo]}>942</Text>
@@ -15,22 +16,22 @@ const GroupComponent4 = () => {
         source={require("../assets/ellipse-65-light.png")}
       />
       <Image
-        style={[styles.ellipse66LightIcon, styles.componentChildPosition]}
+        style={[styles.ellipse66LightIcon, styles.groupChildPosition]}
         contentFit="cover"
         source={require("../assets/ellipse-66-light.png")}
       />
       <Image
-        style={[styles.componentChild, styles.componentChildPosition]}
+        style={[styles.groupChild, styles.groupChildPosition]}
         contentFit="cover"
         source={require("../assets/ellipse-54.png")}
       />
       <Image
-        style={[styles.componentItem, styles.componentLayout]}
+        style={[styles.groupItem, styles.groupLayout]}
         contentFit="cover"
         source={require("../assets/vector-65.png")}
       />
       <Image
-        style={[styles.componentInner, styles.componentLayout]}
+        style={[styles.groupInner, styles.groupLayout]}
         contentFit="cover"
         source={require("../assets/vector-66.png")}
       />
@@ -41,12 +42,17 @@ const GroupComponent4 = () => {
       />
       <Text style={[styles.hAgo, styles.textTypo]}>24h ago</Text>
       <Image
-        style={[styles.image9Icon, styles.iconLayout]}
+        style={styles.image9Icon}
         contentFit="cover"
         source={require("../assets/image-9.png")}
       />
-      <RectangleScreen />
-      <HongKongInforms />
+      <Pressable
+        style={styles.rectanglePressable}
+        onPress={() => navigation.navigate("YourInfocastPageFromMain")}
+      />
+      <Text style={[styles.hongKongInforms, styles.textTypo]}>
+        Hong Kong informs on 2023 food incident monitoring
+      </Text>
     </View>
   );
 };
@@ -60,7 +66,6 @@ const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     position: "absolute",
-    top: "68.93%",
   },
   iconLayout: {
     maxHeight: "100%",
@@ -68,14 +73,14 @@ const styles = StyleSheet.create({
     maxWidth: "100%",
     position: "absolute",
   },
-  componentChildPosition: {
+  groupChildPosition: {
     top: "69.9%",
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",
     position: "absolute",
   },
-  componentLayout: {
+  groupLayout: {
     width: "0.61%",
     height: "1.94%",
     maxHeight: "100%",
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
   },
   text: {
     left: "43.16%",
+    top: "68.93%",
   },
   ellipse65LightIcon: {
     height: "7.77%",
@@ -101,22 +107,20 @@ const styles = StyleSheet.create({
     bottom: "18.45%",
     left: "35.56%",
   },
-  componentChild: {
+  groupChild: {
     height: "13.59%",
     width: "4.26%",
     right: "37.08%",
     bottom: "16.5%",
     left: "58.66%",
   },
-  componentItem: {
+  groupItem: {
     right: "41.34%",
     bottom: "29.13%",
     left: "58.05%",
     top: "68.93%",
-    width: "0.61%",
-    height: "1.94%",
   },
-  componentInner: {
+  groupInner: {
     top: "67.96%",
     right: "36.47%",
     bottom: "30.1%",
@@ -132,19 +136,39 @@ const styles = StyleSheet.create({
   },
   hAgo: {
     left: "65.65%",
+    top: "68.93%",
   },
   image9Icon: {
-    height: "89.32%",
-    width: "27.96%",
-    top: "4.85%",
-    right: "68.69%",
-    bottom: "5.83%",
-    left: "3.34%",
+    top: 5,
+    left: 11,
+    width: 92,
+    height: 92,
+    position: "absolute",
+  },
+  rectanglePressable: {
+    height: "100%",
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
+    left: "0%",
+    borderRadius: Border.br_xs,
+    backgroundColor: Color.colorGainsboro_200,
+    borderStyle: "solid",
+    borderColor: Color.colorDarkgray,
+    borderWidth: 1,
+    position: "absolute",
+    width: "100%",
+  },
+  hongKongInforms: {
+    width: "58.66%",
+    top: "6.8%",
+    left: "36.47%",
   },
   parent: {
-    width: 329,
+    flex: 1,
     height: 103,
+    width: "100%",
   },
 });
 
-export default GroupComponent4;
+export default Group2;

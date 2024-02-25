@@ -41,7 +41,7 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa111111111 from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa1111111111 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
@@ -55,18 +55,25 @@ import Password from "./components/Password";
 import B1 from "./components/B1";
 import Login1 from "./screens/Login1";
 import OtherInterests from "./screens/OtherInterests";
-import Frame11 from "./components/GroupComponent3";
 import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
 import RectangleScreen from "./components/RectangleScreen";
 import HongKongInforms from "./components/HongKongInforms";
 import RectangleScreen1 from "./components/RectangleScreen1";
-import Image1 from "./components/Image1";
 import Frame11 from "./components/Frame44";
+import Group from "./screens/Group";
+import Group1 from "./screens/Group1";
+import Group2 from "./screens/Group2";
+import GroupComponent2 from "./components/GroupComponent2";
+import GroupComponent3 from "./components/GroupComponent3";
 import GroupComponent4 from "./components/GroupComponent4";
+import Image1 from "./components/Image1";
+import Search11 from "./screens/Search";
+import Frame111 from "./components/GroupComponent3";
+import GroupComponent41 from "./components/GroupComponent4";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
 import MainPage from "./screens/MainPage";
 import Modal1 from "./components/Modal1";
-import ViewFullPageButtonFromMa111111111 from "./screens/ViewFullPageButtonFromMa";
+import ViewFullPageButtonFromMa1111111111 from "./screens/ViewFullPageButtonFromMa";
 import InterestPersonalizer from "./screens/InterestPersonalizer";
 import WhatsNextModal from "./components/WhatsNextModal";
 import Login11 from "./screens/Login11";
@@ -76,7 +83,6 @@ import Login3 from "./screens/Login3";
 import InterestsSetup from "./screens/InterestsSetup";
 import BookmarkedLikedArticles from "./screens/BookmarkedLikedArticles";
 import InterestManager from "./screens/InterestManager";
-import Search11 from "./screens/Search";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -146,8 +152,28 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Frame111"
+              name="Frame11"
               component={Frame11}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Group"
+              component={Group}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Group1"
+              component={Group1}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Group2"
+              component={Group2}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Search11"
+              component={Search11}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -166,8 +192,8 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="ViewFullPageButtonFromMa1111111111"
-              component={ViewFullPageButtonFromMa111111111}
+              name="ViewFullPageButtonFromMa11111111111"
+              component={ViewFullPageButtonFromMa1111111111}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -208,11 +234,6 @@ const App = () => {
             <Stack.Screen
               name="InterestManager"
               component={InterestManager}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Search11"
-              component={Search11}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

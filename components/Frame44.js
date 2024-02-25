@@ -10,9 +10,9 @@ const Frame11 = () => {
   return (
     <View style={styles.componentParent}>
       <View style={styles.parent}>
-        <Text style={[styles.text, styles.textTypo2]}>{`1,239 `}</Text>
+        <Text style={[styles.text, styles.textTypo]}>{`1,239 `}</Text>
         <Image
-          style={[styles.viewLightIcon, styles.iconLayout1]}
+          style={[styles.viewLightIcon, styles.iconLayout]}
           contentFit="cover"
           source={require("../assets/view-light.png")}
         />
@@ -27,24 +27,24 @@ const Frame11 = () => {
             onPress={() => navigation.navigate("YourInfocastPageFromMain")}
           />
           <Text
-            style={[styles.attCustomersHit, styles.image2IconPosition1]}
+            style={[styles.attCustomersHit, styles.image2IconPosition]}
           >{`AT&T customers hit by widespread cellular outages in U.S.`}</Text>
-          <Text style={[styles.hAgo, styles.textTypo2]}>12h ago</Text>
+          <Text style={[styles.hAgo, styles.textTypo]}>12h ago</Text>
           <Image
-            style={[styles.image2Icon, styles.image2IconPosition1]}
+            style={[styles.image2Icon, styles.image2IconPosition]}
             contentFit="cover"
             source={require("../assets/image2.png")}
           />
         </View>
       </View>
-      <Text style={[styles.text1, styles.textTypo2]}>2,432</Text>
+      <Text style={[styles.text1, styles.textTypo]}>2,432</Text>
       <Image
-        style={[styles.viewLightIcon1, styles.lightIconLayout2]}
+        style={[styles.viewLightIcon1, styles.lightIconLayout]}
         contentFit="cover"
         source={require("../assets/view-light.png")}
       />
       <Image
-        style={[styles.alarmclockLightIcon1, styles.lightIconLayout2]}
+        style={[styles.alarmclockLightIcon1, styles.lightIconLayout]}
         contentFit="cover"
         source={require("../assets/alarmclock-light.png")}
       />
@@ -53,7 +53,7 @@ const Frame11 = () => {
         onPress={() => navigation.navigate("YourInfocastPageFromMain")}
       />
       <Text
-        style={[styles.surgingNvidiaStock, styles.textTypo2]}
+        style={[styles.surgingNvidiaStock, styles.textTypo]}
       >{`Surging Nvidia Stock Keeps Drawing In More Believers
 `}</Text>
       <Text style={[styles.hAgo1, styles.agoTypo]}>29h ago</Text>
@@ -155,7 +155,7 @@ const Frame11 = () => {
 };
 
 const styles = StyleSheet.create({
-  textTypo2: {
+  textTypo: {
     textAlign: "left",
     color: Color.colorGray,
     fontFamily: FontFamily.title,
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
   },
-  iconLayout1: {
+  iconLayout: {
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",
@@ -172,11 +172,11 @@ const styles = StyleSheet.create({
     left: "56.97%",
     right: "35.91%",
   },
-  image2IconPosition1: {
+  image2IconPosition: {
     top: "6.8%",
     position: "absolute",
   },
-  lightIconLayout2: {
+  lightIconLayout: {
     height: "5.43%",
     maxHeight: "100%",
     overflow: "hidden",

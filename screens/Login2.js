@@ -17,13 +17,11 @@ const Login2 = () => {
         />
         <View style={[styles.groupChild, styles.passwordLayout]} />
       </View>
-      <View style={[styles.passwordWrapper, styles.passwordLayout]}>
-        <TextInput
-          style={[styles.password1, styles.passwordPosition1]}
-          placeholder="Password"
-          placeholderTextColor="#242424"
-        />
-      </View>
+      <TextInput
+        style={[styles.password1, styles.passwordPosition1]}
+        placeholder="Password"
+        placeholderTextColor="#242424"
+      />
       <Pressable
         style={styles.iForgotMyContainer}
         onPress={() => navigation.navigate("ForgotPassword")}
@@ -59,7 +57,7 @@ const styles = StyleSheet.create({
   },
   passwordPosition1: {
     fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: "50%",
     top: "50%",
     position: "absolute",
@@ -98,21 +96,14 @@ const styles = StyleSheet.create({
     marginLeft: -164.5,
   },
   password1: {
-    marginTop: -34,
-    marginLeft: -163.5,
+    marginTop: -54,
     height: 68,
     width: 327,
-  },
-  passwordWrapper: {
-    marginTop: -54,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
     marginLeft: -164.5,
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
   },
   iForgotMyContainer: {
@@ -122,8 +113,8 @@ const styles = StyleSheet.create({
   },
   passwordChild: {
     marginTop: -26,
-    backgroundColor: Color.colorMediumpurple,
     marginLeft: -163.5,
+    backgroundColor: Color.colorMediumpurple,
     borderRadius: Border.br_base,
   },
   password3: {
