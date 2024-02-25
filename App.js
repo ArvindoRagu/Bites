@@ -41,7 +41,7 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa11 from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa111 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
@@ -62,20 +62,20 @@ import GroupComponent3 from "./components/GroupComponent3";
 import HongKongInforms from "./components/HongKongInforms";
 import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
 import GroupComponent4 from "./components/GroupComponent4";
-import ViewFullPageButtonFromMa11 from "./screens/ViewFullPageButtonFromMa";
-import InterestPersonalizer from "./screens/InterestPersonalizer";
-import Search from "./screens/Search";
-import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
-import MainPage from "./screens/MainPage";
-import Modal1 from "./components/Modal1";
 import WhatsNextModal from "./components/WhatsNextModal";
+import InterestManager from "./screens/InterestManager";
+import ViewFullPageButtonFromMa111 from "./screens/ViewFullPageButtonFromMa";
+import InterestPersonalizer from "./screens/InterestPersonalizer";
 import Login11 from "./screens/Login11";
 import Login2 from "./screens/Login2";
+import MainPage from "./screens/MainPage";
+import Modal1 from "./components/Modal1";
+import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
+import Search from "./screens/Search";
 import ForgotPassword from "./screens/ForgotPassword";
 import Login3 from "./screens/Login3";
 import InterestsSetup from "./screens/InterestsSetup";
 import BookmarkedLikedArticles from "./screens/BookmarkedLikedArticles";
-import InterestManager from "./screens/InterestManager";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -145,8 +145,13 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="ViewFullPageButtonFromMa111"
-              component={ViewFullPageButtonFromMa11}
+              name="InterestManager"
+              component={InterestManager}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="ViewFullPageButtonFromMa1111"
+              component={ViewFullPageButtonFromMa111}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -155,13 +160,13 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Search"
-              component={Search}
+              name="Login11"
+              component={Login11}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="YourInfocastPageFromMain"
-              component={YourInfocastPageFromMain}
+              name="Login2"
+              component={Login2}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -175,13 +180,13 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Login11"
-              component={Login11}
+              name="YourInfocastPageFromMain"
+              component={YourInfocastPageFromMain}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Login2"
-              component={Login2}
+              name="Search"
+              component={Search}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -202,11 +207,6 @@ const App = () => {
             <Stack.Screen
               name="BookmarkedLikedArticles"
               component={BookmarkedLikedArticles}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InterestManager"
-              component={InterestManager}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

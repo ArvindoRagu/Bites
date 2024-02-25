@@ -43,8 +43,8 @@ export const Color = {
   colorGainsboro_200: "rgba(217, 217, 217, 0)",
   colorDimgray: "#555356",
   colorDarkgray: "#a3a3a3",
-  color: "#060047",
   colorMediumslateblue: "#835af6",
+  color: "#060047",
 };
 /* Paddings */
 export const Padding = {

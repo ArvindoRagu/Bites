@@ -23,7 +23,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>Entertainment</Text>
         </Pressable>
@@ -37,7 +37,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>Finance</Text>
         </Pressable>
@@ -51,7 +51,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>{`Science & Tech`}</Text>
         </Pressable>
@@ -65,7 +65,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>{`Art & Literature`}</Text>
         </Pressable>
@@ -79,7 +79,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>Politics</Text>
         </Pressable>
@@ -93,7 +93,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>Lifestyle</Text>
         </Pressable>
@@ -107,7 +107,7 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
         >
           <Text style={styles.entertainment}>Other</Text>
         </Pressable>
