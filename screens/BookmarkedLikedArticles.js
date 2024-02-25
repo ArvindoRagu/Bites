@@ -371,8 +371,8 @@ const styles = StyleSheet.create({
     top: 270,
     width: 345,
     height: 52,
-    fontFamily: FontFamily.text,
-    fontSize: FontSize.text_size,
+    fontFamily: FontFamily.rubikRegular,
+    fontSize: FontSize.size_mini,
   },
   screenshot20240222At601: {
     top: 283,

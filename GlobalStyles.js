@@ -5,7 +5,7 @@ export const FontFamily = {
   paragraphFontSizeSmRegular: "Inter-Regular",
   title: "Rubik-Medium",
   rubikLight: "Rubik-Light",
-  text: "Rubik-Regular",
+  rubikRegular: "Rubik-Regular",
   interSemiBold: "Inter-SemiBold",
   interMedium: "Inter-Medium",
   robotoMedium: "Roboto-Medium",
@@ -14,7 +14,7 @@ export const FontFamily = {
 export const FontSize = {
   size_11xl: 30,
   size_xl: 20,
-  text_size: 15,
+  size_mini: 15,
   size_xs: 12,
   size_13xl: 32,
   size_base: 16,
@@ -25,9 +25,9 @@ export const FontSize = {
   size_mid: 17,
   size_16xl: 35,
   size_3xs: 10,
+  size_2xs: 11,
   size_17xl: 36,
   size_5xl: 24,
-  size_2xs: 11,
 };
 /* Colors */
 export const Color = {

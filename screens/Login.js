@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   iHaveAnAccount: {
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     width: 182,
     lineHeight: 20,
     textAlign: "center",

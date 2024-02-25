@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, StyleSheet, Text, Pressable } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontSize, FontFamily } from "../GlobalStyles";
@@ -8,8 +8,7 @@ const WhatsNextModal = ({ onClose }) => {
   const navigation = useNavigation();
 
   return (
-    <View style={[styles.whatsNextModal, styles.whatsNextModalLayout]}>
-      <View style={styles.whatsNextModalChild} />
+    <View style={styles.whatsNextModal}>
       <Text
         style={[styles.whatsNextRohan, styles.viewProfile1FlexBox]}
       >{`What’s next, 
@@ -24,7 +23,7 @@ Rohan?`}</Text>
       </Pressable>
       <Text style={[styles.rkalahasty, styles.rkalahastyTypo]}>rkalahasty</Text>
       <Image
-        style={[styles.screenshot20240222At546, styles.whatsNextModalLayout]}
+        style={styles.screenshot20240222At546}
         contentFit="cover"
         source={require("../assets/screenshot-20240222-at-546-1.png")}
       />
@@ -59,10 +58,6 @@ Rohan?`}</Text>
 };
 
 const styles = StyleSheet.create({
-  whatsNextModalLayout: {
-    maxHeight: "100%",
-    maxWidth: "100%",
-  },
   viewProfile1FlexBox: {
     textAlign: "left",
     color: Color.colorGray,
@@ -102,17 +97,8 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.title,
     fontWeight: "500",
   },
-  whatsNextModalChild: {
-    height: "154.93%",
-    width: "115.58%",
-    top: "-26.85%",
-    right: "7.93%",
-    bottom: "-28.08%",
-    left: "-23.51%",
-    backgroundColor: Color.colorWhite,
-    position: "absolute",
-  },
   whatsNextRohan: {
+    height: "9.36%",
     top: "14.41%",
     fontSize: FontSize.size_13xl,
     letterSpacing: -0.6,
@@ -121,7 +107,6 @@ const styles = StyleSheet.create({
     color: Color.colorGray,
     left: "11.9%",
     width: "53.54%",
-    height: "6.65%",
     position: "absolute",
   },
   viewProfile1: {
@@ -136,11 +121,11 @@ const styles = StyleSheet.create({
     top: "32.88%",
   },
   rkalahasty: {
+    height: "6.65%",
     top: "28.94%",
     left: "35.13%",
     position: "absolute",
     width: "53.54%",
-    height: "6.65%",
     letterSpacing: -0.4,
     fontSize: FontSize.size_xl,
   },
@@ -153,6 +138,8 @@ const styles = StyleSheet.create({
     left: "8.22%",
     overflow: "hidden",
     position: "absolute",
+    maxHeight: "100%",
+    maxWidth: "100%",
   },
   myInterests1: {
     height: "5.05%",
@@ -199,6 +186,8 @@ const styles = StyleSheet.create({
   whatsNextModal: {
     width: 353,
     height: 812,
+    maxHeight: "100%",
+    maxWidth: "100%",
   },
 });
 

@@ -41,20 +41,15 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa1 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
 import Line4 from "./components/Line4";
 import Line41 from "./components/Line41";
-import Image1 from "./components/Image1";
-import GroupComponent3 from "./components/GroupComponent3";
-import GroupComponent4 from "./components/GroupComponent4";
 import RectangleScreen from "./components/RectangleScreen";
-import HongKongInforms from "./components/HongKongInforms";
 import RectangleScreen1 from "./components/RectangleScreen1";
-import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
-import Image6 from "./screens/Image6";
+import Image6 from "./components/Image6";
 import ShulgaTashCave2 from "./screens/ShulgaTashCave2";
 import ShulgaTashCave3 from "./screens/ShulgaTashCave3";
 import LeftSide from "./screens/LeftSide";
@@ -62,10 +57,16 @@ import Password from "./components/Password";
 import B1 from "./components/B1";
 import Login1 from "./screens/Login1";
 import OtherInterests from "./screens/OtherInterests";
+import Image1 from "./components/Image1";
+import GroupComponent3 from "./components/GroupComponent3";
+import HongKongInforms from "./components/HongKongInforms";
+import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
+import Search from "./screens/Search";
+import GroupComponent4 from "./components/GroupComponent4";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
 import MainPage from "./screens/MainPage";
 import Modal1 from "./components/Modal1";
-import ViewFullPageButtonFromMa from "./screens/ViewFullPageButtonFromMa";
+import ViewFullPageButtonFromMa1 from "./screens/ViewFullPageButtonFromMa";
 import InterestPersonalizer from "./screens/InterestPersonalizer";
 import WhatsNextModal from "./components/WhatsNextModal";
 import Login11 from "./screens/Login11";
@@ -75,7 +76,6 @@ import Login3 from "./screens/Login3";
 import InterestsSetup from "./screens/InterestsSetup";
 import BookmarkedLikedArticles from "./screens/BookmarkedLikedArticles";
 import InterestManager from "./screens/InterestManager";
-import Search from "./screens/Search";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -145,6 +145,11 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
+              name="Search"
+              component={Search}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
               name="YourInfocastPageFromMain"
               component={YourInfocastPageFromMain}
               options={{ headerShown: false }}
@@ -160,8 +165,8 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="ViewFullPageButtonFromMa1"
-              component={ViewFullPageButtonFromMa}
+              name="ViewFullPageButtonFromMa11"
+              component={ViewFullPageButtonFromMa1}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -202,11 +207,6 @@ const App = () => {
             <Stack.Screen
               name="InterestManager"
               component={InterestManager}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Search"
-              component={Search}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

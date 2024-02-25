@@ -223,8 +223,8 @@ const styles = StyleSheet.create({
   financeTypo: {
     textAlign: "center",
     lineHeight: 20,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
+    fontSize: FontSize.size_mini,
+    fontFamily: FontFamily.rubikRegular,
   },
   top30SpaceBlock: {
     marginLeft: 10,
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
   },
   logOut: {
     left: 25,
@@ -276,8 +276,8 @@ const styles = StyleSheet.create({
     width: 286,
     opacity: 0.4,
     lineHeight: 20,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
+    fontSize: FontSize.size_mini,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -378,7 +378,7 @@ const styles = StyleSheet.create({
     left: "45.28%",
     fontSize: FontSize.size_smi,
     opacity: 0.65,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
   },
   rating: {
     height: "8.21%",

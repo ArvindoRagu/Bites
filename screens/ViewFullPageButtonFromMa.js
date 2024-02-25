@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Text, StyleSheet, Pressable, View } from "react-native";
+import { Text, StyleSheet, Pressable, View, ScrollView } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa = () => {
+const ViewFullPageButtonFromMa1 = () => {
   const navigation = useNavigation();
 
   return (
@@ -67,10 +67,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         />
       </Pressable>
       <Text style={[styles.personalize, styles.popularClr]}>Personalize</Text>
-      <Pressable
-        style={[styles.container, styles.containerPosition]}
-        onPress={() => {}}
-      >
+      <Pressable style={styles.container} onPress={() => {}}>
         <Image
           style={[styles.icon, styles.iconLayout]}
           contentFit="cover"
@@ -126,7 +123,13 @@ the commodity carousel...
           source={require("../assets/image-121.png")}
         />
       </View>
-      <View style={[styles.groupParent, styles.containerPosition]}>
+      <ScrollView
+        style={styles.groupParent}
+        horizontal={true}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={true}
+        contentContainerStyle={styles.frameScrollViewContent}
+      >
         <View style={styles.component1Parent}>
           <View style={styles.component1}>
             <View style={styles.meetRddtPopularSocialPlatParent}>
@@ -183,7 +186,7 @@ Time to read: 15 mins
           <Image
             style={[styles.componentItem, styles.anonymousPosition]}
             contentFit="cover"
-            source={require("../assets/ellipse-68.png")}
+            source={require("../assets/ellipse-69.png")}
           />
           <Text style={[styles.anonymous, styles.anonymousPosition]}>
             Anonymous
@@ -192,7 +195,7 @@ Time to read: 15 mins
             <Image
               style={[styles.icon3, styles.iconLayout]}
               contentFit="cover"
-              source={require("../assets/bookmark-light.png")}
+              source={require("../assets/bookmark-light3.png")}
             />
           </Pressable>
           <Image
@@ -213,13 +216,18 @@ Time to read: 15 mins
             />
           </View>
         </View>
-      </View>
+      </ScrollView>
       <View style={styles.lineView} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  frameScrollViewContent: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "center",
+  },
   minTypo1: {
     fontFamily: FontFamily.title,
     fontWeight: "500",
@@ -267,10 +275,6 @@ const styles = StyleSheet.create({
   iconLayout: {
     height: "100%",
     width: "100%",
-  },
-  containerPosition: {
-    left: 26,
-    position: "absolute",
   },
   minPosition: {
     left: "31.88%",
@@ -320,11 +324,11 @@ const styles = StyleSheet.create({
   askAQuestion: {
     top: 16,
     left: 16,
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -352,7 +356,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     left: 33,
@@ -383,7 +387,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   popular: {
@@ -391,7 +395,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   news: {
@@ -399,7 +403,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   rectangleIcon: {
@@ -437,13 +441,15 @@ const styles = StyleSheet.create({
     top: 72,
     left: 268,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   container: {
+    left: 26,
     top: 439,
     width: 98,
     height: 23,
+    position: "absolute",
   },
   sources: {
     top: 442,
@@ -451,7 +457,7 @@ const styles = StyleSheet.create({
     width: 55,
     height: 12,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   bookmarkLight: {
@@ -495,7 +501,7 @@ const styles = StyleSheet.create({
     top: "81.19%",
     left: "81.74%",
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   icon3: {
@@ -668,17 +674,16 @@ const styles = StyleSheet.create({
   nearly30WomenAreSuingOlapParent: {
     width: 364,
     height: 293,
-    marginTop: 15,
+    marginLeft: 15,
   },
   howWasTodays: {
     textAlign: "center",
     top: "0%",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     color: Color.colorGray,
     letterSpacing: -0.7,
     fontSize: FontSize.size_17xl,
     width: "100%",
-    left: "0%",
   },
   image6Icon: {
     height: "27.56%",
@@ -699,15 +704,18 @@ const styles = StyleSheet.create({
   groupWrapper: {
     width: 322,
     height: 156,
-    marginTop: 15,
+    marginLeft: 15,
   },
   groupParent: {
     top: 610,
-    width: 383,
-    height: 198,
+    left: 12,
+    height: 202,
+    maxHeight: 202,
+    position: "absolute",
+    width: "100%",
   },
   lineView: {
-    top: 602,
+    top: 599,
     left: 8,
     borderTopWidth: 1,
     width: 394,
@@ -726,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa;
+export default ViewFullPageButtonFromMa1;
