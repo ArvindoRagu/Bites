@@ -1,14 +1,14 @@
 import * as React from "react";
-import { StyleSheet, View, Text, Pressable } from "react-native";
+import { View, StyleSheet, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const WhatsNextModal = () => {
+const WhatsNextModal = ({ onClose }) => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.whatsNextModal}>
+    <View style={[styles.whatsNextModal, styles.whatsNextModalLayout]}>
       <View style={styles.whatsNextModalChild} />
       <Text
         style={[styles.whatsNextRohan, styles.viewProfile1FlexBox]}
@@ -24,7 +24,7 @@ Rohan?`}</Text>
       </Pressable>
       <Text style={[styles.rkalahasty, styles.rkalahastyTypo]}>rkalahasty</Text>
       <Image
-        style={styles.screenshot20240222At546}
+        style={[styles.screenshot20240222At546, styles.whatsNextModalLayout]}
         contentFit="cover"
         source={require("../assets/screenshot-20240222-at-546-1.png")}
       />
@@ -58,6 +58,10 @@ Rohan?`}</Text>
 };
 
 const styles = StyleSheet.create({
+  whatsNextModalLayout: {
+    maxHeight: "100%",
+    maxWidth: "100%",
+  },
   viewProfile1FlexBox: {
     textAlign: "left",
     color: Color.colorGray,
@@ -143,9 +147,7 @@ const styles = StyleSheet.create({
     right: "64.59%",
     bottom: "62.56%",
     left: "8.22%",
-    maxWidth: "100%",
     overflow: "hidden",
-    maxHeight: "100%",
     position: "absolute",
   },
   myInterests1: {

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, View, TextInput, Pressable, Text } from "react-native";
+import { TextInput, StyleSheet, View, Pressable, Text } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
@@ -9,15 +9,15 @@ const Login2 = () => {
 
   return (
     <View style={styles.login4}>
-      <View style={[styles.password, styles.passwordPosition2]}>
-        <View style={[styles.passwordChild, styles.passwordLayout]} />
+      <TextInput
+        style={[styles.password, styles.passwordTypo1]}
+        placeholder="Username"
+        placeholderTextColor="#242424"
+      />
+      <View style={styles.rectangleParent}>
+        <View style={[styles.frameChild, styles.password1Layout]} />
         <TextInput
-          style={[styles.password1, styles.passwordPosition1]}
-          placeholder="Username"
-          placeholderTextColor="#242424"
-        />
-        <TextInput
-          style={[styles.password2, styles.passwordPosition1]}
+          style={[styles.password1, styles.password1Layout]}
           placeholder="Password"
           placeholderTextColor="#242424"
         />
@@ -31,11 +31,11 @@ const Login2 = () => {
         </Text>
       </Pressable>
       <Pressable
-        style={[styles.password3, styles.passwordPosition]}
+        style={[styles.password2, styles.passwordPosition]}
         onPress={() => navigation.navigate("MainPage")}
       >
-        <View style={[styles.passwordItem, styles.passwordPosition]} />
-        <Text style={[styles.password4, styles.passwordTypo]}>Continue</Text>
+        <View style={[styles.passwordChild, styles.passwordPosition]} />
+        <Text style={[styles.password3, styles.passwordTypo]}>Continue</Text>
       </Pressable>
       <Image
         style={styles.vectorIcon}
@@ -51,21 +51,13 @@ const Login2 = () => {
 };
 
 const styles = StyleSheet.create({
-  passwordPosition2: {
-    left: "50%",
-    top: "50%",
-    position: "absolute",
+  passwordTypo1: {
+    fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
   },
-  passwordLayout: {
+  password1Layout: {
     height: 68,
     width: 327,
-  },
-  passwordPosition1: {
-    fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.rubikRegular,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
   },
   passwordTypo: {
     textAlign: "center",
@@ -79,37 +71,33 @@ const styles = StyleSheet.create({
     top: "50%",
     position: "absolute",
   },
-  passwordChild: {
-    marginTop: -83,
-    marginLeft: -162.5,
-    borderStyle: "solid",
-    borderColor: Color.colorBlack,
-    borderWidth: 1,
-    borderRadius: Border.br_base,
+  password: {
+    marginTop: -131.1,
+    marginLeft: -146.5,
+    opacity: 0.4,
     left: "50%",
     top: "50%",
     position: "absolute",
   },
+  frameChild: {
+    borderStyle: "solid",
+    borderColor: Color.colorBlack,
+    borderWidth: 1,
+    borderRadius: Border.br_base,
+  },
   password1: {
-    marginTop: -62.1,
-    marginLeft: -146.5,
-    opacity: 0.4,
+    marginTop: 30,
+    fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
   },
-  password2: {
-    marginTop: 15,
-    height: 68,
-    width: 327,
-    marginLeft: -164.5,
-  },
-  password: {
-    marginTop: -152,
-    width: 329,
-    height: 166,
-    marginLeft: -164.5,
+  rectangleParent: {
+    top: 254,
+    left: 23,
+    position: "absolute",
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
   },
   iForgotMyContainer: {
@@ -117,13 +105,13 @@ const styles = StyleSheet.create({
     top: 538,
     position: "absolute",
   },
-  passwordItem: {
+  passwordChild: {
     marginTop: -26,
     marginLeft: -163.5,
     backgroundColor: Color.colorMediumpurple,
     borderRadius: Border.br_base,
   },
-  password4: {
+  password3: {
     marginTop: -10,
     marginLeft: -147.5,
     fontWeight: "800",
@@ -135,8 +123,9 @@ const styles = StyleSheet.create({
     top: "50%",
     position: "absolute",
   },
-  password3: {
+  password2: {
     marginTop: 50,
+    marginLeft: -164.5,
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 0,
@@ -145,7 +134,6 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
     shadowOpacity: 1,
-    marginLeft: -164.5,
   },
   vectorIcon: {
     height: "1.72%",

@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
-const Search11 = () => {
+const Frame = () => {
   const navigation = useNavigation();
 
   return (
@@ -147,4 +147,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search11;
+export default Frame;
