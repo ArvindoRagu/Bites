@@ -94,6 +94,20 @@ const InterestManager = () => {
           source={require("../assets/expand-right.png")}
         />
       </View>
+      <View style={[styles.rectangleParent2, styles.groupParentLayout]}>
+        <View style={styles.instanceChild} />
+        <Pressable
+          style={styles.password}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+        >
+          <Text style={styles.entertainment}>Entertainment</Text>
+        </Pressable>
+        <Image
+          style={[styles.expandRightIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/expand-right.png")}
+        />
+      </View>
     </View>
   );
 };
@@ -167,7 +181,7 @@ const styles = StyleSheet.create({
     width: "87.46%",
     fontSize: FontSize.size_xl,
     lineHeight: 20,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     color: Color.colorGray,
     display: "flex",
     alignItems: "center",
@@ -201,6 +215,9 @@ const styles = StyleSheet.create({
   },
   rectangleParent1: {
     top: 488,
+  },
+  rectangleParent2: {
+    top: 559,
   },
   interestManager: {
     borderRadius: Border.br_31xl,

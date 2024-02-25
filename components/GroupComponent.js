@@ -5,7 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 import Image2 from "./Image2";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
-const GroupComponent = () => {
+const GroupComponent4 = () => {
   const navigation = useNavigation();
 
   return (
@@ -48,9 +48,8 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   attCustomersHit: {
-    height: "64.08%",
     width: "64.39%",
-    top: "7.77%",
+    top: "6.8%",
     left: "35.61%",
   },
   hAgo: {
@@ -63,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GroupComponent;
+export default GroupComponent4;

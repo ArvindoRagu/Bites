@@ -11,15 +11,14 @@ const WhatsNextModal = ({ onClose }) => {
     <View style={[styles.whatsNextModal, styles.whatsNextModalLayout]}>
       <View style={styles.whatsNextModalChild} />
       <Text
-        style={[styles.whatsNextRohan, styles.interestsFlexBox]}
+        style={[styles.whatsNextRohan, styles.viewProfile1FlexBox]}
       >{`What’s next, 
 Rohan?`}</Text>
-      <Text style={[styles.interests, styles.interestsFlexBox]}>Interests</Text>
       <Pressable
         style={[styles.viewProfile, styles.rkalahastyPosition]}
         onPress={() => navigation.navigate("MainPage")}
       >
-        <Text style={[styles.viewProfile1, styles.interestsFlexBox]}>
+        <Text style={[styles.viewProfile1, styles.viewProfile1FlexBox]}>
           View profile
         </Text>
       </Pressable>
@@ -30,7 +29,7 @@ Rohan?`}</Text>
         source={require("../assets/screenshot-20240222-at-546-1.png")}
       />
       <Pressable
-        style={styles.myInterests}
+        style={[styles.myInterests, styles.helpPosition]}
         onPress={() => navigation.navigate("InterestManager")}
       >
         <Text style={[styles.myInterests1, styles.rkalahastyTypo]}>
@@ -38,7 +37,7 @@ Rohan?`}</Text>
         </Text>
       </Pressable>
       <Pressable
-        style={styles.bookmarks}
+        style={[styles.bookmarks, styles.helpPosition]}
         onPress={() => navigation.navigate("BookmarkedLikedArticles")}
       >
         <Text style={[styles.bookmarks1, styles.helpTypo]}>Bookmarks</Text>
@@ -50,7 +49,7 @@ Rohan?`}</Text>
       </Text>
       <Text style={[styles.help, styles.helpTypo]}>Help</Text>
       <Pressable
-        style={styles.logOut}
+        style={[styles.logOut, styles.helpPosition]}
         onPress={() => navigation.navigate("Login")}
       >
         <Text style={styles.logOut1Typo}>Log out</Text>
@@ -64,12 +63,12 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
     maxWidth: "100%",
   },
-  interestsFlexBox: {
+  viewProfile1FlexBox: {
     textAlign: "left",
     color: Color.colorGray,
   },
   rkalahastyPosition: {
-    left: "46.46%",
+    left: "35.13%",
     position: "absolute",
   },
   rkalahastyTypo: {
@@ -79,6 +78,10 @@ const styles = StyleSheet.create({
     color: Color.colorGray,
     fontFamily: FontFamily.title,
     fontWeight: "500",
+  },
+  helpPosition: {
+    left: "11.9%",
+    position: "absolute",
   },
   helpTypo: {
     width: "45.33%",
@@ -100,12 +103,12 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   whatsNextModalChild: {
-    height: "100%",
-    width: "92.07%",
-    top: "0%",
+    height: "154.93%",
+    width: "115.58%",
+    top: "-26.85%",
     right: "7.93%",
-    bottom: "0%",
-    left: "0%",
+    bottom: "-28.08%",
+    left: "-23.51%",
     backgroundColor: Color.colorWhite,
     position: "absolute",
   },
@@ -116,18 +119,9 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.title,
     fontWeight: "500",
     color: Color.colorGray,
-    position: "absolute",
-    left: "23.23%",
+    left: "11.9%",
     width: "53.54%",
     height: "6.65%",
-  },
-  interests: {
-    top: "27.96%",
-    left: "20.11%",
-    fontSize: FontSize.title_size,
-    fontFamily: FontFamily.title,
-    fontWeight: "500",
-    color: Color.colorGray,
     position: "absolute",
   },
   viewProfile1: {
@@ -143,18 +137,20 @@ const styles = StyleSheet.create({
   },
   rkalahasty: {
     top: "28.94%",
-    left: "46.46%",
+    left: "35.13%",
     position: "absolute",
     width: "53.54%",
     height: "6.65%",
+    letterSpacing: -0.4,
+    fontSize: FontSize.size_xl,
   },
   screenshot20240222At546: {
     height: "11.33%",
     width: "27.2%",
     top: "26.11%",
-    right: "53.26%",
+    right: "64.59%",
     bottom: "62.56%",
-    left: "19.55%",
+    left: "8.22%",
     overflow: "hidden",
     position: "absolute",
   },
@@ -164,8 +160,6 @@ const styles = StyleSheet.create({
   },
   myInterests: {
     top: "39.78%",
-    left: "23.23%",
-    position: "absolute",
   },
   bookmarks1: {
     height: "4.56%",
@@ -173,38 +167,34 @@ const styles = StyleSheet.create({
   },
   bookmarks: {
     top: "45.94%",
-    left: "23.23%",
-    position: "absolute",
   },
   history: {
     top: "52.34%",
     height: "4.56%",
     width: "45.33%",
-    left: "23.23%",
+    left: "11.9%",
     position: "absolute",
   },
   privacy: {
     height: "4.31%",
     top: "58.37%",
-    left: "23.23%",
+    left: "11.9%",
     position: "absolute",
   },
   notifications: {
     top: "65.02%",
-    left: "23.23%",
+    left: "11.9%",
     position: "absolute",
   },
   help: {
     top: "70.94%",
     height: "4.56%",
     width: "45.33%",
-    left: "23.23%",
+    left: "11.9%",
     position: "absolute",
   },
   logOut: {
     top: "76.97%",
-    left: "23.23%",
-    position: "absolute",
   },
   whatsNextModal: {
     width: 353,

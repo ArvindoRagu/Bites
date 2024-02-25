@@ -38,18 +38,31 @@ import MeetRDDTPopular1 from "./components/MeetRDDTPopular1";
 import SourceGradeUnbiased1 from "./components/SourceGradeUnbiased1";
 import ShulgaTashCave2 from "./screens/ShulgaTashCave2";
 import ShulgaTashCave3 from "./screens/ShulgaTashCave3";
-import LeftSide from "./screens/LeftSide";
 import Password from "./components/Password";
 import Login1 from "./screens/Login1";
 import OtherInterests from "./screens/OtherInterests";
-import GroupComponent from "./components/GroupComponent";
 import GroupInstance from "./components/GroupInstance";
 import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
+import GroupComponent1 from "./components/GroupComponent1";
+import GroupComponent2 from "./components/GroupComponent2";
+import Line1 from "./components/Line1";
+import Line2 from "./components/Line2";
+import Line3 from "./components/Line3";
+import Line4 from "./components/Line4";
+import Line41 from "./components/Line41";
+import LeftSide from "./screens/LeftSide";
+import B1 from "./components/B1";
+import GroupComponent3 from "./components/GroupComponent3";
 import Image1 from "./components/Image1";
+import Search from "./screens/Search";
+import GroupComponent4 from "./components/GroupComponent";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
 import MainPage from "./screens/MainPage";
+import Modal1 from "./components/Modal1";
+import ViewFullPageButtonFromMa from "./screens/ViewFullPageButtonFromMa";
+import InterestPersonalizer from "./screens/InterestPersonalizer";
 import WhatsNextModal from "./components/WhatsNextModal";
 import Login11 from "./screens/Login11";
 import Login2 from "./screens/Login2";
@@ -57,18 +70,7 @@ import ForgotPassword from "./screens/ForgotPassword";
 import Login3 from "./screens/Login3";
 import InterestsSetup from "./screens/InterestsSetup";
 import BookmarkedLikedArticles from "./screens/BookmarkedLikedArticles";
-import Modal1 from "./components/Modal1";
-import GroupComponent1 from "./components/GroupComponent1";
-import GroupComponent2 from "./components/GroupComponent2";
-import Line1 from "./components/Line1";
-import Line2 from "./components/Line2";
-import Line3 from "./components/Line3";
-import Line4 from "./components/Line4";
-import Line41 from "./components/Line4";
 import InterestManager from "./screens/InterestManager";
-import ViewFullPageButtonFromMa from "./screens/ViewFullPageButtonFromMa";
-import InterestPersonalizer from "./screens/InterestPersonalizer";
-import Search from "./screens/Search";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -123,11 +125,6 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="LeftSide"
-              component={LeftSide}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
               name="Login1"
               component={Login1}
               options={{ headerShown: false }}
@@ -138,6 +135,16 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
+              name="LeftSide"
+              component={LeftSide}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Search"
+              component={Search}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
               name="YourInfocastPageFromMain"
               component={YourInfocastPageFromMain}
               options={{ headerShown: false }}
@@ -145,6 +152,21 @@ const App = () => {
             <Stack.Screen
               name="MainPage"
               component={MainPage}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Modal1"
+              component={Modal1}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="ViewFullPageButtonFromMa"
+              component={ViewFullPageButtonFromMa}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="InterestPersonalizer"
+              component={InterestPersonalizer}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -178,28 +200,8 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Modal1"
-              component={Modal1}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
               name="InterestManager"
               component={InterestManager}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="ViewFullPageButtonFromMa"
-              component={ViewFullPageButtonFromMa}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InterestPersonalizer"
-              component={InterestPersonalizer}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Search"
-              component={Search}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

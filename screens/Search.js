@@ -1,6 +1,5 @@
 import * as React from "react";
 import { TextInput, StyleSheet, Text, View } from "react-native";
-import { Image } from "expo-image";
 import { FontFamily, FontSize, Color, Border } from "../GlobalStyles";
 
 const Search = () => {
@@ -35,17 +34,6 @@ const Search = () => {
       <Text style={[styles.bestNewLaptop3, styles.bestTypo]}>
         Best New Laptop 2024
       </Text>
-      <Text style={styles.text}>{`1,239 `}</Text>
-      <Image
-        style={[styles.viewLightIcon, styles.lightIconLayout]}
-        contentFit="cover"
-        source={require("../assets/view-light.png")}
-      />
-      <Image
-        style={[styles.alarmclockLightIcon, styles.lightIconLayout]}
-        contentFit="cover"
-        source={require("../assets/alarmclock-light.png")}
-      />
     </View>
   );
 };
@@ -87,7 +75,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   bestTypo: {
@@ -98,12 +86,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.text,
-    position: "absolute",
-  },
-  lightIconLayout: {
-    height: 24,
-    width: 24,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   searchBar: {
@@ -115,18 +98,18 @@ const styles = StyleSheet.create({
   },
   askAnything: {
     top: 184,
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
     textAlign: "left",
     color: Color.colorGray,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: 39,
     position: "absolute",
   },
   bites: {
-    top: 116,
+    top: 106,
     left: 146,
   },
   discover: {
@@ -136,10 +119,10 @@ const styles = StyleSheet.create({
   ex: {
     top: 229,
     fontSize: FontSize.size_base,
-    color: Color.colorDarkgray,
     letterSpacing: -0.3,
+    color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: 39,
     position: "absolute",
   },
@@ -182,25 +165,6 @@ const styles = StyleSheet.create({
   },
   bestNewLaptop3: {
     left: 173,
-  },
-  text: {
-    top: 422,
-    left: 175,
-    fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    letterSpacing: -0.3,
-    fontFamily: FontFamily.title,
-    fontWeight: "500",
-    textAlign: "left",
-    color: Color.colorGray,
-    position: "absolute",
-  },
-  viewLightIcon: {
-    top: 419,
-    left: 147,
-  },
-  alarmclockLightIcon: {
-    top: 417,
-    left: 221,
   },
   search: {
     borderRadius: Border.br_31xl,

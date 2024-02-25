@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: 327,
   },
   passwordPosition: {
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     fontSize: FontSize.size_xl,
     left: "50%",
     top: "50%",

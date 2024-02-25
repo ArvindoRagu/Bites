@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Pressable, Text, StyleSheet, View } from "react-native";
-import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
@@ -28,11 +27,6 @@ const Login = () => {
         <Text style={[styles.kickstartYourDay, styles.iHaveAnAccountTypo]}>
           Kickstart your day.
         </Text>
-        <Image
-          style={styles.frameChild}
-          contentFit="cover"
-          source={require("../assets/ellipse-104.png")}
-        />
       </View>
     </View>
   );
@@ -54,7 +48,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   iHaveAnAccount: {
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     width: 182,
     lineHeight: 20,
     textAlign: "center",
@@ -99,18 +93,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
   },
   kickstartYourDay: {
-    top: 313,
-    left: 2,
+    top: 254,
+    left: 0,
     fontSize: FontSize.size_11xl,
     lineHeight: 30,
     width: 319,
-    position: "absolute",
-  },
-  frameChild: {
-    top: 0,
-    left: 59,
-    width: 200,
-    height: 200,
     position: "absolute",
   },
   frame: {

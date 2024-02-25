@@ -9,22 +9,14 @@ import {
 } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
-import Modal1 from "../components/Modal1";
 import WhatsNextModal from "../components/WhatsNextModal";
+import Modal1 from "../components/Modal1";
 import { Color, Border, FontSize, FontFamily, Padding } from "../GlobalStyles";
 
 const MainPage = () => {
   const navigation = useNavigation();
-  const [top30Visible, setTop30Visible] = useState(false);
   const [settingsIconVisible, setSettingsIconVisible] = useState(false);
-
-  const openTop30 = useCallback(() => {
-    setTop30Visible(true);
-  }, []);
-
-  const closeTop30 = useCallback(() => {
-    setTop30Visible(false);
-  }, []);
+  const [top30Visible, setTop30Visible] = useState(false);
 
   const openSettingsIcon = useCallback(() => {
     setSettingsIconVisible(true);
@@ -32,6 +24,14 @@ const MainPage = () => {
 
   const closeSettingsIcon = useCallback(() => {
     setSettingsIconVisible(false);
+  }, []);
+
+  const openTop30 = useCallback(() => {
+    setTop30Visible(true);
+  }, []);
+
+  const closeTop30 = useCallback(() => {
+    setTop30Visible(false);
   }, []);
 
   return (
@@ -80,53 +80,6 @@ const MainPage = () => {
           Your Interests
         </Text>
         <Text style={[styles.forYou, styles.forYouTypo]}>For You</Text>
-        <ScrollView
-          style={[styles.categories, styles.categoriesPosition]}
-          horizontal={true}
-          showsVerticalScrollIndicator={false}
-          showsHorizontalScrollIndicator={true}
-          contentContainerStyle={styles.categoriesScrollViewContent}
-        >
-          <Pressable
-            style={[styles.top30, styles.top30SpaceBlock]}
-            onPress={openTop30}
-          >
-            <View style={styles.top301}>
-              <View style={[styles.top30Child, styles.childPosition]} />
-              <Image
-                style={[
-                  styles.screenshot20240224At505,
-                  styles.screenshot20240224Position,
-                ]}
-                contentFit="cover"
-                source={require("../assets/screenshot-20240224-at-505-1.png")}
-              />
-              <Image
-                style={[
-                  styles.screenshot20240224At512,
-                  styles.screenshot20240224Position1,
-                ]}
-                contentFit="cover"
-                source={require("../assets/screenshot-20240224-at-512-1.png")}
-              />
-            </View>
-            <Text style={[styles.stocks, styles.foodTypo]}>Stocks</Text>
-          </Pressable>
-          <View style={[styles.nature, styles.top30SpaceBlock]}>
-            <View style={styles.top301}>
-              <View style={[styles.natureChild, styles.childPosition]} />
-              <Image
-                style={[
-                  styles.screenshot20240224At514,
-                  styles.screenshot20240224Position,
-                ]}
-                contentFit="cover"
-                source={require("../assets/screenshot-20240224-at-514-1.png")}
-              />
-            </View>
-            <Text style={[styles.food, styles.foodTypo]}>Food</Text>
-          </View>
-        </ScrollView>
         <View style={[styles.salavatYulaev, styles.salavatLayout]}>
           <Image
             style={[styles.salavatYulaev1, styles.childPosition1]}
@@ -137,7 +90,7 @@ const MainPage = () => {
             style={[styles.monumentToSalavat, styles.textClr]}
           >{`Monument to Salavat Yulaev `}</Text>
           <View style={styles.liked}>
-            <View style={[styles.likedChild, styles.childPosition1]} />
+            <View style={[styles.likedChild, styles.top30Border]} />
             <Image
               style={[styles.vectorIcon, styles.iconLayout]}
               contentFit="cover"
@@ -161,18 +114,67 @@ const MainPage = () => {
             source={require("../assets/settings.png")}
           />
         </Pressable>
-        <View style={[styles.gastroParent, styles.categoriesPosition]}>
-          <View style={[styles.gastro, styles.top30SpaceBlock]}>
-            <View style={styles.top301}>
-              <View style={[styles.foodChild, styles.childPosition]} />
+        <View style={styles.categoriesParent}>
+          <ScrollView
+            style={[styles.categories, styles.gastroPosition]}
+            horizontal={true}
+            showsVerticalScrollIndicator={false}
+            showsHorizontalScrollIndicator={true}
+            contentContainerStyle={styles.categoriesScrollViewContent}
+          >
+            <Pressable
+              style={[styles.top30, styles.top30SpaceBlock]}
+              onPress={openTop30}
+            >
+              <View style={styles.top301}>
+                <View style={[styles.top30Child, styles.childPosition]} />
+                <Image
+                  style={[
+                    styles.screenshot20240224At505,
+                    styles.screenshot20240224Position,
+                  ]}
+                  contentFit="cover"
+                  source={require("../assets/screenshot-20240224-at-505-1.png")}
+                />
+                <Image
+                  style={[
+                    styles.screenshot20240224At512,
+                    styles.screenshot20240224Position1,
+                  ]}
+                  contentFit="cover"
+                  source={require("../assets/screenshot-20240224-at-512-1.png")}
+                />
+              </View>
+              <Text style={[styles.stocks, styles.foodTypo]}>Stocks</Text>
+            </Pressable>
+            <View style={[styles.nature, styles.top30SpaceBlock]}>
+              <View style={styles.top301}>
+                <View style={[styles.natureChild, styles.childPosition]} />
+                <Image
+                  style={[
+                    styles.screenshot20240224At514,
+                    styles.screenshot20240224Position,
+                  ]}
+                  contentFit="cover"
+                  source={require("../assets/screenshot-20240224-at-514-1.png")}
+                />
+              </View>
+              <Text style={[styles.food, styles.foodTypo]}>Food</Text>
             </View>
-            <Text style={[styles.gastro1, styles.foodTypo]}>Medicine</Text>
+          </ScrollView>
+          <View style={styles.gastroParent}>
+            <View style={[styles.gastro, styles.top30SpaceBlock]}>
+              <View style={styles.top301}>
+                <View style={[styles.foodChild, styles.childPosition]} />
+              </View>
+              <Text style={[styles.gastro1, styles.foodTypo]}>Medicine</Text>
+            </View>
+            <Image
+              style={styles.groupChild}
+              contentFit="cover"
+              source={require("../assets/screenshot-20240224-at-515-1.png")}
+            />
           </View>
-          <Image
-            style={styles.groupChild}
-            contentFit="cover"
-            source={require("../assets/screenshot-20240224-at-515-1.png")}
-          />
         </View>
         <View style={[styles.salavatYulaev2, styles.salavatLayout]}>
           <Image
@@ -184,7 +186,7 @@ const MainPage = () => {
             style={[styles.monumentToSalavat, styles.textClr]}
           >{`Monument to Salavat Yulaev `}</Text>
           <View style={styles.liked}>
-            <View style={[styles.likedChild, styles.childPosition1]} />
+            <View style={[styles.likedChild, styles.top30Border]} />
             <Image
               style={[styles.vectorIcon, styles.iconLayout]}
               contentFit="cover"
@@ -203,13 +205,6 @@ const MainPage = () => {
         </View>
       </View>
 
-      <Modal animationType="fade" transparent visible={top30Visible}>
-        <View style={styles.top30Overlay}>
-          <Pressable style={styles.top30Bg} onPress={closeTop30} />
-          <Modal1 onClose={closeTop30} />
-        </View>
-      </Modal>
-
       <Modal animationType="fade" transparent visible={settingsIconVisible}>
         <View style={styles.settingsIconOverlay}>
           <Pressable
@@ -217,6 +212,13 @@ const MainPage = () => {
             onPress={closeSettingsIcon}
           />
           <WhatsNextModal onClose={closeSettingsIcon} />
+        </View>
+      </Modal>
+
+      <Modal animationType="fade" transparent visible={top30Visible}>
+        <View style={styles.top30Overlay}>
+          <Pressable style={styles.top30Bg} onPress={closeTop30} />
+          <Modal1 onClose={closeTop30} />
         </View>
       </Modal>
     </>
@@ -254,8 +256,33 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     position: "absolute",
   },
-  categoriesPosition: {
-    top: 229,
+  salavatLayout: {
+    height: 280,
+    width: 212,
+    top: 601,
+    position: "absolute",
+  },
+  childPosition1: {
+    left: "0%",
+    bottom: "0%",
+    right: "0%",
+    top: "0%",
+    height: "100%",
+    position: "absolute",
+    width: "100%",
+  },
+  textClr: {
+    color: Color.colorWhite,
+    textAlign: "left",
+    position: "absolute",
+  },
+  top30Border: {
+    borderWidth: 1,
+    borderStyle: "solid",
+  },
+  gastroPosition: {
+    left: 0,
+    top: 0,
     position: "absolute",
   },
   top30SpaceBlock: {
@@ -295,29 +322,9 @@ const styles = StyleSheet.create({
   foodTypo: {
     marginLeft: 8,
     lineHeight: 20,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
+    fontSize: FontSize.size_mini,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
-  },
-  salavatLayout: {
-    height: 280,
-    width: 212,
-    top: 601,
-    position: "absolute",
-  },
-  childPosition1: {
-    left: "0%",
-    bottom: "0%",
-    right: "0%",
-    top: "0%",
-    height: "100%",
-    position: "absolute",
-    width: "100%",
-  },
-  textClr: {
-    color: Color.colorWhite,
-    textAlign: "left",
-    position: "absolute",
   },
   heyRohan: {
     top: 50,
@@ -332,7 +339,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
   },
   logOut: {
     left: 25,
@@ -352,8 +359,8 @@ const styles = StyleSheet.create({
     width: 286,
     opacity: 0.4,
     lineHeight: 20,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
+    fontSize: FontSize.size_mini,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -381,6 +388,113 @@ const styles = StyleSheet.create({
   forYou: {
     top: 565,
     left: 27,
+  },
+  salavatYulaev1: {
+    borderRadius: Border.br_9xl,
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
+  },
+  monumentToSalavat: {
+    width: "54.25%",
+    top: "65.36%",
+    fontSize: FontSize.size_base,
+    left: "11.32%",
+    fontFamily: FontFamily.title,
+    fontWeight: "500",
+  },
+  likedChild: {
+    borderColor: Color.colorGray_100,
+    left: "0%",
+    bottom: "0%",
+    right: "0%",
+    top: "0%",
+    height: "100%",
+    position: "absolute",
+    width: "100%",
+    backgroundColor: Color.colorWhitesmoke,
+    borderRadius: Border.br_base,
+  },
+  vectorIcon: {
+    height: "50%",
+    width: "56.25%",
+    top: "28.13%",
+    right: "21.88%",
+    bottom: "21.88%",
+    left: "21.88%",
+    position: "absolute",
+  },
+  liked: {
+    height: "11.43%",
+    width: "15.09%",
+    top: "5.71%",
+    right: "7.55%",
+    bottom: "82.86%",
+    left: "77.36%",
+    position: "absolute",
+    overflow: "hidden",
+  },
+  ratingChild: {
+    borderRadius: Border.br_xl,
+    backgroundColor: Color.colorGray_200,
+  },
+  rateIcon: {
+    height: "56.52%",
+    width: "24.53%",
+    top: "21.74%",
+    right: "62.26%",
+    bottom: "21.74%",
+    left: "13.21%",
+    borderRadius: Border.br_12xs_4,
+    position: "absolute",
+  },
+  text: {
+    top: "17.39%",
+    left: "45.28%",
+    fontSize: FontSize.size_smi,
+    opacity: 0.65,
+    fontFamily: FontFamily.rubikRegular,
+  },
+  rating: {
+    height: "8.21%",
+    width: "25%",
+    top: "81.79%",
+    right: "63.68%",
+    bottom: "10%",
+    left: "11.32%",
+    position: "absolute",
+  },
+  salavatYulaev: {
+    left: 27,
+  },
+  settingsIconOverlay: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(113, 113, 113, 0.3)",
+  },
+  settingsIconBg: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    top: 0,
+  },
+  icon: {
+    height: "100%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
+    width: "100%",
+  },
+  settings: {
+    left: "86.13%",
+    top: "7.14%",
+    right: "7.47%",
+    bottom: "89.9%",
+    width: "6.4%",
+    height: "2.96%",
+    position: "absolute",
   },
   top30Overlay: {
     flex: 1,
@@ -440,110 +554,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   categories: {
-    left: 21,
     width: "100%",
-  },
-  salavatYulaev1: {
-    borderRadius: Border.br_9xl,
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-  },
-  monumentToSalavat: {
-    width: "54.25%",
-    top: "65.36%",
-    fontSize: FontSize.size_base,
-    left: "11.32%",
-    fontFamily: FontFamily.title,
-    fontWeight: "500",
-  },
-  likedChild: {
-    borderColor: Color.colorGray_100,
-    borderWidth: 1,
-    borderStyle: "solid",
-    backgroundColor: Color.colorWhitesmoke,
-    borderRadius: Border.br_base,
-  },
-  vectorIcon: {
-    height: "50%",
-    width: "56.25%",
-    top: "28.13%",
-    right: "21.88%",
-    bottom: "21.88%",
-    left: "21.88%",
-    position: "absolute",
-  },
-  liked: {
-    height: "11.43%",
-    width: "15.09%",
-    top: "5.71%",
-    right: "7.55%",
-    bottom: "82.86%",
-    left: "77.36%",
-    position: "absolute",
-    overflow: "hidden",
-  },
-  ratingChild: {
-    borderRadius: Border.br_xl,
-    backgroundColor: Color.colorGray_200,
-  },
-  rateIcon: {
-    height: "56.52%",
-    width: "24.53%",
-    top: "21.74%",
-    right: "62.26%",
-    bottom: "21.74%",
-    left: "13.21%",
-    borderRadius: Border.br_12xs_4,
-    position: "absolute",
-  },
-  text: {
-    top: "17.39%",
-    left: "45.28%",
-    fontSize: FontSize.size_smi,
-    opacity: 0.65,
-    fontFamily: FontFamily.text,
-  },
-  rating: {
-    height: "8.21%",
-    width: "25%",
-    top: "81.79%",
-    right: "63.68%",
-    bottom: "10%",
-    left: "11.32%",
-    position: "absolute",
-  },
-  salavatYulaev: {
-    left: 27,
-  },
-  settingsIconOverlay: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(113, 113, 113, 0.3)",
-  },
-  settingsIconBg: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    left: 0,
-    top: 0,
-  },
-  icon: {
-    height: "100%",
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-    width: "100%",
-  },
-  settings: {
-    left: "86.13%",
-    top: "7.14%",
-    right: "7.47%",
-    bottom: "89.9%",
-    width: "6.4%",
-    height: "2.96%",
-    position: "absolute",
   },
   foodChild: {
     backgroundColor: "#296ce7",
@@ -564,9 +575,18 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   gastroParent: {
-    left: 264,
+    left: 237,
     width: 131,
+    top: 0,
     height: 52,
+    position: "absolute",
+  },
+  categoriesParent: {
+    top: 229,
+    left: 21,
+    width: 368,
+    height: 52,
+    position: "absolute",
   },
   salavatYulaev2: {
     left: 269,
