@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
-const Frame = () => {
+const Frame1 = () => {
   const navigation = useNavigation();
 
   return (
@@ -518,4 +518,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Frame;
+export default Frame1;

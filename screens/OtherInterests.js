@@ -21,7 +21,7 @@ const OtherInterests = () => {
       />
       <Pressable
         style={[styles.interest, styles.interestLayout]}
-        onPress={() => navigation.navigate("ViewFullPageButtonFromMa11111111")}
+        onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111111")}
       >
         <View style={[styles.interestChild, styles.interestLayout]} />
         <Text style={[styles.password, styles.passwordPosition]}>

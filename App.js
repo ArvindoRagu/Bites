@@ -41,7 +41,7 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa1111111 from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa11111111 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
@@ -55,19 +55,19 @@ import Password from "./components/Password";
 import B1 from "./components/B1";
 import Login1 from "./screens/Login1";
 import OtherInterests from "./screens/OtherInterests";
-import Frame from "./components/GroupComponent3";
+import Frame1 from "./components/GroupComponent3";
 import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
 import RectangleScreen from "./components/RectangleScreen";
 import HongKongInforms from "./components/HongKongInforms";
 import RectangleScreen1 from "./components/RectangleScreen1";
-import Frame from "./screens/Frame";
 import Image1 from "./components/Image1";
+import Frame1 from "./components/Frame44";
 import GroupComponent4 from "./components/GroupComponent4";
 import Login2 from "./screens/Login2";
 import MainPage from "./screens/MainPage";
 import Modal1 from "./components/Modal1";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
-import ViewFullPageButtonFromMa1111111 from "./screens/ViewFullPageButtonFromMa";
+import ViewFullPageButtonFromMa11111111 from "./screens/ViewFullPageButtonFromMa";
 import InterestPersonalizer from "./screens/InterestPersonalizer";
 import WhatsNextModal from "./components/WhatsNextModal";
 import Login11 from "./screens/Login11";
@@ -146,8 +146,8 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Frame1"
-              component={Frame}
+              name="Frame11"
+              component={Frame1}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -171,8 +171,8 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="ViewFullPageButtonFromMa11111111"
-              component={ViewFullPageButtonFromMa1111111}
+              name="ViewFullPageButtonFromMa111111111"
+              component={ViewFullPageButtonFromMa11111111}
               options={{ headerShown: false }}
             />
             <Stack.Screen
