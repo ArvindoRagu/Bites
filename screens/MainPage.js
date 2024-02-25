@@ -66,7 +66,7 @@ const MainPage = () => {
         </View>
         <Pressable
           style={styles.searchBar}
-          onPress={() => navigation.navigate("Search1")}
+          onPress={() => navigation.navigate("Search11")}
         >
           <View style={styles.searchBarChild} />
           <Text style={styles.askAnything}>Ask anything...</Text>

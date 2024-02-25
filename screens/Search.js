@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, FontSize, Color, Border } from "../GlobalStyles";
 
-const Search = () => {
+const Search1 = () => {
   const navigation = useNavigation();
 
   return (
@@ -40,12 +40,12 @@ const Search = () => {
       </Text>
       <Text style={[styles.text, styles.textTypo2]}>2,432</Text>
       <Image
-        style={[styles.viewLightIcon, styles.iconLayout2]}
+        style={[styles.viewLightIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/view-light.png")}
       />
       <Image
-        style={[styles.alarmclockLightIcon, styles.iconLayout2]}
+        style={[styles.alarmclockLightIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/alarmclock-light.png")}
       />
@@ -97,12 +97,12 @@ const Search = () => {
         source={require("../assets/ellipse-65-light.png")}
       />
       <Image
-        style={[styles.ellipse66LightIcon1, styles.iconPosition2]}
+        style={[styles.ellipse66LightIcon1, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/ellipse-66-light.png")}
       />
       <Image
-        style={[styles.ellipseIcon, styles.iconPosition2]}
+        style={[styles.ellipseIcon, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/ellipse-54.png")}
       />
@@ -123,12 +123,12 @@ const Search = () => {
       />
       <Text style={[styles.hAgo2, styles.text2Position]}>24h ago</Text>
       <Image
-        style={[styles.image8Icon, styles.iconPosition1]}
+        style={[styles.image8Icon, styles.iconPosition]}
         contentFit="cover"
         source={require("../assets/image-8.png")}
       />
       <Image
-        style={[styles.image7Icon, styles.iconPosition1]}
+        style={[styles.image7Icon, styles.iconPosition]}
         contentFit="cover"
         source={require("../assets/image-7.png")}
       />
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: Color.colorGray,
   },
-  iconLayout2: {
+  iconLayout1: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
@@ -311,14 +311,14 @@ const styles = StyleSheet.create({
     top: "92.86%",
     position: "absolute",
   },
-  iconPosition2: {
+  iconPosition1: {
     top: "92.98%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  iconPosition1: {
+  iconPosition: {
     left: 32,
     position: "absolute",
   },
@@ -660,4 +660,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search;
+export default Search1;

@@ -25,9 +25,9 @@ export const FontSize = {
   size_mid: 17,
   size_16xl: 35,
   size_3xs: 10,
+  size_2xs: 11,
   size_17xl: 36,
   size_5xl: 24,
-  size_2xs: 11,
 };
 /* Colors */
 export const Color = {
@@ -69,6 +69,6 @@ export const Border = {
   br_lg: 18,
   br_3xs: 10,
   br_6xl: 25,
-  br_71xl: 90,
   br_5xs: 8,
+  br_71xl: 90,
 };

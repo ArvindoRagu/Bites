@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa1111 = () => {
+const ViewFullPageButtonFromMa11111 = () => {
   const navigation = useNavigation();
 
   return (
@@ -61,7 +61,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => navigation.navigate("InterestPersonalizer")}
       >
         <Image
-          style={[styles.icon, styles.iconLayout1]}
+          style={[styles.icon, styles.iconLayout2]}
           contentFit="cover"
           source={require("../assets/rectangle-50.png")}
         />
@@ -69,7 +69,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
       <Text style={[styles.personalize, styles.popularClr]}>Personalize</Text>
       <Pressable style={styles.container} onPress={() => {}}>
         <Image
-          style={[styles.icon, styles.iconLayout1]}
+          style={[styles.icon, styles.iconLayout2]}
           contentFit="cover"
           source={require("../assets/rectangle-56.png")}
         />
@@ -80,7 +80,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => {}}
       >
         <Image
-          style={styles.iconLayout1}
+          style={styles.iconLayout2}
           contentFit="cover"
           source={require("../assets/bookmark-light.png")}
         />
@@ -111,14 +111,14 @@ the commodity carousel...
         <Text style={[styles.listen, styles.popularClr]}>Listen</Text>
         <Pressable style={styles.bookmarkLight1} onPress={() => {}}>
           <Image
-            style={[styles.icon3, styles.iconLayout1]}
+            style={[styles.icon3, styles.iconLayout2]}
             contentFit="cover"
             source={require("../assets/bookmark-light.png")}
           />
         </Pressable>
         <Text style={[styles.min, styles.minPosition]}>10 min</Text>
         <Image
-          style={[styles.image12Icon, styles.iconPosition]}
+          style={[styles.image12Icon, styles.iconPosition2]}
           contentFit="cover"
           source={require("../assets/image-121.png")}
         />
@@ -145,11 +145,11 @@ Released: This Morning
 Time to read: 5 mins 
 `}</Text>
               <Pressable
-                style={[styles.bookmarkLight2, styles.iconPosition]}
+                style={[styles.bookmarkLight2, styles.iconPosition2]}
                 onPress={() => {}}
               >
                 <Image
-                  style={[styles.icon3, styles.iconLayout1]}
+                  style={[styles.icon3, styles.iconLayout2]}
                   contentFit="cover"
                   source={require("../assets/bookmark-light2.png")}
                 />
@@ -193,21 +193,21 @@ Time to read: 15 mins
           </Text>
           <Pressable style={styles.bookmarkLight3} onPress={() => {}}>
             <Image
-              style={[styles.icon3, styles.iconLayout1]}
+              style={[styles.icon3, styles.iconLayout2]}
               contentFit="cover"
               source={require("../assets/bookmark-light3.png")}
             />
           </Pressable>
           <Image
-            style={[styles.image15Icon, styles.iconPosition]}
+            style={[styles.image15Icon, styles.iconPosition2]}
             contentFit="cover"
             source={require("../assets/image-15.png")}
           />
         </View>
         <View style={styles.groupWrapper}>
-          <View style={[styles.howWasTodaysPageParent, styles.iconPosition]}>
+          <View style={[styles.howWasTodaysPageParent, styles.iconPosition2]}>
             <Text
-              style={[styles.howWasTodays, styles.iconPosition]}
+              style={[styles.howWasTodays, styles.iconPosition2]}
             >{`How Was Today’s Page? `}</Text>
             <Image
               style={[styles.image6Icon, styles.iconChildLayout]}
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     color: Color.colorBlack,
   },
-  iconLayout1: {
+  iconLayout2: {
     height: "100%",
     width: "100%",
   },
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     position: "absolute",
   },
-  iconPosition: {
+  iconPosition2: {
     left: "0%",
     position: "absolute",
   },
@@ -734,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa1111;
+export default ViewFullPageButtonFromMa11111;

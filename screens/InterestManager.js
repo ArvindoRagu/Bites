@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, Pressable, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Color, Border, FontFamily, FontSize } from "../GlobalStyles";
+import { FontSize, Color, FontFamily, Border } from "../GlobalStyles";
 
 const InterestManager = () => {
   const navigation = useNavigation();
@@ -10,7 +10,7 @@ const InterestManager = () => {
   return (
     <View style={styles.interestManager}>
       <Image
-        style={styles.vectorIcon}
+        style={[styles.vectorIcon, styles.iconLayout]}
         contentFit="cover"
         source={require("../assets/vector4.png")}
       />
@@ -19,101 +19,118 @@ const InterestManager = () => {
         style={styles.interestManagerChild}
         onPress={() => navigation.goBack()}
       />
-      <View style={[styles.interestManagerItem, styles.interestChildLayout]} />
-      <Text style={[styles.entertainment, styles.artlitLayout]}>
-        <Text style={styles.text}>{` `}</Text>
-        <Text style={styles.entertainment1}>Entertainment</Text>
-      </Text>
-      <Image
-        style={[styles.expandRightIcon, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <View style={[styles.interestManagerInner, styles.interestChildLayout]} />
-      <Text style={[styles.finance, styles.artlitLayout]}>Finance</Text>
-      <Image
-        style={[styles.expandRightIcon1, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <View style={[styles.rectangleView, styles.interestChildLayout]} />
-      <Text style={[styles.scitech, styles.artlitLayout]}>Sci/Tech</Text>
-      <Image
-        style={[styles.expandRightIcon2, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <View
-        style={[styles.interestManagerChild1, styles.interestChildLayout]}
-      />
-      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
-      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
-      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
-      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
-      <View
-        style={[styles.interestManagerChild2, styles.interestChildLayout]}
-      />
-      <View
-        style={[styles.interestManagerChild3, styles.interestChildLayout]}
-      />
-      <Image
-        style={[styles.expandRightIcon3, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <Image
-        style={[styles.expandRightIcon4, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <Image
-        style={[styles.expandRightIcon5, styles.expandIconLayout]}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
-      <Text style={[styles.politics, styles.politicsTypo]}>Politics</Text>
-      <Text style={[styles.lifestyle, styles.politicsTypo]}>Lifestyle</Text>
+      <View style={styles.groupParent}>
+        <View style={styles.groupLayout}>
+          <Pressable
+            style={[styles.groupChild, styles.groupLayout]}
+            onPress={() =>
+              navigation.navigate("ViewFullPageButtonFromMa111111")
+            }
+          />
+          <Text style={styles.entertainment}>
+            <Text style={styles.text}>{` `}</Text>
+            <Text style={styles.entertainment1}>Entertainment</Text>
+          </Text>
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+        </View>
+        <Pressable
+          style={[styles.rectangleGroup, styles.groupLayout]}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111")}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text style={[styles.finance, styles.artlitPosition]}>Finance</Text>
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+        </Pressable>
+        <Pressable
+          style={[styles.rectangleGroup, styles.groupLayout]}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111")}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text style={styles.scitech}>Sci/Tech</Text>
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+        </Pressable>
+        <Pressable
+          style={[styles.rectangleGroup, styles.groupLayout]}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111")}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Text style={[styles.artlit, styles.artlitPosition]}>Art/Lit</Text>
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+        </Pressable>
+        <Pressable
+          style={[styles.rectangleGroup, styles.groupLayout]}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111")}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+          <Text style={[styles.politics, styles.politicsTypo]}>Politics</Text>
+        </Pressable>
+        <Pressable
+          style={[styles.rectangleGroup, styles.groupLayout]}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111")}
+        >
+          <View style={[styles.groupChild, styles.groupLayout]} />
+          <Image
+            style={[styles.expandRightIcon, styles.iconLayout]}
+            contentFit="cover"
+            source={require("../assets/expand-right.png")}
+          />
+          <Text style={[styles.lifestyle, styles.politicsTypo]}>Lifestyle</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  interestChildLayout: {
-    height: 52,
-    width: 324,
-    borderWidth: 1,
-    borderColor: Color.colorBlack,
-    borderStyle: "solid",
-    backgroundColor: Color.colorGray_400,
-    borderRadius: Border.br_2xs,
-    left: 27,
-    position: "absolute",
-  },
-  artlitLayout: {
-    height: 78,
-    width: 236,
-    textAlign: "center",
-    color: Color.colorDarkgray_100,
-    fontFamily: FontFamily.text,
-    lineHeight: 20,
-    position: "absolute",
-  },
-  expandIconLayout: {
-    left: "81.6%",
-    right: "12%",
-    width: "6.4%",
-    height: "2.96%",
+  iconLayout: {
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  politicsTypo: {
-    textAlign: "center",
+  groupLayout: {
+    height: 52,
+    width: 324,
+  },
+  artlitPosition: {
+    height: 37,
+    left: 16,
+    fontSize: FontSize.size_xl,
     color: Color.colorDarkgray_100,
     fontFamily: FontFamily.text,
     lineHeight: 20,
+    top: 15,
+    textAlign: "left",
+    position: "absolute",
+  },
+  politicsTypo: {
+    textAlign: "center",
+    top: 17,
     fontSize: FontSize.size_xl,
+    color: Color.colorDarkgray_100,
+    fontFamily: FontFamily.text,
+    lineHeight: 20,
     position: "absolute",
   },
   vectorIcon: {
@@ -123,10 +140,6 @@ const styles = StyleSheet.create({
     right: "84.8%",
     bottom: "86.45%",
     left: "13.07%",
-    maxHeight: "100%",
-    maxWidth: "100%",
-    position: "absolute",
-    overflow: "hidden",
   },
   myInterests: {
     top: 156,
@@ -136,8 +149,8 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontFamily: FontFamily.rubikSemiBold,
     color: Color.colorBlack,
-    textAlign: "left",
     width: 319,
+    textAlign: "left",
     position: "absolute",
   },
   interestManagerChild: {
@@ -151,8 +164,15 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhitesmoke,
     position: "absolute",
   },
-  interestManagerItem: {
-    top: 207,
+  groupChild: {
+    top: 0,
+    left: 0,
+    borderRadius: Border.br_2xs,
+    backgroundColor: Color.colorGray_400,
+    borderStyle: "solid",
+    borderColor: Color.colorBlack,
+    borderWidth: 1,
+    position: "absolute",
   },
   text: {
     fontSize: FontSize.size_xl,
@@ -161,76 +181,61 @@ const styles = StyleSheet.create({
     fontSize: FontSize.title_size,
   },
   entertainment: {
-    top: 224,
-    left: -11,
+    width: 244,
+    height: 35,
+    color: Color.colorDarkgray_100,
+    fontFamily: FontFamily.text,
+    lineHeight: 20,
+    top: 15,
+    left: 11,
+    textAlign: "left",
+    position: "absolute",
   },
   expandRightIcon: {
-    top: "27.22%",
-    bottom: "69.83%",
-  },
-  interestManagerInner: {
-    top: 266,
+    height: "46.15%",
+    width: "7.41%",
+    top: "26.92%",
+    right: "6.48%",
+    bottom: "26.92%",
+    left: "86.11%",
   },
   finance: {
-    top: 281,
-    left: -31,
-    fontSize: FontSize.size_xl,
+    width: 236,
   },
-  expandRightIcon1: {
-    top: "34.48%",
-    bottom: "62.56%",
-  },
-  rectangleView: {
-    top: 325,
+  rectangleGroup: {
+    marginTop: 15,
   },
   scitech: {
-    top: 342,
-    left: -27,
+    width: 181,
+    left: 16,
     fontSize: FontSize.size_xl,
-  },
-  expandRightIcon2: {
-    top: "41.75%",
-    bottom: "55.3%",
-  },
-  interestManagerChild1: {
-    top: 384,
+    height: 35,
+    color: Color.colorDarkgray_100,
+    fontFamily: FontFamily.text,
+    lineHeight: 20,
+    top: 15,
+    textAlign: "left",
+    position: "absolute",
   },
   artlit: {
-    top: 399,
-    left: -37,
-    fontSize: FontSize.size_xl,
-  },
-  interestManagerChild2: {
-    top: 443,
-  },
-  interestManagerChild3: {
-    top: 502,
-  },
-  expandRightIcon3: {
-    top: "49.01%",
-    bottom: "48.03%",
-  },
-  expandRightIcon4: {
-    top: "56.28%",
-    bottom: "40.76%",
-  },
-  expandRightIcon5: {
-    top: "63.55%",
-    bottom: "33.5%",
+    width: 171,
   },
   politics: {
-    top: 460,
-    left: 46,
+    left: 19,
     width: 69,
     height: 26,
-    fontSize: FontSize.size_xl,
   },
   lifestyle: {
-    top: 519,
-    left: 38,
     width: 96,
     height: 25,
-    fontSize: FontSize.size_xl,
+    left: 11,
+    textAlign: "center",
+    top: 17,
+  },
+  groupParent: {
+    top: 223,
+    left: 26,
+    position: "absolute",
   },
   interestManager: {
     borderRadius: Border.br_31xl,
