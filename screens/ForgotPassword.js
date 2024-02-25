@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     marginTop: -184,
     marginLeft: -161.5,
     height: 60,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     width: 327,
     fontSize: FontSize.size_xl,
     left: "50%",

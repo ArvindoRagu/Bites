@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, FontSize, Color, Border } from "../GlobalStyles";
 
-const Search1 = () => {
+const Search11 = () => {
   const navigation = useNavigation();
 
   return (
@@ -40,12 +40,12 @@ const Search1 = () => {
       </Text>
       <Text style={[styles.text, styles.textTypo2]}>2,432</Text>
       <Image
-        style={[styles.viewLightIcon, styles.iconLayout1]}
+        style={[styles.viewLightIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/view-light.png")}
       />
       <Image
-        style={[styles.alarmclockLightIcon, styles.iconLayout1]}
+        style={[styles.alarmclockLightIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/alarmclock-light.png")}
       />
@@ -97,12 +97,12 @@ const Search1 = () => {
         source={require("../assets/ellipse-65-light.png")}
       />
       <Image
-        style={[styles.ellipse66LightIcon1, styles.iconPosition1]}
+        style={[styles.ellipse66LightIcon1, styles.iconPosition2]}
         contentFit="cover"
         source={require("../assets/ellipse-66-light.png")}
       />
       <Image
-        style={[styles.ellipseIcon, styles.iconPosition1]}
+        style={[styles.ellipseIcon, styles.iconPosition2]}
         contentFit="cover"
         source={require("../assets/ellipse-54.png")}
       />
@@ -123,12 +123,12 @@ const Search1 = () => {
       />
       <Text style={[styles.hAgo2, styles.text2Position]}>24h ago</Text>
       <Image
-        style={[styles.image8Icon, styles.iconPosition]}
+        style={[styles.image8Icon, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/image-8.png")}
       />
       <Image
-        style={[styles.image7Icon, styles.iconPosition]}
+        style={[styles.image7Icon, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/image-7.png")}
       />
@@ -209,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   bestTypo: {
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   textTypo2: {
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: Color.colorGray,
   },
-  iconLayout1: {
+  iconLayout2: {
     maxHeight: "100%",
     maxWidth: "100%",
     overflow: "hidden",
@@ -311,14 +311,14 @@ const styles = StyleSheet.create({
     top: "92.86%",
     position: "absolute",
   },
-  iconPosition1: {
+  iconPosition2: {
     top: "92.98%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  iconPosition: {
+  iconPosition1: {
     left: 32,
     position: "absolute",
   },
@@ -349,13 +349,13 @@ const styles = StyleSheet.create({
   },
   askAnything: {
     top: 184,
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
     textAlign: "left",
     color: Color.colorGray,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: 39,
     position: "absolute",
   },
@@ -373,7 +373,7 @@ const styles = StyleSheet.create({
     color: Color.colorDarkgray,
     letterSpacing: -0.3,
     textAlign: "left",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: 39,
     position: "absolute",
   },
@@ -660,4 +660,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search1;
+export default Search11;

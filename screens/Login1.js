@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
   makeSureYouContainer: {
     top: 248,
     left: 42,
-    fontSize: FontSize.text_size,
-    fontFamily: FontFamily.text,
+    fontSize: FontSize.size_mini,
+    fontFamily: FontFamily.rubikRegular,
     width: 292,
   },
   vectorIcon: {

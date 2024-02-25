@@ -28,32 +28,31 @@ Rohan?`}</Text>
         contentFit="cover"
         source={require("../assets/screenshot-20240222-at-546-1.png")}
       />
-      <Text style={[styles.history, styles.helpTypo]}>History</Text>
-      <Text style={[styles.privacy, styles.helpTypo]}>Privacy</Text>
-      <Text style={[styles.notifications, styles.logOut1Typo]}>
-        Notifications
-      </Text>
-      <Text style={[styles.help, styles.helpTypo]}>Help</Text>
-      <Pressable
-        style={[styles.bookmarks, styles.helpPosition]}
-        onPress={() => navigation.navigate("BookmarkedLikedArticles")}
-      >
-        <Text style={[styles.bookmarks1, styles.helpTypo]}>Bookmarks</Text>
-      </Pressable>
-      <Pressable
-        style={[styles.logOut, styles.helpPosition]}
-        onPress={() => navigation.navigate("Login")}
-      >
-        <Text style={styles.logOut1Typo}>Log out</Text>
-      </Pressable>
-      <Pressable
-        style={[styles.myInterests, styles.helpPosition]}
-        onPress={() => navigation.navigate("InterestManager")}
-      >
-        <Text style={[styles.myInterests1, styles.rkalahastyTypo]}>
-          My Interests
+      <View style={styles.myInterestsParent}>
+        <Pressable onPress={() => navigation.navigate("InterestManager")}>
+          <Text style={[styles.myInterests1, styles.rkalahastyTypo]}>
+            My Interests
+          </Text>
+        </Pressable>
+        <Pressable
+          style={styles.bookmarks}
+          onPress={() => navigation.navigate("BookmarkedLikedArticles")}
+        >
+          <Text style={styles.historyTypo}>Bookmarks</Text>
+        </Pressable>
+        <Text style={[styles.history, styles.historyTypo]}>History</Text>
+        <Text style={styles.privacy}>Privacy</Text>
+        <Text style={[styles.notifications, styles.logOut1Typo]}>
+          Notifications
         </Text>
-      </Pressable>
+        <Text style={[styles.history, styles.historyTypo]}>Help</Text>
+        <Pressable
+          style={styles.bookmarks}
+          onPress={() => navigation.navigate("Login")}
+        >
+          <Text style={styles.logOut1Typo}>Log out</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
@@ -75,8 +74,9 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.title,
     fontWeight: "500",
   },
-  helpTypo: {
-    width: "45.33%",
+  historyTypo: {
+    height: 37,
+    width: 160,
     letterSpacing: -0.4,
     fontSize: FontSize.size_xl,
     textAlign: "left",
@@ -85,18 +85,14 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   logOut1Typo: {
-    height: "4.43%",
-    width: "45.33%",
+    height: 36,
+    width: 160,
     letterSpacing: -0.4,
     fontSize: FontSize.size_xl,
     textAlign: "left",
     color: Color.colorGray,
     fontFamily: FontFamily.title,
     fontWeight: "500",
-  },
-  helpPosition: {
-    left: "11.9%",
-    position: "absolute",
   },
   whatsNextModalChild: {
     height: "154.93%",
@@ -111,12 +107,12 @@ const styles = StyleSheet.create({
   whatsNextRohan: {
     height: "9.36%",
     top: "14.41%",
+    left: "11.9%",
     fontSize: FontSize.size_13xl,
     letterSpacing: -0.6,
     fontFamily: FontFamily.title,
     fontWeight: "500",
     color: Color.colorGray,
-    left: "11.9%",
     width: "53.54%",
     position: "absolute",
   },
@@ -152,47 +148,34 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
     position: "absolute",
   },
-  history: {
-    top: "52.34%",
-    height: "4.56%",
-    width: "45.33%",
-    left: "11.9%",
-    position: "absolute",
-  },
-  privacy: {
-    height: "4.31%",
-    top: "58.37%",
-    left: "11.9%",
-    position: "absolute",
-  },
-  notifications: {
-    top: "65.02%",
-    left: "11.9%",
-    position: "absolute",
-  },
-  help: {
-    top: "70.94%",
-    height: "4.56%",
-    width: "45.33%",
-    left: "11.9%",
-    position: "absolute",
-  },
-  bookmarks1: {
-    height: "4.56%",
-    width: "45.33%",
+  myInterests1: {
+    width: 178,
+    height: 41,
   },
   bookmarks: {
-    top: "45.94%",
+    marginTop: 15,
   },
-  logOut: {
-    top: "76.97%",
+  history: {
+    marginTop: 15,
   },
-  myInterests1: {
-    height: "5.05%",
-    width: "50.42%",
+  privacy: {
+    height: 35,
+    width: 160,
+    marginTop: 15,
+    letterSpacing: -0.4,
+    fontSize: FontSize.size_xl,
+    textAlign: "left",
+    color: Color.colorGray,
+    fontFamily: FontFamily.title,
+    fontWeight: "500",
   },
-  myInterests: {
-    top: "39.78%",
+  notifications: {
+    marginTop: 15,
+  },
+  myInterestsParent: {
+    top: 323,
+    left: 42,
+    position: "absolute",
   },
   whatsNextModal: {
     width: 353,
