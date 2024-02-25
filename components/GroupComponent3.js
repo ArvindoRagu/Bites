@@ -1,16 +1,17 @@
 import * as React from "react";
 import { Text, StyleSheet, Pressable, View } from "react-native";
 import { Image } from "expo-image";
-import RectangleScreen1 from "./RectangleScreen1";
-import BerkshireHathawayRamps from "./BerkshireHathawayRamps";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { useNavigation } from "@react-navigation/native";
+import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
 const GroupComponent3 = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.parent}>
-      <Text style={[styles.text, styles.textTypo]}>942</Text>
+      <Text style={[styles.text, styles.textTypo1]}>942</Text>
       <Image
-        style={[styles.ellipse65LightIcon, styles.iconLayout]}
+        style={[styles.ellipse65LightIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/ellipse-65-light.png")}
       />
@@ -35,24 +36,29 @@ const GroupComponent3 = () => {
         source={require("../assets/vector-66.png")}
       />
       <Image
-        style={[styles.vectorIcon, styles.iconLayout]}
+        style={[styles.vectorIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/vector-64.png")}
       />
-      <Text style={[styles.hAgo, styles.textTypo]}>3h ago</Text>
+      <Text style={[styles.hAgo, styles.textTypo1]}>3h ago</Text>
       <Image
-        style={[styles.image8Icon, styles.iconLayout]}
+        style={[styles.image8Icon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/image-8.png")}
       />
-      <RectangleScreen1 />
-      <BerkshireHathawayRamps />
+      <Pressable
+        style={styles.rectanglePressable}
+        onPress={() => navigation.navigate("YourInfocastPageFromMain")}
+      />
+      <Text style={[styles.berkshireHathawayRamps, styles.textTypo1]}>
+        Berkshire Hathaway ramps up buying in secret stock. Here's what we know.
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  textTypo: {
+  textTypo1: {
     textAlign: "left",
     color: Color.colorGray,
     fontFamily: FontFamily.title,
@@ -60,9 +66,8 @@ const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     position: "absolute",
-    top: "74.76%",
   },
-  iconLayout: {
+  iconLayout1: {
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
   },
   text: {
     left: "42.86%",
+    top: "74.76%",
   },
   ellipse65LightIcon: {
     height: "7.77%",
@@ -113,8 +119,6 @@ const styles = StyleSheet.create({
     bottom: "23.3%",
     left: "57.75%",
     top: "74.76%",
-    width: "0.61%",
-    height: "1.94%",
   },
   componentInner: {
     top: "73.79%",
@@ -132,6 +136,7 @@ const styles = StyleSheet.create({
   },
   hAgo: {
     left: "65.35%",
+    top: "74.76%",
   },
   image8Icon: {
     height: "86.41%",
@@ -140,6 +145,25 @@ const styles = StyleSheet.create({
     right: "68.39%",
     bottom: "5.83%",
     left: "2.43%",
+  },
+  rectanglePressable: {
+    height: "100%",
+    width: "100%",
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
+    left: "0%",
+    borderRadius: Border.br_xs,
+    backgroundColor: Color.colorGainsboro_200,
+    borderStyle: "solid",
+    borderColor: Color.colorDarkgray,
+    borderWidth: 1,
+    position: "absolute",
+  },
+  berkshireHathawayRamps: {
+    width: "58.66%",
+    top: "11.65%",
+    left: "36.17%",
   },
   parent: {
     width: 329,

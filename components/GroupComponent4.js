@@ -1,58 +1,64 @@
 import * as React from "react";
 import { Text, StyleSheet, Pressable, View } from "react-native";
 import { Image } from "expo-image";
-import RectangleScreen from "./RectangleScreen";
-import HongKongInforms from "./HongKongInforms";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
+import { useNavigation } from "@react-navigation/native";
+import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
 const GroupComponent4 = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.parent}>
-      <Text style={[styles.text, styles.textTypo]}>942</Text>
+      <Text style={[styles.text, styles.textTypo2]}>942</Text>
       <Image
-        style={[styles.ellipse65LightIcon, styles.iconLayout]}
+        style={[styles.ellipse65LightIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/ellipse-65-light.png")}
       />
       <Image
-        style={[styles.ellipse66LightIcon, styles.componentChildPosition]}
+        style={[styles.ellipse66LightIcon, styles.componentChildPosition1]}
         contentFit="cover"
         source={require("../assets/ellipse-66-light.png")}
       />
       <Image
-        style={[styles.componentChild, styles.componentChildPosition]}
+        style={[styles.componentChild, styles.componentChildPosition1]}
         contentFit="cover"
         source={require("../assets/ellipse-54.png")}
       />
       <Image
-        style={[styles.componentItem, styles.componentLayout]}
+        style={[styles.componentItem, styles.componentLayout1]}
         contentFit="cover"
         source={require("../assets/vector-65.png")}
       />
       <Image
-        style={[styles.componentInner, styles.componentLayout]}
+        style={[styles.componentInner, styles.componentLayout1]}
         contentFit="cover"
         source={require("../assets/vector-66.png")}
       />
       <Image
-        style={[styles.vectorIcon, styles.iconLayout]}
+        style={[styles.vectorIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/vector-64.png")}
       />
-      <Text style={[styles.hAgo, styles.textTypo]}>24h ago</Text>
+      <Text style={[styles.hAgo, styles.textTypo2]}>24h ago</Text>
       <Image
-        style={[styles.image9Icon, styles.iconLayout]}
+        style={[styles.image9Icon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/image-9.png")}
       />
-      <RectangleScreen />
-      <HongKongInforms />
+      <Pressable
+        style={styles.rectanglePressable}
+        onPress={() => navigation.navigate("YourInfocastPageFromMain")}
+      />
+      <Text style={[styles.hongKongInforms, styles.textTypo2]}>
+        Hong Kong informs on 2023 food incident monitoring
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  textTypo: {
+  textTypo2: {
     textAlign: "left",
     color: Color.colorGray,
     fontFamily: FontFamily.title,
@@ -60,22 +66,21 @@ const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     position: "absolute",
-    top: "68.93%",
   },
-  iconLayout: {
+  iconLayout2: {
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",
     position: "absolute",
   },
-  componentChildPosition: {
+  componentChildPosition1: {
     top: "69.9%",
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",
     position: "absolute",
   },
-  componentLayout: {
+  componentLayout1: {
     width: "0.61%",
     height: "1.94%",
     maxHeight: "100%",
@@ -85,6 +90,7 @@ const styles = StyleSheet.create({
   },
   text: {
     left: "43.16%",
+    top: "68.93%",
   },
   ellipse65LightIcon: {
     height: "7.77%",
@@ -113,8 +119,6 @@ const styles = StyleSheet.create({
     bottom: "29.13%",
     left: "58.05%",
     top: "68.93%",
-    width: "0.61%",
-    height: "1.94%",
   },
   componentInner: {
     top: "67.96%",
@@ -132,6 +136,7 @@ const styles = StyleSheet.create({
   },
   hAgo: {
     left: "65.65%",
+    top: "68.93%",
   },
   image9Icon: {
     height: "89.32%",
@@ -140,6 +145,25 @@ const styles = StyleSheet.create({
     right: "68.69%",
     bottom: "5.83%",
     left: "3.34%",
+  },
+  rectanglePressable: {
+    height: "100%",
+    width: "100%",
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
+    left: "0%",
+    borderRadius: Border.br_xs,
+    backgroundColor: Color.colorGainsboro_200,
+    borderStyle: "solid",
+    borderColor: Color.colorDarkgray,
+    borderWidth: 1,
+    position: "absolute",
+  },
+  hongKongInforms: {
+    width: "58.66%",
+    top: "6.8%",
+    left: "36.47%",
   },
   parent: {
     width: 329,

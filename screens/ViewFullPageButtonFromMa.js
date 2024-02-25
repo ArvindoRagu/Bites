@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa11111111111 = () => {
+const ViewFullPageButtonFromMa111111111111 = () => {
   const navigation = useNavigation();
 
   return (
@@ -61,7 +61,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => navigation.navigate("InterestPersonalizer")}
       >
         <Image
-          style={[styles.icon, styles.iconLayout]}
+          style={[styles.icon, styles.iconLayout5]}
           contentFit="cover"
           source={require("../assets/rectangle-50.png")}
         />
@@ -69,7 +69,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
       <Text style={[styles.personalize, styles.popularClr]}>Personalize</Text>
       <Pressable style={styles.container} onPress={() => {}}>
         <Image
-          style={[styles.icon, styles.iconLayout]}
+          style={[styles.icon, styles.iconLayout5]}
           contentFit="cover"
           source={require("../assets/rectangle-56.png")}
         />
@@ -80,7 +80,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => {}}
       >
         <Image
-          style={styles.iconLayout}
+          style={styles.iconLayout5}
           contentFit="cover"
           source={require("../assets/bookmark-light.png")}
         />
@@ -111,14 +111,14 @@ the commodity carousel...
         <Text style={[styles.listen, styles.popularClr]}>Listen</Text>
         <Pressable style={styles.bookmarkLight1} onPress={() => {}}>
           <Image
-            style={[styles.icon3, styles.iconLayout]}
+            style={[styles.icon3, styles.iconLayout5]}
             contentFit="cover"
             source={require("../assets/bookmark-light.png")}
           />
         </Pressable>
         <Text style={[styles.min, styles.minPosition]}>10 min</Text>
         <Image
-          style={[styles.image12Icon, styles.iconPosition]}
+          style={[styles.image12Icon, styles.iconPosition4]}
           contentFit="cover"
           source={require("../assets/image-121.png")}
         />
@@ -145,11 +145,11 @@ Released: This Morning
 Time to read: 5 mins 
 `}</Text>
               <Pressable
-                style={[styles.bookmarkLight2, styles.iconPosition]}
+                style={[styles.bookmarkLight2, styles.iconPosition4]}
                 onPress={() => {}}
               >
                 <Image
-                  style={[styles.icon3, styles.iconLayout]}
+                  style={[styles.icon3, styles.iconLayout5]}
                   contentFit="cover"
                   source={require("../assets/bookmark-light2.png")}
                 />
@@ -193,21 +193,21 @@ Time to read: 15 mins
           </Text>
           <Pressable style={styles.bookmarkLight3} onPress={() => {}}>
             <Image
-              style={[styles.icon3, styles.iconLayout]}
+              style={[styles.icon3, styles.iconLayout5]}
               contentFit="cover"
               source={require("../assets/bookmark-light3.png")}
             />
           </Pressable>
           <Image
-            style={[styles.image15Icon, styles.iconPosition]}
+            style={[styles.image15Icon, styles.iconPosition4]}
             contentFit="cover"
             source={require("../assets/image-15.png")}
           />
         </View>
         <View style={styles.groupWrapper}>
-          <View style={[styles.howWasTodaysPageParent, styles.iconPosition]}>
+          <View style={[styles.howWasTodaysPageParent, styles.iconPosition4]}>
             <Text
-              style={[styles.howWasTodays, styles.iconPosition]}
+              style={[styles.howWasTodays, styles.iconPosition4]}
             >{`How Was Today’s Page? `}</Text>
             <Image
               style={[styles.image6Icon, styles.iconChildLayout]}
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     color: Color.colorBlack,
   },
-  iconLayout: {
+  iconLayout5: {
     height: "100%",
     width: "100%",
   },
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     position: "absolute",
   },
-  iconPosition: {
+  iconPosition4: {
     left: "0%",
     position: "absolute",
   },
@@ -328,11 +328,11 @@ const styles = StyleSheet.create({
   askAQuestion: {
     top: 16,
     left: 16,
-    fontSize: FontSize.text_size,
+    fontSize: FontSize.size_mini,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -360,7 +360,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     textAlign: "left",
     color: Color.colorGray,
     left: 33,
@@ -391,7 +391,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   popular: {
@@ -399,7 +399,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   news: {
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   rectangleIcon: {
@@ -445,7 +445,7 @@ const styles = StyleSheet.create({
     top: 72,
     left: 268,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   container: {
@@ -461,7 +461,7 @@ const styles = StyleSheet.create({
     width: 54,
     height: 18,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   bookmarkLight: {
@@ -505,7 +505,7 @@ const styles = StyleSheet.create({
     top: "81.19%",
     left: "81.74%",
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     position: "absolute",
   },
   icon3: {
@@ -681,7 +681,7 @@ const styles = StyleSheet.create({
   howWasTodays: {
     textAlign: "center",
     top: "0%",
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     color: Color.colorGray,
     letterSpacing: -0.7,
     fontSize: FontSize.size_17xl,
@@ -734,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa11111111111;
+export default ViewFullPageButtonFromMa111111111111;

@@ -9,14 +9,14 @@ const Frame111 = () => {
 
   return (
     <View style={styles.parent}>
-      <Text style={[styles.text, styles.textTypo]}>{`1,239 `}</Text>
+      <Text style={[styles.text, styles.textTypo3]}>{`1,239 `}</Text>
       <Image
-        style={[styles.viewLightIcon, styles.iconLayout]}
+        style={[styles.viewLightIcon, styles.iconLayout3]}
         contentFit="cover"
         source={require("../assets/view-light.png")}
       />
       <Image
-        style={[styles.alarmclockLightIcon, styles.iconLayout]}
+        style={[styles.alarmclockLightIcon, styles.iconLayout3]}
         contentFit="cover"
         source={require("../assets/alarmclock-light.png")}
       />
@@ -28,7 +28,7 @@ const Frame111 = () => {
         <Text
           style={[styles.attCustomersHit, styles.image2IconPosition]}
         >{`AT&T customers hit by widespread cellular outages in U.S.`}</Text>
-        <Text style={[styles.hAgo, styles.textTypo]}>12h ago</Text>
+        <Text style={[styles.hAgo, styles.textTypo3]}>12h ago</Text>
         <Image
           style={[styles.image2Icon, styles.image2IconPosition]}
           contentFit="cover"
@@ -40,7 +40,7 @@ const Frame111 = () => {
 };
 
 const styles = StyleSheet.create({
-  textTypo: {
+  textTypo3: {
     textAlign: "left",
     color: Color.colorGray,
     fontFamily: FontFamily.title,
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
   },
-  iconLayout: {
+  iconLayout3: {
     maxHeight: "100%",
     overflow: "hidden",
     maxWidth: "100%",

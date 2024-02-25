@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   passwordPosition1: {
     fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     left: "50%",
     top: "50%",
     position: "absolute",
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
-    fontFamily: FontFamily.text,
+    fontFamily: FontFamily.rubikRegular,
     lineHeight: 20,
   },
   iForgotMyContainer: {
