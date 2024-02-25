@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa11111111 = () => {
+const ViewFullPageButtonFromMa111111111 = () => {
   const navigation = useNavigation();
 
   return (
@@ -734,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa11111111;
+export default ViewFullPageButtonFromMa111111111;

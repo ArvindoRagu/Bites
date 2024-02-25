@@ -24,7 +24,7 @@ const InterestManager = () => {
           <Pressable
             style={[styles.groupChild, styles.groupLayout]}
             onPress={() =>
-              navigation.navigate("ViewFullPageButtonFromMa111111111")
+              navigation.navigate("ViewFullPageButtonFromMa1111111111")
             }
           />
           <Text style={styles.entertainment}>
@@ -40,7 +40,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa111111111")
+            navigation.navigate("ViewFullPageButtonFromMa1111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -54,7 +54,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa111111111")
+            navigation.navigate("ViewFullPageButtonFromMa1111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -68,7 +68,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa111111111")
+            navigation.navigate("ViewFullPageButtonFromMa1111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -82,7 +82,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa111111111")
+            navigation.navigate("ViewFullPageButtonFromMa1111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />
@@ -96,7 +96,7 @@ const InterestManager = () => {
         <Pressable
           style={[styles.rectangleGroup, styles.groupLayout]}
           onPress={() =>
-            navigation.navigate("ViewFullPageButtonFromMa111111111")
+            navigation.navigate("ViewFullPageButtonFromMa1111111111")
           }
         >
           <View style={[styles.groupChild, styles.groupLayout]} />

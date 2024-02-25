@@ -45,8 +45,8 @@ export const Color = {
   colorDimgray: "#555356",
   colorDarkgray: "#a3a3a3",
   colorDarkgray_100: "#999",
-  colorMediumslateblue: "#835af6",
   color: "#060047",
+  colorMediumslateblue: "#835af6",
 };
 /* Paddings */
 export const Padding = {

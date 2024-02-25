@@ -9,15 +9,17 @@ const Login2 = () => {
 
   return (
     <View style={styles.login4}>
-      <TextInput
-        style={[styles.password, styles.passwordTypo1]}
-        placeholder="Username"
-        placeholderTextColor="#242424"
-      />
-      <View style={styles.rectangleParent}>
-        <View style={[styles.frameChild, styles.password1Layout]} />
+      <View style={[styles.passwordParent, styles.passwordLayout]}>
         <TextInput
-          style={[styles.password1, styles.password1Layout]}
+          style={[styles.password, styles.passwordPosition1]}
+          placeholder="Username"
+          placeholderTextColor="#242424"
+        />
+        <View style={[styles.groupChild, styles.passwordLayout]} />
+      </View>
+      <View style={[styles.passwordWrapper, styles.passwordLayout]}>
+        <TextInput
+          style={[styles.password1, styles.passwordPosition1]}
           placeholder="Password"
           placeholderTextColor="#242424"
         />
@@ -51,13 +53,16 @@ const Login2 = () => {
 };
 
 const styles = StyleSheet.create({
-  passwordTypo1: {
-    fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.text,
-  },
-  password1Layout: {
+  passwordLayout: {
     height: 68,
     width: 327,
+  },
+  passwordPosition1: {
+    fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
+    left: "50%",
+    top: "50%",
+    position: "absolute",
   },
   passwordTypo: {
     textAlign: "center",
@@ -72,28 +77,38 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   password: {
-    marginTop: -131.1,
-    marginLeft: -146.5,
+    marginTop: -13.1,
+    marginLeft: -145.5,
     opacity: 0.4,
-    left: "50%",
-    top: "50%",
-    position: "absolute",
   },
-  frameChild: {
+  groupChild: {
+    top: 0,
+    left: 0,
     borderStyle: "solid",
     borderColor: Color.colorBlack,
     borderWidth: 1,
     borderRadius: Border.br_base,
+    position: "absolute",
+  },
+  passwordParent: {
+    marginTop: -152,
+    left: "50%",
+    top: "50%",
+    position: "absolute",
+    marginLeft: -164.5,
   },
   password1: {
-    marginTop: 30,
-    fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.text,
+    marginTop: -34,
+    marginLeft: -163.5,
+    height: 68,
+    width: 327,
   },
-  rectangleParent: {
-    top: 254,
-    left: 23,
+  passwordWrapper: {
+    marginTop: -54,
+    left: "50%",
+    top: "50%",
     position: "absolute",
+    marginLeft: -164.5,
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
@@ -107,8 +122,8 @@ const styles = StyleSheet.create({
   },
   passwordChild: {
     marginTop: -26,
-    marginLeft: -163.5,
     backgroundColor: Color.colorMediumpurple,
+    marginLeft: -163.5,
     borderRadius: Border.br_base,
   },
   password3: {
@@ -125,7 +140,6 @@ const styles = StyleSheet.create({
   },
   password2: {
     marginTop: 50,
-    marginLeft: -164.5,
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 0,
@@ -134,6 +148,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
     shadowOpacity: 1,
+    marginLeft: -164.5,
   },
   vectorIcon: {
     height: "1.72%",

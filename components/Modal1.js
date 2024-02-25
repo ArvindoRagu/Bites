@@ -19,7 +19,9 @@ const Modal1 = ({ onClose }) => {
       </Text>
       <Pressable
         style={[styles.wrapper, styles.wrapperPosition]}
-        onPress={() => navigation.navigate("ViewFullPageButtonFromMa111111111")}
+        onPress={() =>
+          navigation.navigate("ViewFullPageButtonFromMa1111111111")
+        }
       >
         <Image
           style={[styles.icon, styles.iconLayout]}
