@@ -1,19 +1,14 @@
 import * as React from "react";
+import { Pressable, Text, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
-import { StyleSheet, Pressable, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Color, FontFamily, Border, FontSize } from "../GlobalStyles";
+import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
 const Login = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.login1}>
-      <Image
-        style={styles.login1Child}
-        contentFit="cover"
-        source={require("../assets/ellipse-104.png")}
-      />
       <Pressable
         style={styles.iHaveAnContainer}
         onPress={() => navigation.navigate("Login2")}
@@ -22,16 +17,23 @@ const Login = () => {
           I have an account.
         </Text>
       </Pressable>
-      <Text style={[styles.kickstartYourDay, styles.iHaveAnAccountTypo]}>
-        Kickstart your day.
-      </Text>
-      <Pressable
-        style={[styles.password, styles.passwordPosition]}
-        onPress={() => navigation.navigate("Login1")}
-      >
-        <View style={[styles.passwordChild, styles.passwordPosition]} />
-        <Text style={styles.password1}>Get Started</Text>
-      </Pressable>
+      <View style={styles.frame}>
+        <Pressable
+          style={[styles.password, styles.passwordPosition]}
+          onPress={() => navigation.navigate("Login11")}
+        >
+          <View style={[styles.passwordChild, styles.passwordPosition]} />
+          <Text style={styles.password1}>Get Started</Text>
+        </Pressable>
+        <Text style={[styles.kickstartYourDay, styles.iHaveAnAccountTypo]}>
+          Kickstart your day.
+        </Text>
+        <Image
+          style={styles.frameChild}
+          contentFit="cover"
+          source={require("../assets/ellipse-104.png")}
+        />
+      </View>
     </View>
   );
 };
@@ -45,20 +47,14 @@ const styles = StyleSheet.create({
   },
   passwordPosition: {
     height: 52,
-    width: 327,
+    marginLeft: -163.5,
     left: "50%",
     top: "50%",
-    position: "absolute",
-  },
-  login1Child: {
-    top: 121,
-    left: 87,
-    width: 200,
-    height: 200,
+    width: 327,
     position: "absolute",
   },
   iHaveAnAccount: {
-    fontSize: 15,
+    fontSize: FontSize.text_size,
     width: 182,
     lineHeight: 20,
     textAlign: "center",
@@ -71,17 +67,8 @@ const styles = StyleSheet.create({
     top: 668,
     position: "absolute",
   },
-  kickstartYourDay: {
-    top: 453,
-    left: 28,
-    fontSize: 30,
-    lineHeight: 30,
-    width: 319,
-    position: "absolute",
-  },
   passwordChild: {
     marginTop: -26,
-    marginLeft: -163.5,
     borderRadius: Border.br_base,
     backgroundColor: Color.colorMediumpurple,
   },
@@ -101,8 +88,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   password: {
-    marginTop: 190,
-    marginLeft: -161.5,
+    marginTop: 202,
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 0,
@@ -111,6 +97,29 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
     shadowOpacity: 1,
+  },
+  kickstartYourDay: {
+    top: 313,
+    left: 2,
+    fontSize: FontSize.size_11xl,
+    lineHeight: 30,
+    width: 319,
+    position: "absolute",
+  },
+  frameChild: {
+    top: 0,
+    left: 59,
+    width: 200,
+    height: 200,
+    position: "absolute",
+  },
+  frame: {
+    top: 140,
+    left: 26,
+    height: 508,
+    width: 327,
+    position: "absolute",
+    overflow: "hidden",
   },
   login1: {
     borderRadius: Border.br_31xl,

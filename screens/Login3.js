@@ -1,54 +1,51 @@
 import * as React from "react";
-import { StyleSheet, View, TextInput, Pressable, Text } from "react-native";
+import { TextInput, StyleSheet, View, Pressable, Text } from "react-native";
 import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
-const Login2 = () => {
+const Login3 = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.login4}>
-      <View style={[styles.password, styles.passwordPosition2]}>
+    <View style={styles.login3}>
+      <TextInput
+        style={[styles.password, styles.passwordTypo]}
+        placeholder="Username"
+        placeholderTextColor="#242424"
+      />
+      <View style={styles.password1}>
         <View style={[styles.passwordChild, styles.passwordLayout]} />
         <TextInput
-          style={[styles.password1, styles.passwordPosition1]}
-          placeholder="Username"
+          style={[styles.password2, styles.passwordPosition1]}
+          placeholder="Email"
           placeholderTextColor="#242424"
         />
         <TextInput
-          style={[styles.password2, styles.passwordPosition1]}
+          style={[styles.password3, styles.passwordTypo]}
           placeholder="Password"
           placeholderTextColor="#242424"
         />
       </View>
       <Image
-        style={[styles.login4Child, styles.login4Layout]}
+        style={[styles.login3Child, styles.login3Layout]}
         contentFit="cover"
         source={require("../assets/ellipse-105.png")}
       />
       <Image
-        style={[styles.login4Item, styles.login4Layout]}
+        style={[styles.login3Item, styles.login3Layout]}
         contentFit="cover"
         source={require("../assets/ellipse-105.png")}
       />
-      <Text style={[styles.signInWith, styles.passwordTypo]}>
-        Sign in with:
+      <Text style={[styles.createAnAccount, styles.password5Typo]}>
+        Create an account with:
       </Text>
       <Pressable
-        style={styles.iForgotMyContainer}
-        onPress={() => navigation.navigate("ForgotPassword")}
-      >
-        <Text style={[styles.iForgotMyPassword, styles.passwordTypo]}>
-          I forgot my password.
-        </Text>
-      </Pressable>
-      <Pressable
-        style={[styles.password3, styles.passwordPosition]}
-        onPress={() => navigation.navigate("MainPage")}
+        style={[styles.password4, styles.passwordPosition]}
+        onPress={() => navigation.navigate("InterestsSetup")}
       >
         <View style={[styles.passwordItem, styles.passwordPosition]} />
-        <Text style={[styles.password4, styles.passwordTypo]}>Continue</Text>
+        <Text style={[styles.password5, styles.password5Typo]}>Continue</Text>
       </Pressable>
       <Image
         style={styles.vectorIcon}
@@ -56,7 +53,7 @@ const Login2 = () => {
         source={require("../assets/vector4.png")}
       />
       <Pressable
-        style={styles.login4Inner}
+        style={styles.login3Inner}
         onPress={() => navigation.goBack()}
       />
     </View>
@@ -64,40 +61,49 @@ const Login2 = () => {
 };
 
 const styles = StyleSheet.create({
-  passwordPosition2: {
-    left: "50%",
-    top: "50%",
+  passwordTypo: {
+    fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   passwordLayout: {
     height: 68,
     width: 327,
-  },
-  passwordPosition1: {
-    fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.text,
     left: "50%",
     top: "50%",
-    position: "absolute",
   },
-  login4Layout: {
+  passwordPosition1: {
+    opacity: 0.4,
+    left: "50%",
+    top: "50%",
+  },
+  login3Layout: {
     height: 100,
     width: 100,
-    top: 432,
+    top: 495,
     position: "absolute",
   },
-  passwordTypo: {
+  password5Typo: {
     textAlign: "center",
     lineHeight: 20,
     fontSize: FontSize.size_xl,
+    position: "absolute",
   },
   passwordPosition: {
     height: 52,
+    marginLeft: -163.5,
     width: 327,
     left: "50%",
     top: "50%",
-    marginLeft: -163.5,
     position: "absolute",
+  },
+  password: {
+    marginTop: -266,
+    marginLeft: -161.5,
+    height: 68,
+    width: 327,
+    left: "50%",
+    top: "50%",
   },
   passwordChild: {
     marginTop: -83,
@@ -106,78 +112,63 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderWidth: 1,
     borderRadius: Border.br_base,
-    left: "50%",
-    top: "50%",
     position: "absolute",
   },
-  password1: {
+  password2: {
     marginTop: -62.1,
     marginLeft: -146.5,
-    opacity: 0.4,
     fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
+    position: "absolute",
   },
-  password2: {
+  password3: {
     marginTop: 15,
     marginLeft: -164.5,
     height: 68,
     width: 327,
+    left: "50%",
+    top: "50%",
   },
-  password: {
-    marginTop: -233,
+  password1: {
+    marginTop: -170,
     width: 329,
     height: 166,
     marginLeft: -163.5,
     left: "50%",
     top: "50%",
+    position: "absolute",
   },
-  login4Child: {
+  login3Child: {
     left: 54,
   },
-  login4Item: {
+  login3Item: {
     left: 226,
   },
-  signInWith: {
-    top: 382,
-    left: 126,
+  createAnAccount: {
+    top: 445,
+    left: 70,
     fontWeight: "500",
     fontFamily: FontFamily.title,
     color: Color.colorBlack,
-    textAlign: "center",
-    lineHeight: 20,
-    position: "absolute",
-  },
-  iForgotMyPassword: {
-    color: Color.colorBlack,
-    textAlign: "center",
-    lineHeight: 20,
-    fontFamily: FontFamily.text,
-  },
-  iForgotMyContainer: {
-    left: 85,
-    top: 658,
-    position: "absolute",
   },
   passwordItem: {
     marginTop: -26,
     backgroundColor: Color.colorMediumpurple,
     borderRadius: Border.br_base,
   },
-  password4: {
+  password5: {
     marginTop: -10,
     marginLeft: -147.5,
     fontWeight: "800",
     fontFamily: FontFamily.rubikExtraBold,
     color: Color.colorGray,
     width: 286,
-    textAlign: "center",
-    lineHeight: 20,
     opacity: 0.4,
     left: "50%",
     top: "50%",
-    position: "absolute",
   },
-  password3: {
-    marginTop: 170,
+  password4: {
+    marginTop: 233,
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 0,
@@ -190,27 +181,27 @@ const styles = StyleSheet.create({
   vectorIcon: {
     height: "1.72%",
     width: "2.13%",
-    top: "9.24%",
-    right: "83.73%",
-    bottom: "89.04%",
-    left: "14.13%",
+    top: "8.99%",
+    right: "80.53%",
+    bottom: "89.29%",
+    left: "17.33%",
     maxWidth: "100%",
     maxHeight: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  login4Inner: {
+  login3Inner: {
     height: "3.94%",
     width: "8.8%",
-    top: "8.13%",
-    right: "80%",
-    bottom: "87.93%",
-    left: "11.2%",
+    top: "7.88%",
+    right: "76.8%",
+    bottom: "88.18%",
+    left: "14.4%",
     borderRadius: Border.br_3xs,
     backgroundColor: Color.colorWhitesmoke,
     position: "absolute",
   },
-  login4: {
+  login3: {
     borderRadius: Border.br_31xl,
     backgroundColor: Color.colorWhite,
     flex: 1,
@@ -220,4 +211,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login2;
+export default Login3;
