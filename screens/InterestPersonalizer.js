@@ -4,7 +4,7 @@ import { StyleSheet, Text, Pressable, View, Switch } from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
 import { Slider } from "@rneui/themed";
 import { useNavigation } from "@react-navigation/native";
-import { FontFamily, Color, FontSize, Border } from "../GlobalStyles";
+import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
 const InterestPersonalizer = () => {
   const [rectangleDropdownOpen, setRectangleDropdownOpen] = useState(false);
@@ -30,7 +30,7 @@ const InterestPersonalizer = () => {
         style={styles.interestPersonalizerChild}
         onPress={() => navigation.goBack()}
       />
-      <Text style={[styles.personalizeYourDaily, styles.americanVoice1Typo]}>
+      <Text style={styles.personalizeYourDaily}>
         Personalize your daily infocast
       </Text>
       <View
@@ -58,9 +58,6 @@ const InterestPersonalizer = () => {
       <Text style={[styles.simple, styles.simpleTypo]}>Simple</Text>
       <Text style={[styles.moderate, styles.simpleTypo]}>Moderate</Text>
       <Text style={[styles.complex, styles.simpleTypo]}>Complex</Text>
-      <Text style={[styles.americanVoice1, styles.americanVoice1Typo]}>
-        American Voice 1
-      </Text>
       <Image
         style={styles.expandDownIcon}
         contentFit="cover"
@@ -78,11 +75,6 @@ const InterestPersonalizer = () => {
         onValueChange={setRectangleSwitchSwitchValueState}
         trackColor={{ false: "#939393", true: "#ae79e2" }}
       />
-      <Image
-        style={[styles.ellipseIcon, styles.ellipseIconLayout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-99.png")}
-      />
       <Switch
         style={[
           styles.interestPersonalizerChild1,
@@ -91,16 +83,6 @@ const InterestPersonalizer = () => {
         value={rectangleSwitch1SwitchValueState}
         onValueChange={setRectangleSwitch1SwitchValueState}
         trackColor={{ false: "#939393", true: "#ae79e2" }}
-      />
-      <Image
-        style={[styles.interestPersonalizerChild2, styles.ellipseIconLayout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-99.png")}
-      />
-      <Image
-        style={[styles.ellipseIcon, styles.ellipseIconLayout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-99.png")}
       />
       <Slider
         style={styles.rectangleSlider}
@@ -129,13 +111,6 @@ const styles = StyleSheet.create({
     height: 25,
     width: 25,
   },
-  americanVoice1Typo: {
-    fontFamily: FontFamily.rubikRegular,
-    lineHeight: 20,
-    textAlign: "left",
-    color: Color.colorBlack,
-    position: "absolute",
-  },
   interestPosition: {
     width: 321,
     borderBottomWidth: 1,
@@ -148,7 +123,7 @@ const styles = StyleSheet.create({
     width: 173,
     height: 21,
     left: 39,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
     fontSize: FontSize.size_xl,
     textAlign: "left",
@@ -170,7 +145,7 @@ const styles = StyleSheet.create({
     color: Color.colorGray,
     fontSize: FontSize.size_2xs,
     top: 643,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
     textAlign: "left",
     position: "absolute",
@@ -180,12 +155,6 @@ const styles = StyleSheet.create({
     width: 64,
     borderRadius: Border.br_base,
     top: 601,
-    position: "absolute",
-  },
-  ellipseIconLayout: {
-    height: 32,
-    width: 31,
-    top: 604,
     position: "absolute",
   },
   vectorIcon: {
@@ -225,12 +194,16 @@ const styles = StyleSheet.create({
   },
   personalizeYourDaily: {
     top: 196,
-    fontSize: FontSize.size_xl,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
+    fontSize: FontSize.size_xl,
+    textAlign: "left",
+    color: Color.colorBlack,
     left: 28,
+    position: "absolute",
   },
   interestPersonalizerItem: {
-    top: 398,
+    top: 388,
     height: 139,
   },
   interestPersonalizerInner: {
@@ -243,7 +216,7 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
   },
   wrapper: {
-    top: 470,
+    top: 460,
     left: 43,
     width: 290,
     height: 40,
@@ -256,7 +229,7 @@ const styles = StyleSheet.create({
     width: 147,
     height: 21,
     left: 39,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
     fontSize: FontSize.size_xl,
     textAlign: "left",
@@ -264,7 +237,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   voicePreference: {
-    top: 426,
+    top: 416,
   },
   controls: {
     top: 565,
@@ -278,13 +251,8 @@ const styles = StyleSheet.create({
   complex: {
     left: 264,
   },
-  americanVoice1: {
-    top: 480,
-    left: 57,
-    fontSize: FontSize.title_size,
-  },
   expandDownIcon: {
-    top: 478,
+    top: 468,
     left: 291,
     width: 24,
     height: 24,
@@ -301,14 +269,8 @@ const styles = StyleSheet.create({
   rectangleSwitch: {
     left: 221,
   },
-  ellipseIcon: {
-    left: 251,
-  },
   interestPersonalizerChild1: {
     left: 102,
-  },
-  interestPersonalizerChild2: {
-    left: 132,
   },
   rectangleSlider: {
     top: 308,

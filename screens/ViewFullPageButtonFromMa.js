@@ -4,7 +4,7 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa111 = () => {
+const ViewFullPageButtonFromMa1111 = () => {
   const navigation = useNavigation();
 
   return (
@@ -61,7 +61,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => navigation.navigate("InterestPersonalizer")}
       >
         <Image
-          style={[styles.icon, styles.iconLayout]}
+          style={[styles.icon, styles.iconLayout1]}
           contentFit="cover"
           source={require("../assets/rectangle-50.png")}
         />
@@ -69,7 +69,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
       <Text style={[styles.personalize, styles.popularClr]}>Personalize</Text>
       <Pressable style={styles.container} onPress={() => {}}>
         <Image
-          style={[styles.icon, styles.iconLayout]}
+          style={[styles.icon, styles.iconLayout1]}
           contentFit="cover"
           source={require("../assets/rectangle-56.png")}
         />
@@ -80,7 +80,7 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
         onPress={() => {}}
       >
         <Image
-          style={styles.iconLayout}
+          style={styles.iconLayout1}
           contentFit="cover"
           source={require("../assets/bookmark-light.png")}
         />
@@ -111,7 +111,7 @@ the commodity carousel...
         <Text style={[styles.listen, styles.popularClr]}>Listen</Text>
         <Pressable style={styles.bookmarkLight1} onPress={() => {}}>
           <Image
-            style={[styles.icon3, styles.iconLayout]}
+            style={[styles.icon3, styles.iconLayout1]}
             contentFit="cover"
             source={require("../assets/bookmark-light.png")}
           />
@@ -124,14 +124,14 @@ the commodity carousel...
         />
       </View>
       <ScrollView
-        style={styles.groupParent}
+        style={[styles.groupParent, styles.component1Position]}
         horizontal={true}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={true}
         contentContainerStyle={styles.frameScrollViewContent}
       >
         <View style={styles.component1Parent}>
-          <View style={styles.component1}>
+          <View style={[styles.component1, styles.component1Position]}>
             <View style={styles.meetRddtPopularSocialPlatParent}>
               <Text
                 style={[styles.meetRddtPopular, styles.nearly30WomenTypo]}
@@ -149,7 +149,7 @@ Time to read: 5 mins
                 onPress={() => {}}
               >
                 <Image
-                  style={[styles.icon3, styles.iconLayout]}
+                  style={[styles.icon3, styles.iconLayout1]}
                   contentFit="cover"
                   source={require("../assets/bookmark-light2.png")}
                 />
@@ -193,7 +193,7 @@ Time to read: 15 mins
           </Text>
           <Pressable style={styles.bookmarkLight3} onPress={() => {}}>
             <Image
-              style={[styles.icon3, styles.iconLayout]}
+              style={[styles.icon3, styles.iconLayout1]}
               contentFit="cover"
               source={require("../assets/bookmark-light3.png")}
             />
@@ -272,7 +272,7 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     color: Color.colorBlack,
   },
-  iconLayout: {
+  iconLayout1: {
     height: "100%",
     width: "100%",
   },
@@ -283,6 +283,10 @@ const styles = StyleSheet.create({
   },
   iconPosition: {
     left: "0%",
+    position: "absolute",
+  },
+  component1Position: {
+    left: 0,
     position: "absolute",
   },
   nearly30WomenTypo: {
@@ -324,11 +328,11 @@ const styles = StyleSheet.create({
   askAQuestion: {
     top: 16,
     left: 16,
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     textAlign: "left",
     color: Color.colorGray,
     position: "absolute",
@@ -356,7 +360,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_xs,
     letterSpacing: 0.1,
     opacity: 0.5,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     textAlign: "left",
     color: Color.colorGray,
     left: 33,
@@ -387,7 +391,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   popular: {
@@ -395,7 +399,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   news: {
@@ -403,7 +407,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     top: 223,
     color: Color.colorBlack,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   rectangleIcon: {
@@ -441,7 +445,7 @@ const styles = StyleSheet.create({
     top: 72,
     left: 268,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   container: {
@@ -454,10 +458,10 @@ const styles = StyleSheet.create({
   sources: {
     top: 442,
     left: 48,
-    width: 55,
-    height: 12,
+    width: 54,
+    height: 18,
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   bookmarkLight: {
@@ -496,12 +500,12 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   listen: {
-    height: "11.88%",
-    width: "14.99%",
+    height: "52.48%",
+    width: "24.8%",
     top: "81.19%",
     left: "81.74%",
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   icon3: {
@@ -599,10 +603,8 @@ const styles = StyleSheet.create({
   },
   component1: {
     top: 0,
-    left: 0,
     justifyContent: "center",
     width: 358,
-    position: "absolute",
   },
   image13Icon: {
     top: 5,
@@ -679,7 +681,7 @@ const styles = StyleSheet.create({
   howWasTodays: {
     textAlign: "center",
     top: "0%",
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     color: Color.colorGray,
     letterSpacing: -0.7,
     fontSize: FontSize.size_17xl,
@@ -708,10 +710,8 @@ const styles = StyleSheet.create({
   },
   groupParent: {
     top: 610,
-    left: 12,
     height: 202,
     maxHeight: 202,
-    position: "absolute",
     width: "100%",
   },
   lineView: {
@@ -734,4 +734,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa111;
+export default ViewFullPageButtonFromMa1111;

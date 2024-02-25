@@ -5,7 +5,7 @@ export const FontFamily = {
   paragraphFontSizeSmRegular: "Inter-Regular",
   title: "Rubik-Medium",
   rubikLight: "Rubik-Light",
-  rubikRegular: "Rubik-Regular",
+  text: "Rubik-Regular",
   interSemiBold: "Inter-SemiBold",
   interMedium: "Inter-Medium",
   robotoMedium: "Roboto-Medium",
@@ -14,7 +14,7 @@ export const FontFamily = {
 export const FontSize = {
   size_11xl: 30,
   size_xl: 20,
-  size_mini: 15,
+  text_size: 15,
   size_xs: 12,
   size_13xl: 32,
   size_base: 16,
@@ -33,6 +33,7 @@ export const FontSize = {
 export const Color = {
   colorWhite: "#fff",
   colorBlack: "#000",
+  colorGray_400: "#fdfdfd",
   colorGray: "#242424",
   colorGray_300: "rgba(0, 0, 0, 0.77)",
   colorGray_100: "rgba(255, 255, 255, 0.05)",
@@ -43,6 +44,7 @@ export const Color = {
   colorGainsboro_200: "rgba(217, 217, 217, 0)",
   colorDimgray: "#555356",
   colorDarkgray: "#a3a3a3",
+  colorDarkgray_100: "#999",
   colorMediumslateblue: "#835af6",
   color: "#060047",
 };

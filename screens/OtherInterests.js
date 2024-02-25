@@ -21,7 +21,7 @@ const OtherInterests = () => {
       />
       <Pressable
         style={[styles.interest, styles.interestLayout]}
-        onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
+        onPress={() => navigation.navigate("ViewFullPageButtonFromMa11111")}
       >
         <View style={[styles.interestChild, styles.interestLayout]} />
         <Text style={[styles.password, styles.passwordPosition]}>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     width: 327,
   },
   passwordPosition: {
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     fontSize: FontSize.size_xl,
     left: "50%",
     top: "50%",

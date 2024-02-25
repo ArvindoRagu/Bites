@@ -38,23 +38,23 @@ const Search = () => {
       <Text style={[styles.bestNewLaptop3, styles.bestTypo]}>
         Best New Laptop 2024
       </Text>
-      <Text style={[styles.text, styles.textTypo]}>2,432</Text>
+      <Text style={[styles.text, styles.textTypo2]}>2,432</Text>
       <Image
-        style={[styles.viewLightIcon, styles.lightIconLayout]}
+        style={[styles.viewLightIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/view-light.png")}
       />
       <Image
-        style={[styles.alarmclockLightIcon, styles.lightIconLayout]}
+        style={[styles.alarmclockLightIcon, styles.iconLayout2]}
         contentFit="cover"
         source={require("../assets/alarmclock-light.png")}
       />
       <Pressable
-        style={styles.searchChild}
+        style={[styles.searchChild, styles.childBorder]}
         onPress={() => navigation.navigate("YourInfocastPageFromMain")}
       />
       <Text
-        style={[styles.surgingNvidiaStock, styles.textTypo]}
+        style={[styles.surgingNvidiaStock, styles.textTypo2]}
       >{`Surging Nvidia Stock Keeps Drawing In More Believers
 `}</Text>
       <Text style={[styles.hAgo, styles.agoTypo]}>29h ago</Text>
@@ -97,12 +97,12 @@ const Search = () => {
         source={require("../assets/ellipse-65-light.png")}
       />
       <Image
-        style={[styles.ellipse66LightIcon1, styles.iconPosition1]}
+        style={[styles.ellipse66LightIcon1, styles.iconPosition2]}
         contentFit="cover"
         source={require("../assets/ellipse-66-light.png")}
       />
       <Image
-        style={[styles.ellipseIcon, styles.iconPosition1]}
+        style={[styles.ellipseIcon, styles.iconPosition2]}
         contentFit="cover"
         source={require("../assets/ellipse-54.png")}
       />
@@ -123,12 +123,12 @@ const Search = () => {
       />
       <Text style={[styles.hAgo2, styles.text2Position]}>24h ago</Text>
       <Image
-        style={[styles.image8Icon, styles.iconPosition]}
+        style={[styles.image8Icon, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/image-8.png")}
       />
       <Image
-        style={[styles.image7Icon, styles.iconPosition]}
+        style={[styles.image7Icon, styles.iconPosition1]}
         contentFit="cover"
         source={require("../assets/image-7.png")}
       />
@@ -137,6 +137,34 @@ const Search = () => {
         contentFit="cover"
         source={require("../assets/image-9.png")}
       />
+      <View style={styles.parent}>
+        <Text style={[styles.text3, styles.textTypo2]}>{`1,239 `}</Text>
+        <Image
+          style={[styles.viewLightIcon1, styles.lightIconLayout2]}
+          contentFit="cover"
+          source={require("../assets/view-light.png")}
+        />
+        <Image
+          style={[styles.alarmclockLightIcon1, styles.lightIconLayout2]}
+          contentFit="cover"
+          source={require("../assets/alarmclock-light.png")}
+        />
+        <View style={[styles.rectangleParent, styles.instanceChildPosition1]}>
+          <Pressable
+            style={[styles.instanceChild, styles.instanceChildPosition1]}
+            onPress={() => navigation.navigate("YourInfocastPageFromMain")}
+          />
+          <Text
+            style={[styles.attCustomersHit, styles.image2IconPosition1]}
+          >{`AT&T customers hit by widespread cellular outages in U.S.`}</Text>
+          <Text style={[styles.hAgo3, styles.textTypo2]}>12h ago</Text>
+          <Image
+            style={[styles.image2Icon, styles.image2IconPosition1]}
+            contentFit="cover"
+            source={require("../assets/image2.png")}
+          />
+        </View>
+      </View>
     </View>
   );
 };
@@ -158,11 +186,11 @@ const styles = StyleSheet.create({
   searchBorder: {
     borderWidth: 0.2,
     borderColor: Color.colorBlack,
+    borderStyle: "solid",
     backgroundColor: Color.colorWhitesmoke,
     borderRadius: Border.br_base,
     left: 0,
     top: 0,
-    borderStyle: "solid",
     height: 19,
     position: "absolute",
   },
@@ -181,7 +209,7 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
   bestTypo: {
@@ -192,10 +220,10 @@ const styles = StyleSheet.create({
     fontSize: FontSize.size_2xs,
     color: Color.colorDarkgray,
     textAlign: "left",
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     position: "absolute",
   },
-  textTypo: {
+  textTypo2: {
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     letterSpacing: -0.3,
     fontFamily: FontFamily.title,
@@ -203,13 +231,17 @@ const styles = StyleSheet.create({
     textAlign: "left",
     color: Color.colorGray,
   },
-  lightIconLayout: {
+  iconLayout2: {
     maxHeight: "100%",
     maxWidth: "100%",
-    width: "6.4%",
-    height: "2.96%",
-    position: "absolute",
     overflow: "hidden",
+  },
+  childBorder: {
+    borderWidth: 1,
+    borderColor: Color.colorDarkgray,
+    backgroundColor: Color.colorGainsboro_200,
+    borderRadius: Border.br_xs,
+    borderStyle: "solid",
   },
   agoTypo: {
     left: "63.73%",
@@ -279,15 +311,33 @@ const styles = StyleSheet.create({
     top: "92.86%",
     position: "absolute",
   },
-  iconPosition1: {
+  iconPosition2: {
     top: "92.98%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  iconPosition: {
+  iconPosition1: {
     left: 32,
+    position: "absolute",
+  },
+  lightIconLayout2: {
+    width: "7.12%",
+    height: "23.3%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    position: "absolute",
+    overflow: "hidden",
+  },
+  instanceChildPosition1: {
+    bottom: "0%",
+    top: "0%",
+    height: "100%",
+    position: "absolute",
+  },
+  image2IconPosition1: {
+    top: "6.8%",
     position: "absolute",
   },
   searchBar: {
@@ -299,13 +349,13 @@ const styles = StyleSheet.create({
   },
   askAnything: {
     top: 184,
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     lineHeight: 20,
     width: 286,
     opacity: 0.4,
     textAlign: "left",
     color: Color.colorGray,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     left: 39,
     position: "absolute",
   },
@@ -323,7 +373,7 @@ const styles = StyleSheet.create({
     color: Color.colorDarkgray,
     letterSpacing: -0.3,
     textAlign: "left",
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     left: 39,
     position: "absolute",
   },
@@ -379,12 +429,20 @@ const styles = StyleSheet.create({
     right: "57.07%",
     bottom: "31.16%",
     left: "36.53%",
+    width: "6.4%",
+    height: "2.96%",
+    maxWidth: "100%",
+    position: "absolute",
   },
   alarmclockLightIcon: {
     top: "65.64%",
     right: "37.33%",
     bottom: "31.4%",
     left: "56.27%",
+    width: "6.4%",
+    height: "2.96%",
+    maxWidth: "100%",
+    position: "absolute",
   },
   searchChild: {
     height: "12.68%",
@@ -393,11 +451,6 @@ const styles = StyleSheet.create({
     right: "6.13%",
     bottom: "30.17%",
     left: "6.13%",
-    borderRadius: Border.br_xs,
-    backgroundColor: Color.colorGainsboro_200,
-    borderColor: Color.colorDarkgray,
-    borderWidth: 1,
-    borderStyle: "solid",
     position: "absolute",
   },
   surgingNvidiaStock: {
@@ -530,13 +583,80 @@ const styles = StyleSheet.create({
     width: 92,
     height: 92,
   },
+  text3: {
+    top: "71.84%",
+    left: "43.32%",
+    position: "absolute",
+  },
+  viewLightIcon1: {
+    top: "68.93%",
+    right: "57.86%",
+    bottom: "7.77%",
+    left: "35.01%",
+  },
+  alarmclockLightIcon1: {
+    top: "66.99%",
+    right: "35.91%",
+    bottom: "9.71%",
+    left: "56.97%",
+  },
+  instanceChild: {
+    width: "97.63%",
+    right: "2.37%",
+    left: "0%",
+    borderWidth: 1,
+    borderColor: Color.colorDarkgray,
+    backgroundColor: Color.colorGainsboro_200,
+    borderRadius: Border.br_xs,
+    borderStyle: "solid",
+  },
+  attCustomersHit: {
+    width: "64.39%",
+    left: "35.61%",
+    fontSize: FontSize.paragraphFontSizeSmRegular_size,
+    letterSpacing: -0.3,
+    fontFamily: FontFamily.title,
+    fontWeight: "500",
+    textAlign: "left",
+    color: Color.colorGray,
+  },
+  hAgo3: {
+    top: "70.87%",
+    left: "64.09%",
+    position: "absolute",
+  },
+  image2Icon: {
+    height: "86.41%",
+    width: "29.38%",
+    right: "67.95%",
+    bottom: "6.8%",
+    left: "2.67%",
+    borderRadius: Border.br_9xs,
+    maxHeight: "100%",
+    maxWidth: "100%",
+    overflow: "hidden",
+  },
+  rectangleParent: {
+    right: "-1.19%",
+    left: "1.19%",
+    width: "100%",
+    top: "0%",
+    height: "100%",
+  },
+  parent: {
+    top: 352,
+    left: 14,
+    width: 337,
+    height: 103,
+    position: "absolute",
+  },
   search: {
     borderRadius: Border.br_31xl,
     backgroundColor: Color.colorWhite,
     flex: 1,
-    width: "100%",
     height: 812,
     overflow: "hidden",
+    width: "100%",
   },
 });
 

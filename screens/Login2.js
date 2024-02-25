@@ -22,19 +22,6 @@ const Login2 = () => {
           placeholderTextColor="#242424"
         />
       </View>
-      <Image
-        style={[styles.login4Child, styles.login4Layout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-105.png")}
-      />
-      <Image
-        style={[styles.login4Item, styles.login4Layout]}
-        contentFit="cover"
-        source={require("../assets/ellipse-105.png")}
-      />
-      <Text style={[styles.signInWith, styles.passwordTypo]}>
-        Sign in with:
-      </Text>
       <Pressable
         style={styles.iForgotMyContainer}
         onPress={() => navigation.navigate("ForgotPassword")}
@@ -56,7 +43,7 @@ const Login2 = () => {
         source={require("../assets/vector4.png")}
       />
       <Pressable
-        style={styles.login4Inner}
+        style={styles.login4Child}
         onPress={() => navigation.goBack()}
       />
     </View>
@@ -75,15 +62,9 @@ const styles = StyleSheet.create({
   },
   passwordPosition1: {
     fontSize: FontSize.size_xl,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     left: "50%",
     top: "50%",
-    position: "absolute",
-  },
-  login4Layout: {
-    height: 100,
-    width: 100,
-    top: 432,
     position: "absolute",
   },
   passwordTypo: {
@@ -96,7 +77,6 @@ const styles = StyleSheet.create({
     width: 327,
     left: "50%",
     top: "50%",
-    marginLeft: -163.5,
     position: "absolute",
   },
   passwordChild: {
@@ -114,51 +94,32 @@ const styles = StyleSheet.create({
     marginTop: -62.1,
     marginLeft: -146.5,
     opacity: 0.4,
-    fontSize: FontSize.size_xl,
   },
   password2: {
     marginTop: 15,
-    marginLeft: -164.5,
     height: 68,
     width: 327,
+    marginLeft: -164.5,
   },
   password: {
-    marginTop: -233,
+    marginTop: -152,
     width: 329,
     height: 166,
-    marginLeft: -163.5,
-    left: "50%",
-    top: "50%",
-  },
-  login4Child: {
-    left: 54,
-  },
-  login4Item: {
-    left: 226,
-  },
-  signInWith: {
-    top: 382,
-    left: 126,
-    fontWeight: "500",
-    fontFamily: FontFamily.title,
-    color: Color.colorBlack,
-    textAlign: "center",
-    lineHeight: 20,
-    position: "absolute",
+    marginLeft: -164.5,
   },
   iForgotMyPassword: {
     color: Color.colorBlack,
-    textAlign: "center",
+    fontFamily: FontFamily.text,
     lineHeight: 20,
-    fontFamily: FontFamily.rubikRegular,
   },
   iForgotMyContainer: {
-    left: 85,
-    top: 658,
+    left: 84,
+    top: 538,
     position: "absolute",
   },
   passwordItem: {
     marginTop: -26,
+    marginLeft: -163.5,
     backgroundColor: Color.colorMediumpurple,
     borderRadius: Border.br_base,
   },
@@ -169,15 +130,13 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.rubikExtraBold,
     color: Color.colorGray,
     width: 286,
-    textAlign: "center",
-    lineHeight: 20,
     opacity: 0.4,
     left: "50%",
     top: "50%",
     position: "absolute",
   },
   password3: {
-    marginTop: 170,
+    marginTop: 50,
     shadowColor: "rgba(0, 0, 0, 0.25)",
     shadowOffset: {
       width: 0,
@@ -186,6 +145,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 4,
     shadowOpacity: 1,
+    marginLeft: -164.5,
   },
   vectorIcon: {
     height: "1.72%",
@@ -199,7 +159,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     overflow: "hidden",
   },
-  login4Inner: {
+  login4Child: {
     height: "3.94%",
     width: "8.8%",
     top: "8.13%",

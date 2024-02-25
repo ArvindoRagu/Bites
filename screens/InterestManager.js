@@ -2,7 +2,7 @@ import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, Pressable, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
+import { Color, Border, FontFamily, FontSize } from "../GlobalStyles";
 
 const InterestManager = () => {
   const navigation = useNavigation();
@@ -10,7 +10,7 @@ const InterestManager = () => {
   return (
     <View style={styles.interestManager}>
       <Image
-        style={[styles.vectorIcon, styles.iconLayout]}
+        style={styles.vectorIcon}
         contentFit="cover"
         source={require("../assets/vector4.png")}
       />
@@ -19,119 +19,101 @@ const InterestManager = () => {
         style={styles.interestManagerChild}
         onPress={() => navigation.goBack()}
       />
-      <View style={[styles.rectangleParent, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>Entertainment</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.rectangleGroup, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>Finance</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.rectangleContainer, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>{`Science & Tech`}</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.groupView, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>{`Art & Literature`}</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.rectangleParent1, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>Politics</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.rectangleParent2, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>Lifestyle</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
-      <View style={[styles.rectangleParent3, styles.groupParentLayout]}>
-        <View style={styles.instanceChild} />
-        <Pressable
-          style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1111")}
-        >
-          <Text style={styles.entertainment}>Other</Text>
-        </Pressable>
-        <Image
-          style={[styles.expandRightIcon, styles.iconLayout]}
-          contentFit="cover"
-          source={require("../assets/expand-right.png")}
-        />
-      </View>
+      <View style={[styles.interestManagerItem, styles.interestChildLayout]} />
+      <Text style={[styles.entertainment, styles.artlitLayout]}>
+        <Text style={styles.text}>{` `}</Text>
+        <Text style={styles.entertainment1}>Entertainment</Text>
+      </Text>
+      <Image
+        style={[styles.expandRightIcon, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <View style={[styles.interestManagerInner, styles.interestChildLayout]} />
+      <Text style={[styles.finance, styles.artlitLayout]}>Finance</Text>
+      <Image
+        style={[styles.expandRightIcon1, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <View style={[styles.rectangleView, styles.interestChildLayout]} />
+      <Text style={[styles.scitech, styles.artlitLayout]}>Sci/Tech</Text>
+      <Image
+        style={[styles.expandRightIcon2, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <View
+        style={[styles.interestManagerChild1, styles.interestChildLayout]}
+      />
+      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
+      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
+      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
+      <Text style={[styles.artlit, styles.artlitLayout]}>Art/Lit</Text>
+      <View
+        style={[styles.interestManagerChild2, styles.interestChildLayout]}
+      />
+      <View
+        style={[styles.interestManagerChild3, styles.interestChildLayout]}
+      />
+      <Image
+        style={[styles.expandRightIcon3, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <Image
+        style={[styles.expandRightIcon4, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <Image
+        style={[styles.expandRightIcon5, styles.expandIconLayout]}
+        contentFit="cover"
+        source={require("../assets/expand-right.png")}
+      />
+      <Text style={[styles.politics, styles.politicsTypo]}>Politics</Text>
+      <Text style={[styles.lifestyle, styles.politicsTypo]}>Lifestyle</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  iconLayout: {
+  interestChildLayout: {
+    height: 52,
+    width: 324,
+    borderWidth: 1,
+    borderColor: Color.colorBlack,
+    borderStyle: "solid",
+    backgroundColor: Color.colorGray_400,
+    borderRadius: Border.br_2xs,
+    left: 27,
+    position: "absolute",
+  },
+  artlitLayout: {
+    height: 78,
+    width: 236,
+    textAlign: "center",
+    color: Color.colorDarkgray_100,
+    fontFamily: FontFamily.text,
+    lineHeight: 20,
+    position: "absolute",
+  },
+  expandIconLayout: {
+    left: "81.6%",
+    right: "12%",
+    width: "6.4%",
+    height: "2.96%",
     maxHeight: "100%",
     maxWidth: "100%",
     position: "absolute",
     overflow: "hidden",
   },
-  groupParentLayout: {
-    height: 60,
-    width: 327,
-    left: 24,
+  politicsTypo: {
+    textAlign: "center",
+    color: Color.colorDarkgray_100,
+    fontFamily: FontFamily.text,
+    lineHeight: 20,
+    fontSize: FontSize.size_xl,
     position: "absolute",
   },
   vectorIcon: {
@@ -141,6 +123,10 @@ const styles = StyleSheet.create({
     right: "84.8%",
     bottom: "86.45%",
     left: "13.07%",
+    maxHeight: "100%",
+    maxWidth: "100%",
+    position: "absolute",
+    overflow: "hidden",
   },
   myInterests: {
     top: 156,
@@ -150,8 +136,8 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontFamily: FontFamily.rubikSemiBold,
     color: Color.colorBlack,
-    width: 319,
     textAlign: "left",
+    width: 319,
     position: "absolute",
   },
   interestManagerChild: {
@@ -165,72 +151,94 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhitesmoke,
     position: "absolute",
   },
-  instanceChild: {
-    height: "100%",
-    top: "0%",
-    right: "0%",
-    bottom: "0%",
-    left: "0%",
-    borderRadius: Border.br_base,
-    borderStyle: "solid",
-    borderColor: Color.colorBlack,
-    borderWidth: 1,
-    position: "absolute",
-    width: "100%",
+  interestManagerItem: {
+    top: 207,
+  },
+  text: {
+    fontSize: FontSize.size_xl,
+  },
+  entertainment1: {
+    fontSize: FontSize.title_size,
   },
   entertainment: {
-    height: "38.5%",
-    width: "87.46%",
-    fontSize: FontSize.size_xl,
-    lineHeight: 20,
-    fontFamily: FontFamily.rubikRegular,
-    color: Color.colorGray,
-    display: "flex",
-    alignItems: "center",
-    opacity: 0.4,
-    textAlign: "left",
-  },
-  password: {
-    left: "4.89%",
-    top: "30.83%",
-    position: "absolute",
+    top: 224,
+    left: -11,
   },
   expandRightIcon: {
-    height: "40%",
-    width: "7.34%",
-    top: "30%",
-    right: "6.73%",
-    bottom: "30%",
-    left: "85.93%",
+    top: "27.22%",
+    bottom: "69.83%",
   },
-  rectangleParent: {
-    top: 206,
+  interestManagerInner: {
+    top: 266,
   },
-  rectangleGroup: {
-    top: 277,
+  finance: {
+    top: 281,
+    left: -31,
+    fontSize: FontSize.size_xl,
   },
-  rectangleContainer: {
-    top: 346,
+  expandRightIcon1: {
+    top: "34.48%",
+    bottom: "62.56%",
   },
-  groupView: {
-    top: 417,
+  rectangleView: {
+    top: 325,
   },
-  rectangleParent1: {
-    top: 488,
+  scitech: {
+    top: 342,
+    left: -27,
+    fontSize: FontSize.size_xl,
   },
-  rectangleParent2: {
-    top: 559,
+  expandRightIcon2: {
+    top: "41.75%",
+    bottom: "55.3%",
   },
-  rectangleParent3: {
-    top: 631,
+  interestManagerChild1: {
+    top: 384,
+  },
+  artlit: {
+    top: 399,
+    left: -37,
+    fontSize: FontSize.size_xl,
+  },
+  interestManagerChild2: {
+    top: 443,
+  },
+  interestManagerChild3: {
+    top: 502,
+  },
+  expandRightIcon3: {
+    top: "49.01%",
+    bottom: "48.03%",
+  },
+  expandRightIcon4: {
+    top: "56.28%",
+    bottom: "40.76%",
+  },
+  expandRightIcon5: {
+    top: "63.55%",
+    bottom: "33.5%",
+  },
+  politics: {
+    top: 460,
+    left: 46,
+    width: 69,
+    height: 26,
+    fontSize: FontSize.size_xl,
+  },
+  lifestyle: {
+    top: 519,
+    left: 38,
+    width: 96,
+    height: 25,
+    fontSize: FontSize.size_xl,
   },
   interestManager: {
     borderRadius: Border.br_31xl,
     backgroundColor: Color.colorWhite,
     flex: 1,
+    width: "100%",
     height: 812,
     overflow: "hidden",
-    width: "100%",
   },
 });
 

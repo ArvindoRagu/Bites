@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Pressable, Text, StyleSheet, View } from "react-native";
+import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
@@ -28,6 +29,11 @@ const Login = () => {
           Kickstart your day.
         </Text>
       </View>
+      <Image
+        style={styles.b11}
+        contentFit="cover"
+        source={require("../assets/b11.png")}
+      />
     </View>
   );
 };
@@ -48,7 +54,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   iHaveAnAccount: {
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     width: 182,
     lineHeight: 20,
     textAlign: "center",
@@ -107,6 +113,13 @@ const styles = StyleSheet.create({
     width: 327,
     position: "absolute",
     overflow: "hidden",
+  },
+  b11: {
+    top: 164,
+    left: 10,
+    width: 356,
+    height: 232,
+    position: "absolute",
   },
   login1: {
     borderRadius: Border.br_31xl,

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     left: "50%",
     width: 327,
     height: 68,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     fontSize: FontSize.size_xl,
     position: "absolute",
   },

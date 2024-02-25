@@ -41,7 +41,7 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa111 from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa1111 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
@@ -58,24 +58,24 @@ import B1 from "./components/B1";
 import Login1 from "./screens/Login1";
 import OtherInterests from "./screens/OtherInterests";
 import Image1 from "./components/Image1";
-import GroupComponent3 from "./components/GroupComponent3";
+import Search from "./components/GroupComponent3";
 import HongKongInforms from "./components/HongKongInforms";
 import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
 import GroupComponent4 from "./components/GroupComponent4";
-import WhatsNextModal from "./components/WhatsNextModal";
-import InterestManager from "./screens/InterestManager";
-import ViewFullPageButtonFromMa111 from "./screens/ViewFullPageButtonFromMa";
-import InterestPersonalizer from "./screens/InterestPersonalizer";
-import Login11 from "./screens/Login11";
+import Login3 from "./screens/Login3";
 import Login2 from "./screens/Login2";
+import InterestsSetup from "./screens/InterestsSetup";
 import MainPage from "./screens/MainPage";
 import Modal1 from "./components/Modal1";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
-import Search from "./screens/Search";
+import ViewFullPageButtonFromMa1111 from "./screens/ViewFullPageButtonFromMa";
+import InterestPersonalizer from "./screens/InterestPersonalizer";
+import WhatsNextModal from "./components/WhatsNextModal";
+import InterestManager from "./screens/InterestManager";
+import Login11 from "./screens/Login11";
 import ForgotPassword from "./screens/ForgotPassword";
-import Login3 from "./screens/Login3";
-import InterestsSetup from "./screens/InterestsSetup";
 import BookmarkedLikedArticles from "./screens/BookmarkedLikedArticles";
+import Search from "./screens/Search";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { View, Text, Pressable, TouchableOpacity } from "react-native";
@@ -145,28 +145,18 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="InterestManager"
-              component={InterestManager}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="ViewFullPageButtonFromMa1111"
-              component={ViewFullPageButtonFromMa111}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InterestPersonalizer"
-              component={InterestPersonalizer}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="Login11"
-              component={Login11}
+              name="Login3"
+              component={Login3}
               options={{ headerShown: false }}
             />
             <Stack.Screen
               name="Login2"
               component={Login2}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="InterestsSetup"
+              component={InterestsSetup}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -185,8 +175,23 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Search"
-              component={Search}
+              name="ViewFullPageButtonFromMa11111"
+              component={ViewFullPageButtonFromMa1111}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="InterestPersonalizer"
+              component={InterestPersonalizer}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="InterestManager"
+              component={InterestManager}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Login11"
+              component={Login11}
               options={{ headerShown: false }}
             />
             <Stack.Screen
@@ -195,18 +200,13 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="Login3"
-              component={Login3}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InterestsSetup"
-              component={InterestsSetup}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
               name="BookmarkedLikedArticles"
               component={BookmarkedLikedArticles}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Search1"
+              component={Search}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>
