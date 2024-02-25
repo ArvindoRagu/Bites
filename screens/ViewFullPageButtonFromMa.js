@@ -4,13 +4,16 @@ import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa1 = () => {
+const ViewFullPageButtonFromMa11 = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.viewFullPageButtonFromMa}>
       <Text style={[styles.finance, styles.minTypo1]}>Finance</Text>
-      <Pressable style={styles.searchBar}>
+      <Pressable
+        style={styles.searchBar}
+        onPress={() => navigation.navigate("Search")}
+      >
         <Text style={styles.askAQuestion}>Ask a question</Text>
         <Image
           style={[styles.searchIcon, styles.iconChildLayout]}
@@ -734,4 +737,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa1;
+export default ViewFullPageButtonFromMa11;

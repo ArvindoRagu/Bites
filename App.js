@@ -41,7 +41,7 @@ import GroupInstance1 from "./components/GroupInstance1";
 import GroupInstance2 from "./components/GroupInstance2";
 import GroupInstance3 from "./components/GroupInstance3";
 import GroupComponent1 from "./components/GroupComponent1";
-import ViewFullPageButtonFromMa1 from "./components/GroupComponent2";
+import ViewFullPageButtonFromMa11 from "./components/GroupComponent2";
 import Line1 from "./components/Line1";
 import Line2 from "./components/Line2";
 import Line3 from "./components/Line3";
@@ -61,13 +61,13 @@ import Image1 from "./components/Image1";
 import GroupComponent3 from "./components/GroupComponent3";
 import HongKongInforms from "./components/HongKongInforms";
 import BerkshireHathawayRamps from "./components/BerkshireHathawayRamps";
-import Search from "./screens/Search";
 import GroupComponent4 from "./components/GroupComponent4";
+import ViewFullPageButtonFromMa11 from "./screens/ViewFullPageButtonFromMa";
+import InterestPersonalizer from "./screens/InterestPersonalizer";
+import Search from "./screens/Search";
 import YourInfocastPageFromMain from "./screens/YourInfocastPageFromMain";
 import MainPage from "./screens/MainPage";
 import Modal1 from "./components/Modal1";
-import ViewFullPageButtonFromMa1 from "./screens/ViewFullPageButtonFromMa";
-import InterestPersonalizer from "./screens/InterestPersonalizer";
 import WhatsNextModal from "./components/WhatsNextModal";
 import Login11 from "./screens/Login11";
 import Login2 from "./screens/Login2";
@@ -145,6 +145,16 @@ const App = () => {
               options={{ headerShown: false }}
             />
             <Stack.Screen
+              name="ViewFullPageButtonFromMa111"
+              component={ViewFullPageButtonFromMa11}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="InterestPersonalizer"
+              component={InterestPersonalizer}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
               name="Search"
               component={Search}
               options={{ headerShown: false }}
@@ -162,16 +172,6 @@ const App = () => {
             <Stack.Screen
               name="Modal1"
               component={Modal1}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="ViewFullPageButtonFromMa11"
-              component={ViewFullPageButtonFromMa1}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="InterestPersonalizer"
-              component={InterestPersonalizer}
               options={{ headerShown: false }}
             />
             <Stack.Screen

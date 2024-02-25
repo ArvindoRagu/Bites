@@ -3,7 +3,7 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
 import { FontFamily, FontSize, Color, Border } from "../GlobalStyles";
 
-const ViewFullPageButtonFromMa1 = () => {
+const ViewFullPageButtonFromMa11 = () => {
   return (
     <View style={styles.bookmarkLightParent}>
       <Image
@@ -124,4 +124,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ViewFullPageButtonFromMa1;
+export default ViewFullPageButtonFromMa11;
