@@ -10,12 +10,7 @@ const Modal1 = ({ onClose }) => {
   return (
     <View style={styles.modal}>
       <Image
-        style={[styles.baseindicatorIcon, styles.modalChildLayout]}
-        contentFit="cover"
-        source={require("../assets/positiontop.png")}
-      />
-      <Image
-        style={[styles.modalChild, styles.modalChildLayout]}
+        style={styles.modalChild}
         contentFit="cover"
         source={require("../assets/rectangle-46.png")}
       />
@@ -24,7 +19,7 @@ const Modal1 = ({ onClose }) => {
       </Text>
       <Pressable
         style={[styles.wrapper, styles.wrapperPosition]}
-        onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+        onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
       >
         <Image
           style={[styles.icon, styles.iconLayout]}
@@ -57,12 +52,6 @@ Minor fluctuations in commodities like Brent Crude and Gold, and currencies like
 };
 
 const styles = StyleSheet.create({
-  modalChildLayout: {
-    overflow: "hidden",
-    position: "absolute",
-    maxHeight: "100%",
-    maxWidth: "100%",
-  },
   highlightsFlexBox: {
     textAlign: "left",
     color: Color.colorBlack,
@@ -86,18 +75,10 @@ const styles = StyleSheet.create({
   },
   viewFullPageTypo: {
     color: Color.colorMediumslateblue,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     lineHeight: 20,
-    fontSize: FontSize.size_mini,
+    fontSize: FontSize.text_size,
     textAlign: "left",
-  },
-  baseindicatorIcon: {
-    height: "3.1%",
-    width: "16.33%",
-    top: "0%",
-    right: "73.18%",
-    bottom: "96.9%",
-    left: "10.5%",
   },
   modalChild: {
     height: "96.12%",
@@ -106,7 +87,11 @@ const styles = StyleSheet.create({
     bottom: "0%",
     left: "0%",
     borderRadius: Border.br_9xl,
+    overflow: "hidden",
+    position: "absolute",
     width: "100%",
+    maxHeight: "100%",
+    maxWidth: "100%",
   },
   highlights: {
     top: "1.55%",
@@ -119,6 +104,7 @@ const styles = StyleSheet.create({
   icon: {
     height: "100%",
     width: "100%",
+    borderRadius: Border.br_2xs,
   },
   wrapper: {
     left: "51.02%",
@@ -128,11 +114,11 @@ const styles = StyleSheet.create({
   modalItem: {
     width: "36.44%",
     right: "53.06%",
+    left: "10.5%",
     height: "10.08%",
     bottom: "6.98%",
     top: "82.95%",
     position: "absolute",
-    left: "10.5%",
   },
   yourInfocast: {
     left: "15.74%",
@@ -143,10 +129,10 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   dowJonesNasdaq: {
-    height: "53.49%",
-    width: "93.29%",
-    top: "25.97%",
-    left: "2.33%",
+    height: "55.43%",
+    width: "90.96%",
+    top: "27.13%",
+    left: "4.96%",
     fontSize: FontSize.paragraphFontSizeSmRegular_size,
     letterSpacing: -0.3,
     fontWeight: "300",

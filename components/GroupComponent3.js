@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     maxWidth: "100%",
   },
   instanceChildPosition: {
-    left: "0%",
     bottom: "0%",
     top: "0%",
     height: "100%",
@@ -99,6 +98,7 @@ const styles = StyleSheet.create({
   instanceChild: {
     width: "97.63%",
     right: "2.37%",
+    left: "0%",
     borderRadius: Border.br_xs,
     backgroundColor: Color.colorGainsboro_200,
     borderStyle: "solid",
@@ -138,7 +138,8 @@ const styles = StyleSheet.create({
   },
   rectangleParent: {
     width: "100%",
-    right: "0%",
+    right: "-1.19%",
+    left: "1.19%",
   },
   parent: {
     width: 337,

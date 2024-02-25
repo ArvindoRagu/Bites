@@ -19,16 +19,11 @@ const InterestManager = () => {
         style={styles.interestManagerChild}
         onPress={() => navigation.goBack()}
       />
-      <Image
-        style={styles.interestIcon}
-        contentFit="cover"
-        source={require("../assets/expand-right.png")}
-      />
       <View style={[styles.rectangleParent, styles.groupParentLayout]}>
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
           <Text style={styles.entertainment}>Entertainment</Text>
         </Pressable>
@@ -42,9 +37,9 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
-          <Text style={styles.entertainment}>Entertainment</Text>
+          <Text style={styles.entertainment}>Finance</Text>
         </Pressable>
         <Image
           style={[styles.expandRightIcon, styles.iconLayout]}
@@ -56,9 +51,9 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
-          <Text style={styles.entertainment}>Entertainment</Text>
+          <Text style={styles.entertainment}>{`Science & Tech`}</Text>
         </Pressable>
         <Image
           style={[styles.expandRightIcon, styles.iconLayout]}
@@ -70,9 +65,9 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
-          <Text style={styles.entertainment}>Entertainment</Text>
+          <Text style={styles.entertainment}>{`Art & Literature`}</Text>
         </Pressable>
         <Image
           style={[styles.expandRightIcon, styles.iconLayout]}
@@ -84,9 +79,9 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
-          <Text style={styles.entertainment}>Entertainment</Text>
+          <Text style={styles.entertainment}>Politics</Text>
         </Pressable>
         <Image
           style={[styles.expandRightIcon, styles.iconLayout]}
@@ -98,9 +93,23 @@ const InterestManager = () => {
         <View style={styles.instanceChild} />
         <Pressable
           style={styles.password}
-          onPress={() => navigation.navigate("ViewFullPageButtonFromMa")}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
         >
-          <Text style={styles.entertainment}>Entertainment</Text>
+          <Text style={styles.entertainment}>Lifestyle</Text>
+        </Pressable>
+        <Image
+          style={[styles.expandRightIcon, styles.iconLayout]}
+          contentFit="cover"
+          source={require("../assets/expand-right.png")}
+        />
+      </View>
+      <View style={[styles.rectangleParent3, styles.groupParentLayout]}>
+        <View style={styles.instanceChild} />
+        <Pressable
+          style={styles.password}
+          onPress={() => navigation.navigate("ViewFullPageButtonFromMa1")}
+        >
+          <Text style={styles.entertainment}>Other</Text>
         </Pressable>
         <Image
           style={[styles.expandRightIcon, styles.iconLayout]}
@@ -156,13 +165,6 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhitesmoke,
     position: "absolute",
   },
-  interestIcon: {
-    top: 684,
-    left: 305,
-    width: 24,
-    height: 24,
-    position: "absolute",
-  },
   instanceChild: {
     height: "100%",
     top: "0%",
@@ -181,7 +183,7 @@ const styles = StyleSheet.create({
     width: "87.46%",
     fontSize: FontSize.size_xl,
     lineHeight: 20,
-    fontFamily: FontFamily.rubikRegular,
+    fontFamily: FontFamily.text,
     color: Color.colorGray,
     display: "flex",
     alignItems: "center",
@@ -218,6 +220,9 @@ const styles = StyleSheet.create({
   },
   rectangleParent2: {
     top: 559,
+  },
+  rectangleParent3: {
+    top: 631,
   },
   interestManager: {
     borderRadius: Border.br_31xl,

@@ -1,6 +1,6 @@
 import * as React from "react";
+import { Pressable, Text, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
-import { StyleSheet, Pressable, Text, View } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 
@@ -9,11 +9,6 @@ const YourInfocastPageFromMain = () => {
 
   return (
     <View style={styles.yourInfocastPageFromMain}>
-      <Image
-        style={[styles.shulgaTashCave, styles.vectorIconLayout1]}
-        contentFit="cover"
-        source={require("../assets/shulgatash-cave1.png")}
-      />
       <Pressable
         style={[styles.backToHomeParent, styles.parentFlexBox]}
         onPress={() => navigation.navigate("MainPage")}
@@ -27,7 +22,7 @@ const YourInfocastPageFromMain = () => {
           source={require("../assets/arrow.png")}
         />
       </Pressable>
-      <View style={[styles.shulgaTashCave1, styles.shulgaPosition]}>
+      <View style={styles.shulgaTashCave}>
         <Text style={[styles.financeDigest, styles.rateTypo]}>
           Finance Digest
         </Text>
@@ -39,11 +34,11 @@ const YourInfocastPageFromMain = () => {
       <Text style={[styles.rate, styles.ratePosition]}>Rate:</Text>
       <View style={[styles.groupParent, styles.ratePosition]}>
         <Image
-          style={[styles.componentChild, styles.financeDigestPosition]}
+          style={[styles.componentChild, styles.vectorIconLayout1]}
           contentFit="cover"
           source={require("../assets/group-3.png")}
         />
-        <Text style={[styles.text, styles.textTypo]}>3.56</Text>
+        <Text style={[styles.text, styles.textTypo]}>0.00</Text>
         <Text style={[styles.text1, styles.textTypo]}>6.12</Text>
       </View>
       <View style={[styles.refresh41Parent, styles.parentFlexBox]}>
@@ -84,16 +79,16 @@ const YourInfocastPageFromMain = () => {
         contentFit="cover"
         source={require("../assets/image-61.png")}
       />
+      <Image
+        style={styles.image12Icon}
+        contentFit="cover"
+        source={require("../assets/image-12.png")}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  vectorIconLayout1: {
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
-  },
   parentFlexBox: {
     justifyContent: "center",
     alignItems: "center",
@@ -103,10 +98,6 @@ const styles = StyleSheet.create({
   backToHomeFlexBox: {
     textAlign: "left",
     lineHeight: 20,
-  },
-  shulgaPosition: {
-    left: "10.4%",
-    position: "absolute",
   },
   rateTypo: {
     color: Color.colorGray,
@@ -118,10 +109,11 @@ const styles = StyleSheet.create({
     left: 39,
     position: "absolute",
   },
-  financeDigestPosition: {
-    top: "0%",
-    left: "0%",
+  vectorIconLayout1: {
+    maxHeight: "100%",
+    maxWidth: "100%",
     position: "absolute",
+    overflow: "hidden",
   },
   textTypo: {
     opacity: 0.5,
@@ -147,16 +139,6 @@ const styles = StyleSheet.create({
     height: 24,
     width: 24,
     overflow: "hidden",
-  },
-  shulgaTashCave: {
-    height: "39.41%",
-    width: "78.93%",
-    top: "8.5%",
-    right: "10.67%",
-    bottom: "52.09%",
-    borderRadius: 34,
-    left: "10.4%",
-    position: "absolute",
   },
   backToHome: {
     color: Color.colorMediumpurple,
@@ -196,21 +178,23 @@ const styles = StyleSheet.create({
     width: "99.66%",
     top: "43.71%",
     left: "0.34%",
-    fontSize: FontSize.size_mini,
-    fontFamily: FontFamily.rubikRegular,
+    fontSize: FontSize.text_size,
+    fontFamily: FontFamily.text,
     color: "#222",
     opacity: 0.7,
     position: "absolute",
   },
-  shulgaTashCave1: {
+  shulgaTashCave: {
     height: "10.96%",
     width: "78.64%",
-    top: "55.91%",
+    top: "55.17%",
     right: "10.96%",
-    bottom: "33.13%",
+    bottom: "33.87%",
+    left: "10.4%",
+    position: "absolute",
   },
   rate: {
-    top: 413,
+    top: 407,
     color: Color.colorGray,
     textAlign: "left",
     fontFamily: FontFamily.title,
@@ -225,14 +209,12 @@ const styles = StyleSheet.create({
     right: "0.67%",
     bottom: "68.57%",
     left: "0%",
-    maxHeight: "100%",
-    maxWidth: "100%",
-    overflow: "hidden",
+    top: "0%",
   },
   text: {
     height: "80%",
     width: "9.7%",
-    top: "20%",
+    top: "27.14%",
     left: "0%",
   },
   text1: {
@@ -253,7 +235,6 @@ const styles = StyleSheet.create({
     bottom: "9.58%",
     left: "8.33%",
     right: "8.33%",
-    position: "absolute",
   },
   vectorIcon1: {
     right: "50%",
@@ -289,10 +270,18 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   image6Icon: {
-    top: 412,
+    top: 406,
     left: 78,
     width: 128,
     height: 23,
+    position: "absolute",
+  },
+  image12Icon: {
+    top: 73,
+    left: 30,
+    borderRadius: Border.br_6xl,
+    width: 317,
+    height: 294,
     position: "absolute",
   },
   yourInfocastPageFromMain: {
